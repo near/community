@@ -4,7 +4,20 @@ This thread contains agenda and/or summary of the regular Middleware sync meetin
 ## 11.03.2020
 
 ### Agenda
-???
+High-level focus:
+* Evgeny K: Vesting contract, Borsh perf improvements, Hashing of account ids (some forward compatibility changes), columns changes (since we have fixed size keys now);
+* Anton B: Working on spec with Sherif https://github.com/nearprotocol/NEPs/pull/38, verifiers QA (Ethprover), light client;
+* Max Z: Turning off iterators. Light client and chain stability;
+* Vlad F: Documentation for changes API https://github.com/nearprotocol/docs/issues/173 ; P0 changes for misterwhite (expose touched accounts in the block); further improvements of changes API to allow batch request for list of accounts (less critical). Needs to test through Python integration tests;
+* Alexey F: deduct used gas at the very end of contract execution (also double check that our promise fee remains correct). RPC issues;
+
+### Notes
+* Anton B, Evgeny K: Multicontract requires scope that's too large and runtime is currently frozen. Let's revisit after the launch;
+* Anton B, Alexey F: Let's consider instantiation ids for the contract given upon deployment, similarly to create2 in Eth. Let's revisit if after the launch. This will enable us the "sharded" contract architecture. Create commonwealth thread or NEPs;
+* Vlad F: Too many work items. Alexey F to help;
+* Alexey F: An idea to have a global gas counter living through the entire transaction/receipt lifetime;
+* Vlad F, Alexey F: We don't need to expose used gas, because error messages already expose them;
+* Evgeny K: Created PoW faucet, see https://near-examples.github.io/pow-faucet/ ;
 
 
 ## 04.03.2020
