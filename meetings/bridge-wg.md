@@ -1,7 +1,7 @@
 # Ethereum-Near Bridge
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
-## 12.03.2020
+## 13.03.2020
 
 ### Agenda
 Pushing deadlines by one week.
