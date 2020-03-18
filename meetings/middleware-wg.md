@@ -1,6 +1,22 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 18.03.2020
+
+### Agenda
+High-level focus:
+* Evgeny K: Vesting contract (vesting and lockups are two contracts now. Lockups are missing tests), Borsh perf improvements (almost done), updated token standard, Hashing of account ids and columns changes (stuck on migration script. Need to sync up with Bowen W);
+* Anton B: Spec, Ethprover fixes, light client;
+* Max Z: Learning eth-bridge, debugging EVM;
+* Vlad F: Finished P0 for misterwhite, working on P1 issues for RPC label (reviewed by Evgeny K). Adding regression tests for RPC (changes API is taking a lot of time). Illia P brought up seat price in RPC. Benchmarking of RPC;
+* Alexey F: Finished early version of runtime documentation. Still working on 1131, 1804, 1795.
+
+### Notes
+* Please comment on https://github.com/nearprotocol/NEPs/issues/40 ;
+* Evgeny K: we need to come up with the process on how we propose and argue about NEPs. Checkout bitcoin proposal guidelines. It should be referring to our core principles and goals;
+* Vlad F noticed that queries that touch non-tracking shard are extremely slow;
+* Alexey F suggests that the refund is using current gas price instead of gas price attached to the receipt. Alexey F needs to create an issue.
+
 ## 11.03.2020
 
 ### Agenda
