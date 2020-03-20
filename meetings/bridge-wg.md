@@ -1,6 +1,26 @@
 # Ethereum-Near Bridge
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 20.03.2020
+Pushing deadlines by one more week.
+* Verifiers QA - March 25-29;
+* Near light client - plus 2-3 weeks;
+* Token example. March 29- April 5;
+* Cross-contract calls.
+
+### Notes
+* Soliciting ideas for the online hackathon;
+* We use Ethash proof software provided by kyber to compute DAG proofs. The tool operates with 32-bit manipulations, maing it hard to understand.
+* We have different source of pseudorandomness for header verification: https://github.com/ethereum/go-ethereum/blob/525116dbff916825463931361f75e75e955c12e2/core/blockchain.go#L863 It should be fine if we just ignore it.
+* We need to describe in detail what we want to implement on the top of the bridge;
+* gsn.openzeppelin.com --  nice documentation on interacting with the contract (skip part of docs related to approvals);
+* There is Solidity contract with Borsh library. Trustful contract already has elements of trustless contract;
+* Illia P, Anton B: In the far future, consider building sharded DeX on near that interacts with its users in p2p manner.
+
+### Action items
+* Evgeny K to send token standard NEP to Anton B;
+* Evgeny K and Anton B discuss sharded contract standard.
+
 ## 13.03.2020
 
 ### Agenda
