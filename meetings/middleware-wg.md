@@ -1,6 +1,24 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 25.03.2020
+
+### Agenda
+High-level focus is closing the Mainnet release.
+Story points:
+
+Max Z - 18. 2 story points a week.
+Evgeny K - 31. 4 story points a week.
+Vlad F - 6 + explorer + block production debug
+Alexey F - 10
+
+* Evgeny K: Refactoring of TrieKeys, not sure we can do accout hashing without iterators. Vesting contracts are blocked on staking contract (Illia P is working on it). Token standard is done and in review;
+* Nikolay I: Onboarding, getting familiar with Rust&codebase, and looking into fee estimator. Alexey F can hehlp with runtime questions;
+* Alexey F: Fixing panics in runtime storage, the other issues assigned in Zenhub;
+* Vlad F: In nearcore, b58 decoding issue. Cleaning up RPCs. Misterwhite's request to have different error codes;
+* Anton B: Spec, Ethprover fixes, light client;
+* Max Z: Disabling transfers, blocked by staking delegation (Illia P). Genesis content. Other things from ZenHub.
+
 ## 18.03.2020
 
 ### Agenda
