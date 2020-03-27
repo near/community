@@ -1,6 +1,25 @@
 # Ethereum-Near Bridge
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
+Led and executed by Anton B.
+
+## 27.03.2020
+* Verifiers QA - March 25 - 29;
+* Near light client - plus 2-3 weeks. Still reading and researching spec;
+* Token example. April 5 - April 12;
+* Cross-contract calls.
+
+### Notes
+* Some progress with calling verifiers from other contracts. A couple of more days needed to wrap up;
+* Just made script to work with local node;
+* Max Z: Ask Alex S to provide;
+* Anton B: Instantiation id for the contract deployment. And then pass additionaly instantiation id with account id, as predecessor instantiation id. This would be useful for sharded contract calls mental model that we can build the course around. Can be added past Mainnet;
+* Anton B: Still considering multicontract per account, post Mainnet. Try to add some code to make it forward-compatible;
+* Anton B: Important thing to take care of: Make sure our contracts are not breaking when we change fees. Interesting idea: if we really need to increase the cost of one operation we need to lower everything else to amortize the total cost;
+* Anton B: We should consider having a write-up on rules an guarantees like: we will not increase fees, etc;
+* Anton B: Consider being able to run old contracts with old runtimes. TON blockchain had an idea of TON runtime;
+* Anton B: An article on how blockchain contracts should not be used: https://medium.com/bitclave/how-to-cook-blockchain-right-dedaed1da57d
+
 ## 20.03.2020
 Pushing deadlines by one more week.
 * Verifiers QA - March 25-29;
