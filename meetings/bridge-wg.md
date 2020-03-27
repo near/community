@@ -12,7 +12,7 @@ Led and executed by Anton B.
 ### Notes
 * Some progress with calling verifiers from other contracts. A couple of more days needed to wrap up;
 * Just made script to work with local node;
-* Max Z: Ask Alex S to provide;
+* Max Z: Ask Alex S to provide formal verification rules;
 * Anton B: Instantiation id for the contract deployment. And then pass additionaly instantiation id with account id, as predecessor instantiation id. This would be useful for sharded contract calls mental model that we can build the course around. Can be added past Mainnet;
 * Anton B: Still considering multicontract per account, post Mainnet. Try to add some code to make it forward-compatible;
 * Anton B: Important thing to take care of: Make sure our contracts are not breaking when we change fees. Interesting idea: if we really need to increase the cost of one operation we need to lower everything else to amortize the total cost;
