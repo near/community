@@ -1,6 +1,21 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 01.04.2020
+
+### Agenda
+High-level focus is closing the Mainnet release.
+
+CI is blocking people.
+
+* Nikolay I: Getting up to speed reading docs. Developing voting app for the showcase (example) and for gas estimation. Ash mentioned that they would need voting app. Proposed name "Full Stack Voting App". Talked to a bunch of people: Alexandra, Ash, Vlad. Discussed Kotlin Native as a potential language for contracts;
+* Alexey F: Upgrading Wasmer for runtime, looking at internal errors from Wasmer. Then will be looking at #1934;
+* Evgeny K: Disabling top-level account registrations, need to wait to Applayer to flip the switch in the config. Need to make sure Applayer understands this is a Mainnet blocker. Also working on storage refactoring. Might not pursue it and consider hashing of account ids to not be critical for the Mainnet. After that will be working on lockup/vesting contracts.
+* Vlad F: Limiting the max lenght of b58 encoding on RPC, finished a few doc items with Sherif (mostly done with documenting of experimenting APIs). Finishing the remaining RPC items, including one from misterwhite;
+* Max Z: Working with Willem on cross-contract testing. Will be workign on bug with integration test #2208. Disabling transfers. TODO: Follow up with Wasmer on differntiating host panics.
+* Anton B: Ethprover fixes, light client;
+
+
 ## 25.03.2020
 
 ### Agenda
