@@ -1,6 +1,28 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 08.04.2020
+
+### Agenda
+
+High-level focus, three major work items:
+* Wasmer error handling;
+* Disabling transfers, genesis contracts;
+* Eth-bridge -- Anton with someone for DevOps;
+
+
+* Alexey F. Vlad F. Will help Willem W with cross-contract testing;
+* Evgeny K: Lockup/vesting contract, voting contract, Python testing infrastructure. Can also take the staking contract testing from Illia P;
+* Vlad F: Finishing some RPC and DevX items, helped Nikolay I;
+* Anton B: Needs some DevOps help, and more help. Need an equivalent of nearup;
+* Nikolay I: Will wrap up voting contract in about one day;
+* Max Z: Wasmer errors, disabling transfers.
+
+Notes:
+* Compiling standalone runtime to Wasm is not necesary for cross-contract testing of Rust contracts;
+* Anton B says EVM is easy to implement, we should look at the 300 LOC project that implements EVM in EVM. Anton B to share a link;
+* Alexey F says there is a spec test for Wasm we need to make sure Wasmer singlepass backend passes it.
+
 ## 01.04.2020
 
 ### Agenda
