@@ -3,6 +3,20 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 10.04.2020
+* Eth event prover -- beginning of the next week;
+* Near result prover -- not implemented yet. (Important PR with fields reordering was merged by Alexey F);
+* Near light client -- waiting for the new spec from Alex S. (Depending on the spec will take from several days to several weeks);
+* Token example -- will reuse components from Eth event prover testing.
+* Cross-contract calls potentially built by community. 
+
+### Notes
+* Anton B: In the future, we will introduce additional smart contracts for IBC compatibility on Eth bridge;
+* Anton B: Discovered OpenZeppelin tool, OZ, for Ethereum contract compilation, deployment, etc. Will have with DevOps and will replace current bash scripts. Would need to loop in Bo Y or/and Vlad F to help with DevOps;
+* Anton B: Getting close to write test that certain Eth event was included in the block;
+* Anton B: Refactoring Bash scripts;
+* Anton B: Cross-contract calls might require additional security, like checking whether the call is performed through callback.
+
 ## 27.03.2020
 * Verifiers QA - March 25 - 29;
 * Near light client - plus 2-3 weeks. Still reading and researching spec;
