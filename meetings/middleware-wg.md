@@ -1,6 +1,23 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 15.04.2020
+
+### Agenda
+
+* Max Z: Fixing expensive tests, will start working on Eth-bridge DevOps. Anton B to share instructions on how to start the bridge;
+* Anton B: Eth bridge DevOps, problems with returning errors from smart contract. Plans to continue testing eth-prover;
+* Nikolay I: Finished with the voting app (DevX to massage it), now working on cost-estimation tool. Had to fix it first. Current plan to use QEMU to count actual number of CPU commands in user-level mode. Don't forget to disable caching in nearcore (see compilation flag);
+* Evgeny K: Helper functions for near-sdk-rs. Started working on combining lockup and vesting in one contract, make vesting an optional feature. Some questions on how to handle Illia P's staking contract API, mostly around voting and delegation. Voting design is unclear, because if there are many validators the function can just fail due to gas. Also working on the token factory, mostly done right now;
+* Alexey F: near-sdk-rs fixing checks for payable view functions. Wasmer update for nearcore;
+* Vlad F: Small items on RPC side. Some discussion on backwards compatibility with Vlad G, e.g. about passing u128 through u64. Probalby u64 will be soft-deprecated with u128 string. Working on the standalone runtime, looking at the dependencies.  using tools for dependency inspection. Discovered lots of issues with our dependencies, like different versions. Will try introducing check on CI that makes sure we don't have stuff like this.
+
+### Notes
+
+* Add password to Zoom links;
+* Alexey F: Not sure we need to store error content in the block, maybe we should just store the fact that error happened. It prevents us from improving on the debugging information;
+* Nikolay I: We need to include all contract dependencies into near-sdk-rs.
+
 ## 08.04.2020
 
 ### Agenda
