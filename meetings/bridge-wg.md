@@ -3,6 +3,14 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 17.04.2020
+* Eth event prover -- Anton B: some progress on DevOps, got stuck, needs help from Evgeny K. Has problems when bash script is composed of other bash scripts, the traps are not working when they are defined in multiple bash scripts.
+
+### Notes
+* Add nearup to npm;
+* FYI Max Z is working on bridgeup;
+* Anton B: Wrote script that extracts events from Ganache. Will extract proofs and use them for testing so that we don't need to relaunch. This will allow us to parallelize work on Eth prover fixes and DevOps;
+
 ## 10.04.2020
 * Eth event prover -- beginning of the next week;
 * Near result prover -- not implemented yet. (Important PR with fields reordering was merged by Alexey F);
