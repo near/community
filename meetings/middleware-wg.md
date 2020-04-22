@@ -1,6 +1,18 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 22.04.2020
+
+### Agenda
+
+* Vlad F: Finishing RPC fixes, working on dependencies (we have outdated deps and libs with duplicated functionality), had a sync with Willem and Alexey on runtime standalone. Re dependencies -- trying to figure out the high-level picture of the standalone runtime;
+* Alexey F: Added ExceptionCodes back. Storage code cleanup. Helped people in near dev chat. Removing actix from primitives;
+* Anton B: Testing Ethprover of bridge, lots of complexity with serialization on proofs. Close ot find and debug bugs in proof algorithm; Will take 1-2 days more to debug. Basically translating code written in Python into Rust. Moving tests from inside Wasm contract code into tests running against nodes, had to clean up devops for that;
+* Max Z: rainbowup --  still WIP. Organizing Wasm for Blockchain CG and session for RL1;
+* Evgeny K: Initial contracts. Refactored the repo, pushed lockup contract, then also pushed Bowen's contract. We have to redesign staking contract, because it takes non-const time per operation. Lockup contract is kinda done, in terms of integration with staking contract, but it does not verify the balances (e.g. when contract is terminated and balances cannot be moved). Trying to simplify voting contract. Max Z: We need some good documentation after we are finished with the code; Stefano is working dApp for staking/delegation (frontend for the staking contract). Also, working on the app -- WebRTC-based video conferencing app;
+* Nikolay I: Resurrected cost estimation app, lots of broken stuff. Attached QEMU, required writing plugin for QEMU. It can now measure costs in CPU instructions. Some operations are precise up to single CPU instructions. See pending PR. Also had to fix several bugs in QEMU emulator, resulting in reports and patches. Everyone else could take a look at it, there are some nuances with threading;
+* Willem W: Pick bugs in near-sdk-as. Set up proper publishing github publishing actions for the standalone-vm. Importing Evgeny's python scripts to JS;
+
 ## 15.04.2020
 
 ### Agenda
