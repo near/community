@@ -3,6 +3,16 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 24.04.2020
+
+Since Middelware Sync:
+
+* Anton B: Worked on slides for DeFi primitives demo. He tried to have a focus on DeFi aggregation. Currently working on: extracting proof, and deserializing ethereum structures in Near contract (some issues on this line: https://github.com/nearprotocol/near-bridge/blob/ethprover-test/ethprover/src/lib.rs#L113 . There are two different types of receipt serialization, one before Byzantine fork and one after). Some difficulties with reproducibility of commands on Ganache. After working on deserialization issues will work on proof issues;
+* Max Z: Rainbowup can do prepare, run, stop, clear for Near node and Ganache. Attaching relayers.
+
+### Notes
+* If there is a security issue in one of our libraries and we fix it we need to notify everyone who depends on our libraries.
+
 ## 17.04.2020
 * Eth event prover -- Anton B: some progress on DevOps, got stuck, needs help from Evgeny K. Has problems when bash script is composed of other bash scripts, the traps are not working when they are defined in multiple bash scripts.
 
