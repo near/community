@@ -1,6 +1,25 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 29.04.2020
+
+### High-level goals
+
+* Core contracts -- Evgeny K
+* Contract testing infra -- Vlad F, Willem W, Alexey F
+* Bridge -- Anton B, Max Z
+* Safe fees -- Nikolay I
+
+### Status report
+
+* Anton B: Solved problem with deserializing Ethereum structures. Working on Merkle Patricia Trie proofs, hope to finish it this week. Asked around whether anyone worked on it before;
+* Max Z: rainbowup sort of working. Should be usable to debug bridge by the end of this week + weekend.
+* Nikolay I: Wrote PR to replace fees, they now use multiple threads. Everyone should checkout the blog post https://nearhack3r.blogspot.com/2020/04/precise-gas-metering.html?spref=tw ! Interview with Richard D;
+* Evgeny K: core contracts. Staking + testing should be done this week. Lockup should be tested next week;
+* Alexey F: working on runtime standalone. Error handling was not properly propagated to nearlib. https://github.com/nearprotocol/nearcore/issues/2518 ;
+* Vlad F: Not much progress on standalone runtime. Cleanup of nearcore project overall, e.g. duplicate dependencies. Project restructuring. No outstanding RPC issues right now;
+* Willem W: Ported Evgeny's Python script for cross-contract testing to TS. Working with Sherif on AS education material and documentation. After prep for RL1 will return to runtime standalone. AssemblyScript Community Group meeting.
+
 ## 22.04.2020
 
 ### Agenda
