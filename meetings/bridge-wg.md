@@ -3,6 +3,30 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 01.05.2020
+
+### Progress
+* Pair programming with Misha. verify_trie_proof seems to be fixed. However it seems like not paths in that function are getting executed. Anton B is working on created more tests that excersize all paths.
+* Currently using index.js to print stuff to plug it in later into tests.rs;
+
+### Action items
+
+* Brush up the rainbowup Zenhub board
+* Extract various proofs from Mainnet and submit it to the EthProver to have proper tasting. The file called extract.js
+* Rework index.js into a testing service and use rainbowup.
+
+After this is done:
+* Anton B will continue working on NearClient. It is all about implementing the client spec (The borsh decoding should be working already);
+* For NearProver we need to decide what exactly we want to prove.
+
+* Should also rename ethbridge and nearbridge to *client;
+
+### Useful links for EthProver
+* https://github.com/ethereum/wiki/wiki/Patricia-Tree#example-trie
+* https://ethereum.stackexchange.com/questions/268/ethereum-block-architecture/6413#6413
+
+
+
 ## 24.04.2020
 
 Since Middelware Sync:
