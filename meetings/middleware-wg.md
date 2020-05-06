@@ -1,6 +1,30 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 06.04.2020
+
+### High-level goals
+* Prepare contracts for the audit -- Evgeny K, Mikhail K, Alexey F, Willem W.
+* Bridge -- Anton B, Max Z. Sync with Alex S.
+
+Slightly less urgent:
+* Blockers for Phase 1 (still time sensitive)
+
+Not super time sensitive:
+* Standalone runtime -- Alexey F, Vlad F, Willem W
+
+### Status report
+* Evgeny K: Staking pool contract, added owners method, can change staking key, added reward so that owner can receive fees. Deployed staking pool to betanet, and currently testing it with Stefano. Staking pool should be ready for the audit on Monday. Might need to simplify the staking pool for make it in time for Monday;
+* Anton B: Switched from EthProver. EthProver has some issues with validating nodes of the trie. Switched to NearClient, read already the spec of the Light Client. Updated all the structures that are Borsh deserialized. Partially implemented light client verification;
+* Alexey F: Working on the standalone runtime. Reviewing staking pool contract and its tests. Implemented view account and call method for the standalone runtime. Updated the issue of execution error contributing to the merkle tree;
+* Vlad F: Firefighting with explorer, domains, docs. Discussed design of the standalone runtime with Alexey F. Working on designing network indexer for explorer, and discussed it with Bogdan. Worked on issues with telemetry. Community support for RL1;
+* Max Z: Prepared with Wasm for Blockchain. DevOps with bridge, looking at the EthProver. Will probably repurpose open-ethereum code;
+* Bowen W: Issue with error handling (https://github.com/nearprotocol/nearcore/issues/2536) that needs to be fixed, needs help from Alexey F. Alexey F: issue needs to be more well-defined. Vlad F: We need to write down the specific problem that Applayer has and solve it. There is also issue with sending lots of staking transactions. We need to brainstorm the solution.
+
+### Notes
+* Evgeny K. Corner cases need to be tested through standalone-runtime because it gives control through context;
+* Max Z needs to fix issue about deleting account.
+
 ## 29.04.2020
 
 ### High-level goals
