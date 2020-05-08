@@ -3,6 +3,23 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 08.05.2020
+
+### High-level goals
+* Anton B: NearClient testing -- we need to extract light client borsh objects and write tests with them;
+* Anton B: NearProver -- next step;
+* Missing components from the DevOps:
+  * Productionize it;
+  * Connect NearClient?
+  * There is a Web3 bug.
+* EthProver -- fixing on Max Z;
+
+
+### Progress
+* (copied from Middleware Sync) Anton B: Switched from EthProver. EthProver has some issues with validating nodes of the trie. Switched to NearClient, read already the spec of the Light Client. Updated all the structures that are Borsh deserialized. Partially implemented light client verification;
+
+AntonB: Updated the code to the new light client spec, following the spec. Rewrote some deserialization code. Added ability to calculate hash of raw serialized bytes. Wrote light client verification code, but we cannot test yet.
+
 ## 01.05.2020
 
 ### Progress
