@@ -1,7 +1,7 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
-## 15.04.2020
+## 15.05.2020
 
 ### High-level goals
 
@@ -52,7 +52,7 @@ Not super time sensitive:
   * Tests -- 1 day for tests;
   * Spec -- 1 day for spec.
 
-## 06.04.2020
+## 06.05.2020
 
 ### High-level goals
 * Prepare contracts for the audit -- Evgeny K, Mikhail K, Alexey F, Willem W.
