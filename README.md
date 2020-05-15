@@ -9,8 +9,7 @@ Below you can find a list of resources to help you get started.
 ### Communication Channels
 
 * [Telegram Announcement Channel](https://t.me/cryptonear)
-* [Discord Community Channel](https://discord.gg/t5KGGG)
-* [Open NEAR Slack](https://join.slack.com/t/near-community/shared_invite/zt-dqpw6l4l-gMKRRgBsgf92_UkzmyXGWg)
+* [Discord Community Channel](https://discord.gg/8NBNhav)
 
 And sign-up to our [newsletter](https://near.org/newsletter/) to receive all updates summarised right to your inbox.
 
