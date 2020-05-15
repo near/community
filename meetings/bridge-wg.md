@@ -3,6 +3,20 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 15.05.2020
+
+* Anton B: Two P0 tasks -- bonds/deposits of the relayers.  Maybe we can change bonds because right now the delay is one hour. Max Z: suggests to go with the simplest design possible. Anton B: making it work in such way that multiple headers can be submitted in a row is easy, but let's keep the simple one for now. We have two constants now: lock duration and one lock eth ammount. Second P0 task -- implement verification of elliptic curves that do not exist in Solidity ATM, ED25519. There were a lot of parts missing for signatute verification. Needs SHA512 is used internally for ED25519 verification. Anton B already knows where to get SHA512 implementation, see smartpool implementation.
+
+Anton B: there is a bug that implementation does not borshify. Bowen W: Unfortunately the change is the protocol level change. TODO: File issue for adding borsh.
+
+* Max Z: Alex S found bugs in proof extractor and Eth2NearProver. It seems like these are all bugs, but we need to polish some code around nibbles and paths in extension/leaf. Going to be working on tests and CI;
+* Bo Y: productionized some devops, e.g. added docker.
+
+### Notes
+
+* Anton B and Max Z: Noticed some strange behaviour when trying to get `LightClientBlockView` for block indices far from the head and close to genesis. TODO: File issue;
+* Anton B need to pair program ED255129 and SHA512 verification in Solidity see https://github.com/near/rainbow-bridge/issues/42 ;
+
 ## 08.05.2020
 
 ### High-level goals
