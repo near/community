@@ -1,6 +1,57 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 15.04.2020
+
+### High-level goals
+
+Urgent:
+* Precise and good fees -- Nikolay I. Done;
+* Prepare contracts for the audit -- Evgeny K, Mikhail K, Alexey F, Willem W.
+* Bridge -- Anton B, Max Z, Alex S, Evgeny Kapun.
+
+Slightly less urgent:
+* Blockers for Phase 1 (still time sensitive)
+
+Not super time sensitive:
+* Standalone runtime -- almost done, except integrating epoch manager.
+
+### Status report
+* Nikolay I: Finshing the fees PRs + migration scripts. Discussions on the future of Wasm VM. Will migrate Wasmer to 0.17;
+* Vlad F: RPC issues, runtime PR reviews. Working on publishing standalone runtime. We would need to publish crates like store, and primitives;
+* Anton B: Neat2EThClient (solidity contract) -- challenges + lockup of bonds. Near2EthProver. Bowen W has prepared modification to our header+lightclient that was neccessary for Near2EthProver;
+* Evgeny K: Added validation of staking keys to the runtime, that prevents locking funds of people in the staking pool -- exploit that was found by Mikhail K. Done with staking pool. Evgeny K has an idea to create a staking pool factory for people participating in Stake Wars. Working on lockup contract. Removing multiple access keys from the lockup contract, only one key now. Added special key for staking pool usage only;
+* Alexey F: Added patches to the standalone runtime. Tests for the staking pool. Reviewed upgradability proposal. Reviewed PRs to contract tests by Willem W. Trying to understand state machine of the epoch manager. We need to ask either Mikhail K or Bowen W to write out the state machine;
+* Willem W: Helped with tests for the staking pool contract. Tests for the fun token. Helped review the spec of the staking pool. Now working on the spec of lockup contract;
+* Max Z: debugging Eth2NearProver. Communicating gitcoin security and other bounties with applicants.
+
+### Notes:
+* 15 min meeting about receipt congestion next week;
+* We need to ask either Mikhail K or Bowen W to write staking state machine spec;
+* Alexey F suggests to fuzz test staking pool and make sure everyone can withdraw money from staking pool after it was called with a bunch of random staking calls.
+* Alexey F is concerned about accumulation of rewards in the staking pool. Bowen W replies that reward can not go negative, but stake can decrease. Stake cannot decrease until we get slashing and because staking pool is upgradable this is not a concern.
+* Bowen W: we need to price epoch manager host functions. Max Z: let's overshoot and discuss offline. Later integrate it into Nikolay's tool.
+* Vlad F: Onboarding Bogdan to work on network indexer, which is a new crate for nearcore.
+
+### Initial contract
+* Fun token:
+  * Tests -- about a day + half a day. Assign to Willem; 
+  * Spec -- was already done. About a day;
+* Staking pool:
+  * Tests -- 2-3 days already spent (3 people). Most of the stuff is done;
+  * Spec -- 2-3 days already spent (included generic staking pool spec). 2 people. Done;
+* Lockup contract:
+  * Tests -- no tests yet. Would take longer than staking pool, because it needs to integrate with staking pool, voting contract and whitelist. (We can do voting contract next, blocked by exposing epoch manager data in PR); Bowen W will take by EOD to expose neccessary stuff for the voting contract. Evgeny K: 5 days for 3 people worth of work;
+  * Spec -- Willem W will be working on it. 2-3 days of work;
+* Voting contract:
+  * Implementation -- hard to test without host function. 1-2 days more after host function are exposed;
+  * Tests -- 5+ days for testing;
+  * Spec -- Bowen W: mostly done, some discussion is needed. 1-2 more days.
+* Whitelist contract:
+  * Implementation -- about 1 day 1 person for simplest implementation.
+  * Tests -- 1 day for tests;
+  * Spec -- 1 day for spec.
+
 ## 06.04.2020
 
 ### High-level goals
