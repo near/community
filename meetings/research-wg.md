@@ -3,6 +3,10 @@ Some proposed discussion topics:
 * Upgradability;
 * Non-increasing transaction nonces;
 
+# Tue May 18 2020
+### Proposed discussion topics:
+* Receipt and transaction congestion attack both in multi-sharded and single-sharded system.
+
 # Fri May 8 2020
 ### Some proposed discussion topics:
 * With the current shards assignment logic and implementation, a block producer with a large stake will end up assigned to all the (or most of the) shards, and will run all those shards on a single node. Assuming network or storage are the bottleneck, this will end up making the system as a whole still go with the speed of a single instance.
