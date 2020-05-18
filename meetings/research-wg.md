@@ -1,4 +1,4 @@
-# Tue May 18 2020
+# Tue May 19 2020
 ### Proposed discussion topics:
 * Receipt and transaction congestion attack both in multi-sharded and single-sharded system.
 
