@@ -1,6 +1,6 @@
 # Tue May 19 2020
 ### Proposed discussion topics:
-* Receipt and transaction congestion attack both in multi-sharded and single-sharded system.
+* Receipt and transaction congestion attack both in multi-sharded and single-sharded system. Issue: https://github.com/nearprotocol/NEPs/issues/67
 
 # Tue May 12 2020
 ### Proposed discussion topics:
