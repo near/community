@@ -2,6 +2,9 @@
 ### Proposed discussion topics:
 * Receipt and transaction congestion attack both in multi-sharded and single-sharded system. Issue: https://github.com/nearprotocol/NEPs/issues/67
 
+### Quick recap:
+See https://github.com/nearprotocol/NEPs/issues/67 for the overview of what was dicussed re: congestion attack, and further discussion.
+
 # Tue May 12 2020
 ### Proposed discussion topics:
 * Upgradability;
