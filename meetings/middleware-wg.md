@@ -1,6 +1,57 @@
 # Middleware Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Middleware sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 20.05.2020
+
+### High-level goals
+Urgent:
+* Prepare contracts for the audit -- Evgeny K, Mikhail K, Alexey F, Willem W.
+* Bridge -- Anton B, Max Z, Alex S, Evgeny Kapun.
+
+Slightly less urgent:
+* Blockers for Phase 1 (still time sensitive)
+
+Not super time sensitive:
+* Integrating epoch manager with standalone runtime.
+
+### Bridge
+* Anton B: Fixed block producer hash verification. Currently implementation of light client in nearcore does not match the spec. Alex S is working on making it match;
+* Anton B: Alex S wrote new version of light client specification, Anton B updated the contact code, but did not merge it yet;
+* Max Z: almost attached the tester to Eth2NearProver. Will get rid Python in rainbowup, replace it with JS. Also, need to finish attaching NearRelayer to rainbowup.
+
+#### Blockers
+* The spec needs to match nearcore so that we can start testing NearClient for real. Need to sync with Alex S;
+* Ask Alex S why his fix of receipts does not use the state root;
+* ED25519. Anton B and Evgeny Kapun work on implementation. Evgeny Kapun is writing JS generator of Solidity code. The code seems to be almost working, approx 80% implemented. Need to sync with Evgeny Kapun;
+* Nearcore RPC limit on query params prevents submission of the proofs.
+
+### Core contracts
+* Staking pool is done. Security audit company done reviewing it and they found critical issue in nearcore;
+* Lockup contract implementation is done. Working on tests. Alexey F working on integration tests using stubs. Evgeny K is finishing the spec on how all of it works. Once it is done we will have another round of reviews and will send it tomorrow to the security audit company. Will also ask Mikhail K to review it. Logic is simpler now, since we delegated a lot of complexity to the staking pool;
+* The next contract is whitelist contract. Foundation will be able to approve factories too;
+* Voting contract;
+
+### Status Report
+* Alexey F: Working on lockup contract tests. Helped Anton B with debugging of the NearClient, related to endianness;
+* Anton B: Blocked on the nearcore mismatch with the light client spec. Working on ED25519 with Evgeny Kapun. Finished some version of NearClient (that matches the current spec). Started migrating to the new version, but blocked by not having test data;
+* Evgeny K: Lockup contract testing and spec. Addressing the comments from the security audit company;
+* Bowen W: Adding epoch manager to the host functions. In the voting contract added the context to the voting result. Addressing vulnerability find in nearcore;
+* Vlad F: Cleanup and breaking apart the primitives crate. Unboarded Bogdan to network indexer and fuzz testing for JSON RPC;
+* Nikolay I: Upgrading Wamser to 0.17.0 and relevant changes to the error handling. Required upgrading Rust toolchain for nearcore. Familiarizing with Wasmer source code, especially around errors, so that we have good understanding of it.
+
+### Contract runtime
+Max Z and Nikolay I discuss this project and its scope. Will be centered around compilers (Wasm->native and Rust/AS/etc->Wasm), code preparation tools, language specific stuff.
+
+### Notes
+* Vlad F: Stumbled upon usage of gemalloc in primitives and it looked weird. In the past Mikhail K measured that this created improvement, but now we can measure the difference using CPU-precise params estimator. Surpirisingly, Nikolay I and Vlad F have different results on host functions that are not storage.
+* Vlad F: We need to pin the exact Wasmer version;
+* Bowen W: We need to make sure our protocol does not depend on Wasmer:
+  * Do not have specific error payload in the protocol (brought by Alexey F);
+  * Code prepartion tools, like gas injection are pwasm-utils;
+  * The way we treat their erros is also generic code;
+  * We need to make sure Wasmer correctly implements Wasm spec (We need to double check these tests, because they forked them from standard Wasm spec tests). Note from Alexey F: Wasm spec can actually be updated. We need to make sure they are in sync with updated. We also need to make sure they run spec tests for the singlepass backend (we need to check it);
+* Nikolay I: We need to have a strategy on what we do if something in Wasmer breaks.
+
 ## 15.05.2020
 
 ### High-level goals
