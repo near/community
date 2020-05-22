@@ -25,7 +25,7 @@ Led and executed by Anton B.
 * Create a script that does end-to-end transfer of a token from Eth to Near -- Max Z;
 * Fix Near2EthClient following the updated spec -- Anton B (ETA 1-2 days, need to use this branch now https://github.com/nearprotocol/nearcore/pull/2686);
 * Near2EthProver following the spec -- Anton B (ETA 1-2 days, assuming there is test data);
-* Implement proof extractor as an RPC endpoint -- Max Z (or Bowen W or Vlad F).
+* Implement proof extractor as an RPC endpoint -- Bowen W (RPC part is done here: https://github.com/nearprotocol/nearcore/issues/2712).
 
 ### Nit
 * Rename EthClient methods to block_hash_unsafe and block_hash.
