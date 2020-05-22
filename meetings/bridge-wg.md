@@ -21,7 +21,7 @@ Led and executed by Anton B.
 * Solidity contract locker (Anton B to implement and give to Max Z) -- Anton B;
 * LightClientBlockView verification (without signatures) in Near2EthClient -- Anton B;
 * Validate ED25519 using two blocks from two sequential epochs from Near RPC -- Anton B;
-* Add prev epoch headers into merkle tree of LightClientBlockView -- Bowen W;
+* Add prev epoch headers into merkle tree of LightClientBlockView -- Bowen W (https://github.com/nearprotocol/nearcore/issues/2711);
 * Create a script that does end-to-end transfer of a token from Eth to Near -- Max Z;
 * Fix Near2EthClient following the updated spec -- Anton B (ETA 1-2 days, need to use this branch now https://github.com/nearprotocol/nearcore/pull/2686);
 * Near2EthProver following the spec -- Anton B (ETA 1-2 days, assuming there is test data);
