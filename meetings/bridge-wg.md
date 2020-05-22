@@ -3,6 +3,33 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 22.05.2020
+### Discussion of contract lockers
+* Anton B to write contract locker in Solidity example for Max Z.
+
+
+### Status Report
+* Anton B is blocked on https://github.com/nearprotocol/nearcore/pull/2686
+* Anton B and Evgeny Kapun had to update ED25519 implementation to accept 41 bytes. Anton B also verified that input to ED25519 is fed correctly;
+* Anton B had to convert JSON coming from Near RPC to JSON;
+
+
+### Notes
+* Max Z: we need to check everything but the signature verification upon accepting block into NearClient;
+
+### Missing components
+* Solidity contract locker (Anton B to implement and give to Max Z) -- Anton B;
+* LightClientBlockView verification (without signatures) in Near2EthClient -- Anton B;
+* Validate ED25519 using two blocks from two sequential epochs from Near RPC -- Anton B;
+* Add prev epoch headers into merkle tree of LightClientBlockView -- Bowen W;
+* Create a script that does end-to-end transfer of a token from Eth to Near -- Max Z;
+* Fix Near2EthClient following the updated spec -- Anton B (ETA 1-2 days, need to use this branch now https://github.com/nearprotocol/nearcore/pull/2686);
+* Near2EthProver following the spec -- Anton B (ETA 1-2 days, assuming there is test data);
+* Implement proof extractor as an RPC endpoint -- Max Z (or Bowen W or Vlad F).
+
+### Nit
+* Rename EthClient methods to block_hash_unsafe and block_hash.
+
 ## 15.05.2020
 
 * Anton B: Two P0 tasks -- bonds/deposits of the relayers.  Maybe we can change bonds because right now the delay is one hour. Max Z: suggests to go with the simplest design possible. Anton B: making it work in such way that multiple headers can be submitted in a row is easy, but let's keep the simple one for now. We have two constants now: lock duration and one lock eth ammount. Second P0 task -- implement verification of elliptic curves that do not exist in Solidity ATM, ED25519. There were a lot of parts missing for signatute verification. Needs SHA512 is used internally for ED25519 verification. Anton B already knows where to get SHA512 implementation, see smartpool implementation.
