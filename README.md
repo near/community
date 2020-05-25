@@ -1,15 +1,16 @@
 # NEAR Community
-> Coordination repository of NEAR Community
+> Coordination repository for the NEAR Community
 
-The content of this repository, the issue tracker, and the pull requests are used to coordinate the efforts towards making Near Community a great place.
-Below you can find a list of resources to help you get started.
+The content of this repository, the issue tracker, and the pull requests are used to coordinate the efforts towards making the NEAR Community a great place.
+
+Below, you can find a list of resources to help you get started.
 
 ## Quick Links
 
 ### Communication Channels
 
 * [Telegram Announcement Channel](https://t.me/cryptonear)
-* [Discord Community Channel](https://discord.gg/8NBNhav)
+* [Discord Community Channel](https://near.dev)
 
 And sign-up to our [newsletter](https://near.org/newsletter/) to receive all updates summarised right to your inbox.
 
@@ -29,10 +30,11 @@ We currently host the following meetings:
 * [NEAR Blog](https://near.org/blog/)
 * [NEAR YouTube Channel](https://www.youtube.com/channel/UCuKdIYVN8iE3fv8alyk1aMw)
 * [NEAR Technical Resources](https://near.org/technology/)
+* [RFP repository](https://github.com/near/rfp) where grant-worthy projects are listed.
 
 ### Developer Resources
 
-If you just starting to learn about Near Protocol then please read our [documentation](https://docs.nearprotocol.com/).
+If you just starting to learn about NEAR Protocol then please read our [documentation](https://docs.nearprotocol.com/).
 To get inspiration, have a look at our [example projects](http://examples.nearprotocol.com/).
 
 If you have any questions, please head over to our [Discord server](https://discord.gg/t5KGGG) or our [NEAR Slack](https://join.slack.com/t/near-community/shared_invite/zt-dqpw6l4l-gMKRRgBsgf92_UkzmyXGWg).
@@ -44,7 +46,8 @@ If you have any questions, please head over to our [Discord server](https://disc
 We love contributions!
 
 *  Check-out our [contribution guide and examples](https://docs.nearprotocol.com/docs/contribution/contribution-overview)
-*  Organise events, create content or code tutorials as part of our [contributor program](https://nearprotocol.com/contributor/)
+*  Organise events, create content or code tutorials as part of our [Contributor Program](https://nearprotocol.com/contributor/)
+* Coming soon: Guild Program
 *  Look for the starter issues on [GitHub](https://github.com/nearprotocol/)
 
 ### Community Ideas 
@@ -65,13 +68,7 @@ If you came across vulnerabilities in our code, or you want to flag other securi
 
 ## Who we are?
 
-Generally, we differentiate between three entities: The NEAR Protocol, the Near Foundation and Near Inc.
-
-#### The NEAR Protocol
-A permissionless, Proof-of-Stake blockchain protocol that anyone can access, add transactions to, or read from. The public NEAR blockchain is an instantiation of the reference code at http://github.com/nearprotocol/nearcore, but theoretically, this repo could be forked and deployed as a separate chain, as much as many protocols have done to build upon the core Bitcoin code.
+Learn more about the NEAR Protocol in [the Beginner's Guide](https://near.org/blog/the-beginners-guide-to-the-near-blockchain/). At a high level, NEAR is a permissionless, Proof-of-Stake blockchain protocol that anyone can access, add transactions to, or read from. The public NEAR blockchain is an instantiation of the reference code at http://github.com/near/nearcore, but theoretically, this repo could be forked and deployed as a separate chain, as much as many protocols have done to build upon the core Bitcoin code.
 
 #### The NEAR Foundation
-A non-profit foundation headquartered in Switzerland, and is responsible for contracting protocol maintainers, funding ecosystem development, and shepherding core governance of the protocol.
-
-#### Near Inc
-A US-based software research and development company that did much of the early development of the protocol and its tooling. While Near Inc does not own or run the NEAR Protocol (which is decentralized), it continues to propose changes to the reference implementation codebase as one of multiple third-party entities performing R&D work for the protocol.
+A [non-profit foundation](https://near.org/blog/introducing-the-near-foundation/) headquartered in Switzerland which is responsible for contracting protocol maintainers, funding ecosystem development, and shepherding core governance of the protocol.
