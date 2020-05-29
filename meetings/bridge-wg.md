@@ -3,6 +3,33 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 29.05.2020
+
+### Summary
+Things to do:
+* Verifier of transaction outcomes on Solidity -- Anton B;
+* ETH->Near transfer of ERC20 on mainnet -- Max Z;
+* https://github.com/nearprotocol/nearcore/issues/2712 -- Bowen W;
+* There are actually some bugs in our ED25519 implementation according Evgeny Kapun. E.g. Anton B found a bug where zeroed pks always pass verification;
+* Bowen W and Anton B to discuss offline the header hash mismatch.
+
+DevOps:
+* Sandi Replacing Python code with JS. Revisiting design: we will use pm2 and docker compose to launch services. Bo Y: We should not actually use docker compose, see discussion here: https://github.com/near/rainbow-bridge/issues/58 . Sandi already sent a PR with refactoring and moving some logic. Next week it should be done;
+* Bo Y: CI tests that excersize Eth2NearClient. Bo Y figured out how to do it, but haven't actually implemented it yet.
+
+### Missing components
+* **Solidity contract locker (Anton B to implement and give to Max Z) -- Anton B.** DONE for ETH->NEAR transfer;
+* **LightClientBlockView verification in Near2EthClient -- Anton B.** Just done by Anton B. There was a bug in light client spec. There are still problems with signature verification, valid signatures are returned as invalid. Need help Evgeny Kapun and maybe Alex S or Bowen W, see below.
+  * **Validate ED25519 using two blocks from two sequential epochs from Near RPC -- Anton B**. Not done yet. Bowen W can help find the exact code that constructs our signatures;
+* **Add prev epoch headers into merkle tree of LightClientBlockView -- Bowen W (https://github.com/nearprotocol/nearcore/issues/2711)**. Done!
+* **Create a script that does end-to-end transfer of a token from Eth to Near -- Max Z**. The janky script is working, need to make it look more usable and plan to do transfer from ETH mainnenet to Near testnet. Bowen W to give Max Z some testnet moneyz;
+* **Fix Near2EthClient following the updated spec -- Anton B (ETA 1-2 days, need to use this branch now https://github.com/nearprotocol/nearcore/pull/2686)** DONE!;
+* **Near2EthProver following the spec -- Anton B (ETA 1-2 days, assuming there is test data)**. Need explanation on how to verify transaction outcome. Need to get some test data. Bowen W: wrote an e2e test that extracts and verifies proof for transaction outcome. There is a Python code that can be followed to implement Solidity. Bowen W: to send code pointers;
+* **Implement proof extractor as an RPC endpoint -- Bowen W (RPC part is done here: https://github.com/nearprotocol/nearcore/issues/2712)**. Implementation is done, needs Alex S and Vlad F reviews. It is a 1000 LOC change;
+
+### Notes
+* Anton B: unclear whether the height should be consecutive. Bowen W: The height must be consecutive;
+
 ## 22.05.2020
 ### Discussion of contract lockers
 * Anton B to write contract locker in Solidity example for Max Z.
