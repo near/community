@@ -7,6 +7,23 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 05.06.2020
+
+### High-level focus
+* Evgeny K: Fixed allowance for the access keys, now they are refunded the same way we refund the account;
+* Evgeny K: Started working on dynamic gas. Started adding a function that computes pessimistic gas price, unfortunately it involves rational numbers that need to be taken to the power, decided to try "big rational" library. Lots of checked arithmetics. Limiting the depth of execution to 32. This needs to be communicated to DevX team. We should make sure the rounding is easily explainable in the spec and reproducible in other languages;
+* Security vulnerability about multiple account deletions in one batch action needs to be fixed in Phase 1;
+* Million proposal attack needs to be handled partially in the transaction runtime -- Bowen W (Avoiding copying proposal in epoch manager needs to be done. Threshold for minimal stake, deduplicating proposals in the runtime is already done);
+* Bowen W asked Mikhail to write spec for the state.
+
+### Notes:
+* Bowen W: At the beginning of the epoch all validators have their accounts updated, this seems to be slow;
+* Max Z: Gas price overflow. Is it a problem? Evgeny K: We can have max gas price above which we do not inflate.
+
+### Action items
+* Communicate the prepaid gas changes to the DevX team;
+* Introduce max gas price;
+
 ## 29.05.2020
 
 ### High-level focus
