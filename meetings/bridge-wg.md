@@ -3,6 +3,29 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 05.06.2020
+
+### Status Update
+* **Verifier of transaction outcomes on Solidity -- Anton B** -- almost completed, will dedicate few hours over the weekend to finish it up. Asked Bowen W to provide example of the proof, there are some missing items in the arrays of the proof. Bowen W: It is empty because we have one shard. Anton B: Currently skipping deserialization of this;
+* **ETH->Near transfer of ERC20 on mainnet -- Max Z** -- done. Found a bug in prover;
+* **https://github.com/nearprotocol/nearcore/issues/2712 -- Bowen W** -- nearcore is implemented, but near-api-js part is missing;
+* **There are actually some bugs in our ED25519 implementation according Evgeny Kapun. E.g. Anton B found a bug where zeroed pks always pass verification.** -- bugs fixed by Evgeny K and Anton B has updated the code. Some new problems -- this made our contract deployment more than 10M gas. So we need to deploy this library separately. It uses different linking on Solidity in contrast to regular contract call. It might produce some problems in the future. Maybe we can make it a standalone smart contract;
+* **Bowen W and Anton B to discuss offline the header hash mismatch.** -- was resolved. Spec needs to be fixed, not sure if Alex S has merged it yet.
+
+DevOps:
+* Sandi -- replacing Python with JS. Implemented the start comment, addressed Bo's and Max's comments. Relay fails on "contract is already initialized". Adding `ethbridge0` to the code broke it. Got everything running with pm2 -- proper process management, nearup, ganache, relay all run separately. Next thing is to split the start command. Also need to expose hardcoded constants into args;
+* Bo -- Implemented block dumping and using these blocks in Rust tests. Max Z: Let's dump these blocks to S3 and then run tests against them on CI. Next step: dump proofs and feed it to the prover;
+
+
+### Action items
+* Make sure bridge works with many shards.
+* Make sure the fix to the lightclient spec is merged.
+* Anton B: Need to call ED as a separate contract rather than a linked library.
+
+### Notes
+* Anton B: See feedback about cross contract API, specifically about separatign bindgen-level stuff;
+* It is okay for Solidity contract to record used events forever. It is a common pattern, e.g. some order books record indefinitely such information.
+
 ## 29.05.2020
 
 ### Summary
