@@ -20,6 +20,25 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 05.06.2020
+
+### Current focus
+* Adding another runtime -- Wasmtime to check consistency of Wasm execution. Nikolay I had a lot of progress prototyping binding Wasmtime with our node. Unfortunately, there is a critical bug in Wasmtime which prevents of calling our host functions. Wasmtime can only handle signed types in the their interface, while we use unsigned types. The integration seems to be feasible, so far. We need to understand how to do arguments passing and return values handling. As a side effect we are making our contract runtime Wasmer agnostic, e.g. we are not importing Wasmer dependencies.
+* Cost estimation of contract invocation based on the contract size (see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/issues/nearprotocol/nearcore/2778);
+* Nikolay I finished FAQ for contract runtime. Currently blocked by Max Z.
+
+### Status update
+* Nikolay I: Discussed with Willem how to split their current work items.
+* Willem W: Pushed changes to aspect. Met with DevX team and brainstormed various projects we can set bounties for, e.g. add `include_bytes` into AssemblyScript. Started writing issues for the bounties and started looking into adding the fee.
+
+### Note
+* Evgeny K: Wasmer actually casts unsigned integers to signed behind the scenes, btw;
+* Nikolay I: Wasmer thinking about providing interface to wrap other runtimes consistent with their interface.
+* Alexey F: How about fusing Wasmer and Wasmtime and run both for each contract execution? Nikolay I: We might run it at a special mode. We might not even take a hit on TPS because it is very parallelizable.
+* Willem W: Can we run V8 safely? Nikolay I: He might be the most familiar with V8, but it might not be easy to embed.
+* Nikolay I: We should fuzz these machines. Max Z: We can repurpose fuzzers that some security audit companies provided for us.
+* Bowen W: Bowen talked about contract migration with Dev X. The problem statement: user updates the contract code and they want to continue using the old state. Max Z: We might solve it by having rigorous best practices. Alexey F: We can constraint a bunch of stuff on near-sdk level. Evgeny K: We might do some work on near-sdk, e.g. we can include version of the contract into the key that we use to store the contract state. Nikolay I: Overall it might be hard to automate, because the translation is semantic in many cases.
+
 ## 29.05.2020
 
 * Work group goals:
