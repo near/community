@@ -3,6 +3,17 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 12.06.2020
+
+### Current focus
+* Fixing Near2EthProver -- Anton B needs help with from Bowen W. The code is pushed into master, you can run `yarn test` to see test that fails on verification of the proof. Bowen W kindly agreed to help, and Max Z will also look into it;
+* DevOps:
+  * Bo Y -- wrote eth header dump, and added Rust test for CI that checks it. Added prover tests too. Then added other test for CI. Max Z: suggestion to focus on client and prover, rather than fun token because it was already security audit reviewed.
+  * Sandi -- implemented start/stop commands. Started working on the config that Max Z took over. Currently working on Dockerization. Dockerized ganache and near node (but nearup sometimes fails). It is not clear how to pass config.json file to eth-relay, maybe docker image needs to grab it on build.
+  * Max Z -- finishing the config, will also look into prover issue, will add near-relay and init-eth-contracts.
+  
+Let's aim for finishing prover, devops, and docs until next EOW and pass it to security audit companies.
+
 ## 05.06.2020
 
 ### Status Update
