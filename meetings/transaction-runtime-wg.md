@@ -7,6 +7,14 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 12.06.2020
+
+### Status report
+* Evgeny K: Created a dynamic gas PR. The idea is that we estimate the max number of blocks the transaction can last and try to limit this number to 64 blocks. Then we have an inflation coefficient slightly higher than the actual inflation gas price coefficient and we strictly use the price of the final block (instead of integrating an exponent). This will break some stuff, e.g. ExecutionOutcome. ExecutionOutcome returns that amount of gas that was burnt, but does not report the price at which the gas was burnt. Stuff gets complex when actual gas price on the block gets higher than pessimistic gas price, Evgeny K will update the spec;
+  * Interesting side effect of the pessimistic gas pricing -- even simple transfers will generate gas refund. We might need to recompute the fees with the new logic -- need to sync with Nikolay I.
+* Bowen W: Fixed gas price possible overflow by adding a limit;
+* Alexey F: Added proposal to not validate actions before they get into the chunk.
+
 ## 05.06.2020
 
 ### High-level focus
