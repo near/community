@@ -20,6 +20,18 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 12.06.2020
+
+### Status report
+* Willem W: Added two new fees to the config: cost of loading in the contract, cost of compiling the contract. Max Z: suggestion: base cost of compilation/loading, cost of compilation/loading per byte;
+* Nikolay I: Experimented with adding Wasmtime, had some issues with host functions. Max Z: AFAIK Nikolay I was able to work around the lack of unsigned numbers in Wasmtime.
+* Willem W: Finally tied version of AssemblySript to near-sdk-as. We will now better reproducibility for the contracts. Batch promises were added. We currently have UnorderedMap (no specific order guarantees, because of the internal swapping). We will have OrderedMap (based on AVL). Max Z: Suggestion, let's have all collections that do not go into near-sdk-* in separate library/crate. Vlad F: let's have AssemblySript-like Map in near-sdk-rs, instead of direction operations with storage.
+* Vlad F: There was a community discussion of the Debug trait in near-sdk-rs, that prevents people from autoimplementing Debug on user-defined types. Unfortunately, for collections Debug will fetch all items which is very expensive.
+* Bowen W: there is a discrepancy between near-sdk-rs and master node.
+
+Discussed adding releases and change log for: near-sdk-rs, near-sdk-as, borsh, runtime.
+
+
 ## 05.06.2020
 
 ### Current focus
