@@ -1,6 +1,29 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 12.06.2020
+
+## Current focus
+
+* Mostly working on JSON RPC, not changing it. Bohdan finished fuzzing, we have a framework in place, merged into master. Identified some issues and inconsistencies. Fuzzing did not reveal any bugs or security issues, just inconsistencies, like returning empty string instead of an error. Bohdan has created all issues on github and we will work on them in order, they are all P2.
+* Redesigning AccountId type redesign, previously it was just type alias of String, and it was not self-validating. Fuzzer revealed that we don't have validation in place for many RPC endpoints. Vlad F believes it is possible to craft malicious PRC request and exploit it somehow.
+* Vlad F is also working on Rozetta RPC, nothing to merge yet.
+* Bohdan is working on the network indexer. Bohdan has implemented storing of the transactions. Had some issues with missing receipts, so decided to use receipts as a central data item. Currently is working on storing receipts in the database, with actions and all accompanying data.
+
+## Notes
+* Vlad F, Bohdan and Max Z discussed implementing sequence diagram for receipts;
+* Bowen W: we need to double check that access key refund still has sender as "system". Something to sync with Evgeny K;
+
+## Discussing receipts
+contract A {
+  B.f1().then(C.f2())
+}
+
+Alice-->A
+A-action->B
+A-action->C (but also wait for the data)
+B-data->C
+
 # 05.06.2020
 
 ## Current focus
