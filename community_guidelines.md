@@ -54,3 +54,4 @@ By being part of the NEAR community, we hope you will not just adhere to these g
 Thank you for your participation and understanding.  Let's build a great community together!
 
 -----
+*These guidelines may be updated from time to time. If you have specific comments, please bring them up in chat or via filing an issue.*
