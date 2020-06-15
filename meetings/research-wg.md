@@ -1,3 +1,30 @@
+# Tue June 9 2020
+
+### Quick recap
+
+We discussed two topics:
+
+1. Michael presented a proposal to switch from a model (a) in which we assign seats to participants who staked, such that each seat is backed by an equal stake, and then uniformly sample block producers and chunk producers uniformly to a different model (b) in which there's no concept of a seat, and we use weighted sample to sample block producers. We discussed the implications for the system.
+
+2. Then Eugene presented a problem with nonces that results in transactions dropped, and we discussed possible alternatives.
+
+# Tue June 2 2020
+
+### Quick recap
+
+Alex S presented an overview of how syncing works today. The existing syncing has several problems:
+
+1. The state machine is pretty complex;
+2. Blocks are downloaded one by one today due to the necessity to download chunks before the block can be applied;
+3. Headers are pretty large, and once the chain is sufficiently long, just storing the header can be very resource-consuming.
+
+We discussed a new proposed approach, that leverages the changes in the protocol (in particular, the notion of finality) since the syncing code was introduced, has a significantly simple state machine, and addresses the issues above.
+
+# Tue May 26 2020
+
+### Quick recap:
+Continued the discussion of the congestion attack. 
+
 # Tue May 19 2020
 ### Proposed discussion topics:
 * Receipt and transaction congestion attack both in multi-sharded and single-sharded system. Issue: https://github.com/nearprotocol/NEPs/issues/67
