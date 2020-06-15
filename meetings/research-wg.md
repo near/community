@@ -1,3 +1,9 @@
+# Tue June 16 2020
+
+### Proposed topics
+
+Bitcoin bridge.
+
 # Tue June 9 2020
 
 ### Quick recap
@@ -9,6 +15,8 @@ We discussed two topics:
 2. Then Eugene presented a problem with nonces that results in transactions dropped, and we discussed possible alternatives.
 
 # Tue June 2 2020
+
+[Recording](https://www.youtube.com/watch?v=9UmUmG1-5H4)
 
 ### Quick recap
 
@@ -22,10 +30,15 @@ We discussed a new proposed approach, that leverages the changes in the protocol
 
 # Tue May 26 2020
 
+[Recording](https://www.youtube.com/watch?v=HDE_mX-fi0k)
+
 ### Quick recap:
 Continued the discussion of the congestion attack. 
 
 # Tue May 19 2020
+
+[Recording](https://www.youtube.com/watch?v=oC7CibKbLkA)
+
 ### Proposed discussion topics:
 * Receipt and transaction congestion attack both in multi-sharded and single-sharded system. Issue: https://github.com/nearprotocol/NEPs/issues/67
 
@@ -33,6 +46,7 @@ Continued the discussion of the congestion attack.
 See https://github.com/nearprotocol/NEPs/issues/67 for the overview of what was dicussed re: congestion attack, and further discussion.
 
 # Tue May 12 2020
+
 ### Proposed discussion topics:
 * Upgradability;
 * Non-increasing transaction nonces;
