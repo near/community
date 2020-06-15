@@ -20,7 +20,6 @@ You can find the list of our community meetings [here](https://calendar.google.c
 
 We currently host the following meetings:
 * Community Talk -- Bi-weekly events to which we invite founders and researches in the space to introduce their project
-* Thursday Jam -- Weekly event to discuss ideas, use cases, and hear from builders across the space
 * NEAR Middleware Work Group (Wasm, RPC, Bridge, Runtime, Trie, etc) -- Weekly event
 * NEAR Bridge Work Group -- Weekly event
 * NEAR Engineering Weekly -- Weekly event
@@ -46,9 +45,10 @@ If you have any questions, please head over to our [Discord server](https://disc
 We love contributions!
 
 *  Check-out our [contribution guide and examples](https://docs.nearprotocol.com/docs/contribution/contribution-overview)
-*  Organise events, create content or code tutorials as part of our [Contributor Program](https://nearprotocol.com/contributor/)
-* Coming soon: Guild Program
+*  Create educational content, contribute to our codebase, documentation or build your own tutorials in our [Contributor Program](https://nearprotocol.com/contributor/)
+*  No matter if you lead an existing community or you want to start a community around NEAR and the open web, we would love to have you part of our [Guild Program](https://near.org/guilds)
 *  Look for the starter issues on [GitHub](https://github.com/nearprotocol/)
+*  Take on a [bounty](https://github.com/near/bounties/issues)
 
 ### Community Ideas 
 
