@@ -6,6 +6,8 @@ Bitcoin bridge.
 
 # Tue June 9 2020
 
+[Recording](https://www.youtube.com/watch?v=mW1bppuXgKY)
+
 ### Quick recap
 
 We discussed two topics:
