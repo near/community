@@ -62,7 +62,7 @@ Someone from the core team will get back to you within a week.
 
 ## Security 
 
-NEAR would ever reach out to you directly and ask you to send funds, share your login credentials, private keys, or other sensitive information.
+NEAR would never reach out to you directly and ask you to send funds, share your login credentials, private keys, or other sensitive information.
 
 If you came across vulnerabilities in our code, or you want to flag other security-related concerns, please follow the security protocol detailed [here](https://github.com/nearprotocol/nearcore/blob/master/SECURITY.md).
 
