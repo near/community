@@ -20,6 +20,19 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 18.06.2020
+
+### Status report
+* Nikolay I: We now have a functional version of contract runtime that can either choose Wasmer or Wasmtime. There is however a problem with running Wasmtime and Wasmer tests concurrently, since Wasmer sets the global signal handler which sometimes intercepts Wasmtime errors. Wasmer might handle it in the future. Overall, it is feasible to run two runtimes. Unfortunately, Wasmtime brought dependencies that pulled cmake version which breaks our CI. We also need to decide the mechanism of selection of the runtime;
+* Willem W (by Nikolay I): Progress in introducing cost of contract exeuction derived from teh sie of the contract.
+
+### External communication
+* Planning to have whiteboard sessions with Cosmwasm and Runtime Verification.
+
+### Notes
+* Bowen W: This seems to be high priority. We need to make sure the same source code compiles into the same Wasm code. This might be urgent, to make sure our users can verify that given Wasm was compiled from the given source code. Vlad F: It seems Rust is already byte to byte reproducible for Wasm compilation. Max Z: We need to have a docker build image;
+* Max Z: We might need to put more effort into reducing the contract size. We shoudl explore `no-std` mode for `near-sdk-rs`. Vlad F: there is https://doc.rust-lang.org/alloc/ crate that provides all collections and primitives for `no-std` mode in Rust. Alexey F: Regarding Willem's proposal to have std as a hardcoded Wasm library that we link against, it is not clear what will be the overhead of calling it using host functions. Evgeny K: We are using `-z` option which is supposed to reduce the size but for Wasm `-s` is often better. There is also a lot of debug data that accounts for ~15% of code size. Max Z: Suggest to checkout https://rust-embedded.github.io/book/ which is a guide to writing no-std Rust;
+
 ## 12.06.2020
 
 ### Status report
