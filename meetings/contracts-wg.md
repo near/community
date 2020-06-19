@@ -1,6 +1,29 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 18.06.2020
+### Current Focus
+* Evgeny K: Worked on the lockup contract, removing access keys in order to support multisig. Multisig contract wil be able to issue actions on top of the lockup contract. This change is done, there is a PR;
+* Matt L: Worked on multisig that supports multiple actions in one transaction. There are some security concerns, in case some key is compromised. Evgeny K: It might still be beneficial to add access keys on top of the multisig contract.
+
+### Notes
+* Evgeny K needs to review NFT contact that DevX team wrote, it might need to include fixes that we've done for fun token. We should also extract minting, burning into the extension.
+* Max Z: We need a scheme for how we extend the contracts. Evgeny K: We might not need to enforce that the extension does not modify the original code.
+* Evgeny K: In staking pool, we need to add the pause/unpause methods. No one is currently working on it.
+* Max Z: We might need Evgeny K's help to add tests for rainbowbridge contracts;
+* Evgeny K: There are some work items for near-sdk-rs, we need to do:
+  * re-exports of Borsh and serde.
+  * And we need to reduce the size of the contracts. Max Z: We need to allow both std and no-std modes for near-sdk-rs.
+  * We need to make collections reusable;
+  * Alexey F was working on private methods and init once.
+  * We also need to make standalone available for near-sdk-rs unit tests.
+  
+### Next week focus
+* Cleanup the lockup, multisig, staking pool contracts;
+* Bridge testing;
+* near-sdk-rs some improvements.
+
+
 ## 12.06.2020
 
 ### Current Focus
