@@ -7,6 +7,21 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 18.06.2020
+
+### Status report
+* Evgeny K: We merged the dynamic gas PR, it first seemed like we broke nightly tests, but they might have been broken already, so we need to investigate it more.
+* Evgeny K: It seems like we are mostly done for Phase 1 overall. Bowen W has added overflow check last week;
+* Bowen W: The million proposal attack fix is pushed already.
+* Evgeny K: Pushed new Borsh version this week, so we need to update nearcore and near-sdk-rs with new version. Vlad F has added Cow support for accounts, so we might want to wait for it.
+
+### Notes
+* Unfortunate side effect for the dependabot, we need to push borsh and near-sdk-rs simultaneously. Vlad F will help with re-exporting borsh in near-sdk-rs, see: https://github.com/near/near-sdk-rs/issues/142#issuecomment-633754970
+* Bowen W: we need to introduce extra field in the `ExecutionOutcome`, it is protocol breaking change. This changes bridge too, we would have adapt the deserialization in Solidity;
+* Evgeny K: Since we have multiple independent change logs in nearcore we need to figure out how to correctly connect it with dependabot;
+* Bowen W: we still hasn't resolved the issue of having lots of proposals in block header. Staking pools will be restaking themselves because of the people delegating, which might create significant issues.
+* Evgeny K: Let's discuss the issue of headers and proposal during the research meeting.
+
 ## 12.06.2020
 
 ### Status report
