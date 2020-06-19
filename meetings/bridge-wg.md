@@ -3,6 +3,19 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 18.06.2020
+
+### High-level focus
+* Getting contracts ready for the audit.
+* Keeping it usable for our partners.
+
+### Status report
+* Max Z: environment/cli -- adding commands. Haven't added the command to do Near->Eth transfer yet. General cleanup and refactoring of the repo, will focus more on the documentation next week;
+* Bo Y: making cross-contract tests for bridge-prover. Upgraded near-sdk-rs with help from Evgeny K. The tests are close to finish, there is an issue with standalone runtime returning empty response for the cross contract call. Bowen W: You might need to explicitly wait for this transaction to finish computation of all receipts. Ask Evgeny K for example of waiting for transaction execution. Earlier this week fixed the CI, made linter allow-to-fail;
+* Sandi F: Finished dockerization. Figured out why ganache-core was not compiling. Fixed nearup setup. Fixed the prepare with no arguments. Will work on nearcore until Max Z files more issues;
+* Alexey F: Created PR with clippy fixes, and overflow checks. Later will work on unit testing of the contract internals, might add fuzz testing for the Eth2NearProver;
+* Anton B: Checked changes by Bo Y and Max Z. Will look through smart contracts to give it another pass of refactoring.
+
 ## 12.06.2020
 
 ### Current focus
