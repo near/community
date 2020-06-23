@@ -3,6 +3,12 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 26.06.2020
+
+Proposed agenda:
+ - Speeding up NEAR -> ETH path
+ - Tx pricing to cover fees on both side
+
 ## 18.06.2020
 
 ### High-level focus
