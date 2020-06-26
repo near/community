@@ -1,7 +1,26 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
-## 18.06.2020
+## 26.06.2020
+### Status report
+* Evgeny Kuzyakov: worked on the contracts, but did not have enough time to review Matt Lockyer's contract;
+* Evgeny Kuzyakov: updated the lockup contract to use external contracts, like multisig;
+* Evgeny Kuzyakov: updated staking pool factory to add pause/unpause staking, it does not affect the internal math, it just unstakes the current all stake, but does not return any shares. Validators wanted it before the upgrade. If someone increases the stake the all stake is not restaked;
+* Evgeny Kuzyakov: added bash script that uses near-shell to deploy core contracts. This is done using repl. This is in PR. But will need to implement multisig with lockup, which would require helper contract;
+* Matt Lockyer: Pending PR that adds multiple actions to the multisig contract.
+
+### Notes
+* Max Zavershynskyi -- we need a template and the cookbook for the Solidity contracts at Near. Anton Bukov's template is pretty good, let's reuse it. We will expanding the scope of this WG to 
+* Evgeny Kuzyakov -- we need to unify testing of Rust contracts. There is a lot of copy-pasting, it depends on nearcore master. We need to wrap up Rust contracts integration testing. Alexey Frolov -- we need to create a generic client that can talk with generic contract that exposes JSON API. We need tool that generates wrapper for client that will be independent from what serializer the contract is using;
+* Evgeny Kuzyakov -- nanoserde might be too generic and heavy for us, we might want to write our own JSON contract.
+* Max Zavershynskyi -- we have metadata is implemented: https://github.com/near/borsh/issues/79 It is not turned on, because it adds 20KiB to contracts. Evgeny Kuzyakov -- let's investigate it after `no-std/alloc` for `near-sdk-rs`.
+
+### Action items
+* Matt Lockyer: Create bounty for no-sdk borsh;
+* Max Zavershynskyi: Optimize borsh schema to occupy less Wasm code;
+* Evgeny Kuzyakov: Writing most space optimized JSON library (after look into nanoserde);
+
+## 19.06.2020
 ### Current Focus
 * Evgeny K: Worked on the lockup contract, removing access keys in order to support multisig. Multisig contract wil be able to issue actions on top of the lockup contract. This change is done, there is a PR;
 * Matt L: Worked on multisig that supports multiple actions in one transaction. There are some security concerns, in case some key is compromised. Evgeny K: It might still be beneficial to add access keys on top of the multisig contract.
