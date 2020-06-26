@@ -20,7 +20,26 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
-## 18.06.2020
+## 26.06.2020
+
+### Status report
+* Nikolay Igotti: multi-VM support was merged, and we made it compilation-time dependency. Eventually this feature will become default, to make sure it does not break;
+* Nikolay Igotti: There was a debug print out by Wasmer, we asked them to publish the version without it `0.17.1`. Nikolay Igotti will switch runtime to this version;
+* Nikolay Igotti: Wasmer provided us with the access to the new `1.0` version, currently it is not published to crates.io yet;
+* Nikolay Igotti: We postponed the whiteboard session with Runtime Verification to next Wednesday;
+* Willem Wyndham: implemented the contract loading fee, but there is an issue with param estimator, see transaction runtiem meeting;
+
+### Future focus
+* Decrease the executable size. We will look at `no-std/alloc` for Rust API, and we will look at nanoserde. Also Nikolay Igotti contacted an independent security researcher to help us debug the size of the contract;
+
+### Notes
+* Max Zavershynskyi -- we need a docker image for building contracts. Might reuse the cost estimation image. Ask Bo Yao to push the image to our Docker hub. Let's ask Sandi to help with it;
+* Nikolay Igotti: we need to understand how to run the contracts with more than one VM;
+* Bowen Wang: Fees (by Willem Wyndham) is blocking us on checking upgradability, which we need for Phase 1;
+* Bowen Wang: On code readiness we will be ready by mid July, but there are many logistic components that were not addressed yet;
+* Nikolay Igotti: Will also schedule a whiteboard session with Cosmwasm.
+
+## 19.06.2020
 
 ### Status report
 * Nikolay I: We now have a functional version of contract runtime that can either choose Wasmer or Wasmtime. There is however a problem with running Wasmtime and Wasmer tests concurrently, since Wasmer sets the global signal handler which sometimes intercepts Wasmtime errors. Wasmer might handle it in the future. Overall, it is feasible to run two runtimes. Unfortunately, Wasmtime brought dependencies that pulled cmake version which breaks our CI. We also need to decide the mechanism of selection of the runtime;
