@@ -7,7 +7,21 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
-## 18.06.2020
+## 26.06.2020
+
+### Status report
+* Evgeny Kuzyakov exposed total token burn that was taken from the account for the given execution -- we needed it for the reporting;
+* Bowen Wang added executor_id to execution outcome. It is needed for the bridge, but also it now allows to query receipt id from the shard since executor_id exposes the shard where the receipt/transaction was executed. Evgeny Kuzyakov: we would need to expose the block height. Bowen Wang: We don't need it since, we already record block hash;
+* Nikolay Igotti -- Willem Wyndham is working on adding contract size fee. Nikolay Igotti adding the fee is not actually the problem but it broke our cost estimator, there is a very dangerous error message "trie node is missing". Bowen Wang: this seems like a very dangerous error message, good thing it is reproducible, we need to investigate it. Sounds like P0.
+
+### Action item
+* Maksym Zavershynskyi We need to escalate the exposed P0 issue. Bowen Wang kindly volunteered to take a look;
+* Add param estimator to the CI. Nikolay Igotti needs to discuss with Bo Yao how to enable it on CI.
+
+### Notes
+* Bowen Wang since we currently enforce having delete account as the last action, we don't change the actor_id during receipt execution, so some of our code right now is redundant. Vlad Frolov and Evgeny Kuzyakov think that we should keep this code around.
+
+## 19.06.2020
 
 ### Status report
 * Evgeny K: We merged the dynamic gas PR, it first seemed like we broke nightly tests, but they might have been broken already, so we need to investigate it more.
