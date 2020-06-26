@@ -1,6 +1,19 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 26.06.2020
+
+## Current focus
+Main focus:
+* Rozetta RPC. Vlad Frolov is finishing two missing endpoints -- endpoints that show transactions from mempool to Rozetta. Will be ready early next week;
+* Network indexer. Bohdan Kholorets has finished all work for explorer indexer. Need help from Vlad Frolov to run it with real nodes, so that we can populate it with real data and pass it to Yifang Ma so that she can work on the frontend. The timeline will depend on Vlad Frolov's availability, hopefully on Monday;
+* JSON RPC. Bowen Wang is helping with timeouts and error messages. Almost done, need to address Vlad Frolov's comments;
+* Added executor_id to execution outcome by Bowen Wang. This is protocol breaking, needed for the bridge;
+
+## Notes
+* Vlad Frolov: It seems like Rozetta can be used only with local node, since it does not support pagination. Neither for transactions in the block nor as transactions in the mempool. It looks like it is easy to overwhelm Rozetta;
+* Vlad Frolov: Now that Bohdan Kholorets and Vlad Frolov know from Bowen Wang what is the difference between signer_id and receiver_id they need to patch some stuff in the indexer.
+
 # 18.06.2020
 
 ## Current focus
