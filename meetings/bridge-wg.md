@@ -8,12 +8,41 @@ Led and executed by Anton B.
 Proposed agenda:
  - Speeding up NEAR -> ETH path
  - Tx pricing to cover fees on both side
+ 
+## 26.06.2020
 
-## 18.06.2020
+### Current state
+* Security audit begins on July 6th, will take 3 physical weeks;
+* Only have ERC20 from Eth transferred to Near and back;
+* We now have a bunch of tests, kudos to Alexey Frolov and Bo Yao;
+* Max Zavershynskyi still connecting some code for Near->Eth transfer (the only missing thing which is executor_id in nearcore was added by Bowen Wang);
+* P0. Bo Yao is investigating ed signature failing on new blocks from testnet. Interestingly the old blocks are passing (those that were commited to master) but new blocks are not. Bowen Wang could help to debug if we can reproduce it. Bo Yao has a script that Bowen Wang can run to reproduce it;
+
+### Missing components
+* transfer-erc20-from-near-to-eth cli command -- Max Zavershynskyi;
+* Watchdog service that will monitor the signature and challenge them if needed -- Max Zavershynskyi;
+* Alexey Frolov is adding more integration tests for Rust contracts;
+* Documentation to help security audit.
+
+### Small broken things
+* Fix cleanup in the e2e test on CI. Sorry Sandi Fatic that Max reverted it;
+* Introducing ganache-core back by Sandi Fatic;
+* Freeze all dependencies (fork github dependencies, specify exact versions in package.json, etc);
+* Sandi Fatic will do npm publishing next week;
+* Sandi Fatic cli does not tell which parameter was not specified.
+
+### Notes
+* Illia Polosukhin -- we added upgradability to nearcore, but it should not affect light client;
+
+### Action item
+* Make our logs general byte blobs, right now they have to be UTF8 strings. Nearcore -- Evgeny Kuzyakov.
+
+
+## 19.06.2020
 
 ### High-level focus
-* Getting contracts ready for the audit.
-* Keeping it usable for our partners.
+* Getting contracts ready for the audit;
+* Keeping it usable for our partners;
 
 ### Status report
 * Max Z: environment/cli -- adding commands. Haven't added the command to do Near->Eth transfer yet. General cleanup and refactoring of the repo, will focus more on the documentation next week;
