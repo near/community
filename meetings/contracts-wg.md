@@ -1,6 +1,18 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 09.07.2020
+ 
+### Status report
+* Evgeny Kuzyakov: Working on deployment scripts. Wrote the script to deploy lockup contract. Will use it for both testing of the testnet and for real deployment on production.
+* Evgeny Kuzyakov: Then will work on core items in near-sdk-rs, like re-export of Borsh and serde. Not clear however whether we want to go with serde or nanoserde. The difficulty is that nearcore runtime uses Borsh and serde. In general, we should re-export Borsh from the runtime, however it is not clear whether we want to do it.
+* Evgeny Kuzyakov: there are some requests for the core contracts. E.g. people want to list deligators for the pool.
+
+### Notes
+* Max Z: Let's release 1.0 version of near-sdk-rs and runtime.
+* Evgeny K: There is an issue that lockup contract can commit to only one pool, which will create centralization. The current solution is to have several lockup contract per user, which will also help us to pseudo-anonymize users.
+* Alexey F: Please review https://github.com/nearprotocol/NEPs/issues/90
+
 ## 26.06.2020
 ### Status report
 * Evgeny Kuzyakov: worked on the contracts, but did not have enough time to review Matt Lockyer's contract;
