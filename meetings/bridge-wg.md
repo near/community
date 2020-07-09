@@ -3,6 +3,30 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 
 Led and executed by Anton B.
 
+## 09.07.2020
+
+### Current state
+* Going through security audit (which will end in 3 weeks). They have frozen the commit;
+* Things that are missing:
+P1:
+  * Testing -- Alexey and Bo;
+  * Robustness -- Bo. Replacing eth-objects and some other JS libraries is in this scope;
+  * Upgradability -- Max;
+  * Documenation -- Max;
+  * More use cases -- Max, Alexey?, Bo?. Evgeny Kuzyakov could help with NEAR contracts. Matt Lockyer can help out with Solidity contracts;
+  * Sandi can help with spillover work items that are urgent, but he is needs documentation;
+P2
+  * ethashprover rewrite;
+
+### Status report
+* Bo Yao -- few PRs to improve e2e test. One PR to dump and verify nearprovers. Small PR to rename CLI and publish to npm. Moved pipeline definitions into the repo. Managed to workaround issue with ganache that we don't need Node 10 anymore. Added retrier to the contract wrapper. Spent a lot of time comparing differences of Web3 responses and RPC responses, we need to adapt the encoding of Web3 format. Our external dependencies do not do correct rlp encoding of the header;
+* Alexey Frolov -- working on the testing of the mintable token. Testing mint and burn by mocking the prover. Using standalone runtime for testing;
+* Max Zavershynskyi -- fixed some critical bugs, writing documentation, lint cleaning.
+
+### Notes
+* Bowen Wang: When is upgradability? We will change blockheaderinnerlight within a month. Max Zavershynskyi was planning to implement it within next 2 weeks;
+* Max Z, Evgeny K: Let's release stable version of standalone runtime. We might not be able to publish it yet.
+
 ## 26.06.2020
 
 Proposed agenda:
