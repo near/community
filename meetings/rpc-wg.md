@@ -1,6 +1,15 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 09.07.2020
+
+## Current focus
+* Indexer. The work was split on indexer itself (indexer streamer) and explorer indexer. Finished the streamer. Now have receipts in the proper way in the streamer indexer. Haven't merged it to master yet, would need to cherry pick it into betanet and testnet branch. Then the plan to continue working on explorer indexer. Will start preparing indexer readme and specific plugins for indexer for our partners;
+* Rosetta. Last week they releazed new version and extended their wallet API (for submitting transactions). Vlad Frolov was finishing it up yesterday and today. No blockers. Vlad Frolov just needs to implement 7 new endpoints. We have more abstractions in NEAR than in Rosetta, so we have to merge some of our abstractions together, e.g. we merged receipts and transactions into one entity.
+
+## Notes
+* Max Z: There are some confusions with what is considered to be a successful transaction.
+
 # 26.06.2020
 
 ## Current focus
