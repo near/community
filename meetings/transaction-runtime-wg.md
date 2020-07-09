@@ -7,6 +7,13 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 09.07.2020
+
+### Notes
+* Contract compilation fees are in. Willem Wyndham said that fee computation should not be affected by `no_cache` issue;
+* Alexey Frolov proposed: https://github.com/nearprotocol/NEPs/issues/90 ;
+* Are we getting rid of UTF8 logs? Evgeny Kuzyakov -- we can do loss conversion to UTF8. Should we expose binary log in addition to string log. Evgeny is not sure we should mix it. Ideally we should not merkelize logs and should merkelize binary events only. The least breaking solution is to expose binary event in addition to logs. If we remove merkelization of logs then we need to recalculate the pricing of the fees. Max Z: This change is a good candidate to test upgradability. Alexey Frolov suggests to consider the bloom filter to simplify subscriptions. Max Z: Another good candidate to test ugpradability.
+
 ## 26.06.2020
 
 ### Status report
