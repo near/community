@@ -1,4 +1,4 @@
-# Contracts Work Group Agenda and Notes
+# RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
 # 09.07.2020
