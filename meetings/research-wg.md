@@ -1,3 +1,7 @@
+# Tue July 14 2020
+
+Discussion: Shared global key-value storage. https://github.com/nearprotocol/NEPs/issues/93
+
 # Tue June 16 2020
 
 ### Proposed topics
