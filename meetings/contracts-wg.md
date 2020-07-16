@@ -1,6 +1,24 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 16.07.2020
+
+### Discussions
+* Code coverage to find dead codepath in the contracts.
+* Smaller/efficient serde for JSON.
+
+### TODO
+* (Evgeny) Update `OWNERS` for `near-sdk`.
+
+### near_sdk
+* Published `1.0.0` version `near-sdk` that includes runtime `1.0.0` with borsh `0.7.0` re-exported.
+
+### Contracts
+* Staking pool contract fix for insufficient stake action failure. Fixed by adding a callback to the staking action.
+* Voting contract. 2 new view methods. Replaced persistent map towards to the hashmap.
+* Testnet test with real validators.
+
+
 ## 09.07.2020
  
 ### Status report
