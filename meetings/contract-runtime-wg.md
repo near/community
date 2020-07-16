@@ -20,6 +20,25 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 16.07.2020
+### Status:
+* Param estimator and threading: we cannot controil threads via Rust APIs, with C++ APIs there are more control, but still thread get created
+  Resolution: estimate conservatively by upper bound, and get back after Phase 1, maybe by contributing to Rocks DB. Also consider disabling Rocks 
+  DB cache during contract run.
+* Contract size reduction:
+   * looking at no-std mode. It requires serios SDK rework, and also we need to make sure no std functions used in contracts. Bo is looking at Parity, which uses no-std for contracts.  
+   * Willem found that twiggy is rather good contract size profiler, shows top functions pretty well if names section is not stripped
+   * from analysis with twiggy we found that significant part of many contracts is float to string convertor
+   * Nikolay is looking at removing known unused functions with wasm-snip tool
+   * Willem fixed twiggy to work with AssemblyScript
+   * In AssemblyScript files string formatters are big as well
+   * With Rust generics could be pretty big as well
+   * Bo did currect example contracts size from Rust SDK run on CI
+   
+ Action item: look at nanoserde
+ Vlad F: reproducability issues with Docker, hash maps make it less reproducible
+
+
 ## 26.06.2020
 
 ### Status report
