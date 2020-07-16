@@ -1,7 +1,28 @@
 # Ethereum-Near Bridge
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
-Led and executed by Anton B.
+## 16.07.2020
+
+### Current state
+* Going through security audit (1 week left);
+
+In the order of importance:
+
+* P0 Bugs:
+  * bps in initialization -- Bo Yao;
+  * bps length not matching -- Bo Yao -- it only works if set of block producers do not change, because you do verification first and then set the block. For the first block in new epoch we currently verify using past past validators. Bo Yao to fix;
+P1:
+* nearcore CI test for bridge -- already directly added to buildkite;
+* Robustness -- in much better shape thanks to Bo Yao;
+* Upgradability -- Max not started on it yet;
+* Tests coverage -- someone (depending on Bo's availability);
+* Documentation -- Max hasn't started working on;
+P2:
+* ethash rewrite;
+* We need reproducible nearcore light client RPC for gas fee optimization of Solidity contracts.
+* We can start Solidity borsh into borsh-sol library, also borsh-js needs unification;
+
+Sandi Fatic's availability is low, should be better after next week.
 
 ## 09.07.2020
 
