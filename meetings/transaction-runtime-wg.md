@@ -7,6 +7,13 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 16.07.2020
+
+### Notes
+* Published `1.0.0` for `near-vm-logic` and other runtime crates. Included contract compilation fees and borsh `0.7.0`.
+* We need to decrease fees `validator_stake_base` and `validator_total_stake_base`, because every call is about `10 ** 12` Gas. So for 100 validators it's almost `100` TGas.
+* Upgradability discussions
+
 ## 09.07.2020
 
 ### Notes
