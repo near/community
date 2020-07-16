@@ -1,6 +1,17 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 16.07.2020
+
+## Hightlights
+
+* NEAR Indexer Framework is merged! Kudos to Bohdan K
+
+## Current focus
+
+* NEAR Indexer for Wallet: index Access Keys (added and removed), already have a PR from Bohdan K (PoC is ready).
+* RosettaRPC: Vlad F works on it. It needs to be clarified things around balances (amounts are expected to be tracked via transaction operations, while we have validators rewards, locked balance). Max Z: We seem to implement an interface of another blockchain on top of NEAR. Max Z: Consider having epoch manager to be a smart contract, we will have transactions/receipts related to the rewards. Evgeny K: We can workaround it using chunk_hash and treat rewards a "block transaction". Max Z: We should still consider the future of having epoch manager as a contract, so we implement rosetta in a future-proof way. Evgeny K: We seem to be able to rely on State Changes exposing all the balance changes. Max Z: Another concern about liquidity of the balance, Rosetta may expect the balance to be fully spendable, which is not the case given the storage rent. Evgeny K: Will write a doc covering all the possible scenarios where the balances can be altered in NEAR.
+
 # 09.07.2020
 
 ## Current focus
