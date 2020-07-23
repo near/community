@@ -1,6 +1,18 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 23.07.2020
+
+## Current focus
+
+* NEAR Indexer for Wallet: Bohdan K: the main part syncing access keys is done, but needs some adjustments (README, CI, deployment). There is a struggle with the DB deployed on Render.com (investigating, optimizing it now). Vlad F: had a chat with Vlad G about NEAR Indexer implementation (nearcore compilation time), no action is planned.
+* Rosetta: ETA Data API 24.07.2020. Implement fake transactions for events like validation rewards / stake return using chunk hash as Rosetta "transaction hash".
+* RPC: a partner had troubles with `validators` RPC call (slowness). Needs to clarify their requirements as it is not clear why they need to hammer it every so often.
+
+## Future work
+
+* NEAR Indexer for Monitoring: Max Z: use NEAR Indexer to collect all possible data into SQL database, so people can use SQL queries to drill down identifying the problems and potential issues proactively (using time series on Spark / Dask)
+
 # 16.07.2020
 
 ## Hightlights
