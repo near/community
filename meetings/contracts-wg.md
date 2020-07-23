@@ -1,9 +1,26 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
-## 16.07.2020
+## 23.07.2020
+
+### Testing
+
+* Voting contract testing is almost done.
+  * Local script that verifies voting through staking pool contract
+  * Testnet validators voting on behalf of the staking pools. Need to ping them. Currently is 40% done.
+
+### Contracts
+
+* Multi-sig is committed with multiple actions on every request.
+  * It doens't have restrictions on added keys.
+  * Wallet is unblocked.
+* Illia fixed linkdrop callback. Issue with callback has a different argument than the method.
 
 ### Discussions
+* Presentation by Alexey: Multiple contracts on the account - modules and resources.
+
+## 16.07.2020
+
 * Code coverage to find dead codepath in the contracts.
 * Smaller/efficient serde for JSON.
 
