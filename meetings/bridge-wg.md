@@ -1,6 +1,21 @@
 # Ethereum-Near Bridge
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 23.07.2020
+
+### Current state
+* Audit ends this week, then 1 week of mitigations;
+* Large backlog of work items;
+* Max is trying to restart Ropsten testnet. Difficulties are: Ropsten is slow and gas price is going up. Rinkeby testnet?
+
+
+### Things to do
+* Max to implement upgradability;
+* Someone to implement incentives.
+
+### Notes
+* Add more testing to bridge e2e.
+
 ## 16.07.2020
 
 ### Current state
