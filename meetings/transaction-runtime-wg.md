@@ -7,6 +7,15 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 23.07.2020
+
+* Zeropool PR for private TXs.
+  * Use `borsh` within Runtime to parse the input within a host function.
+  * To remove all `f64` usage and replace with int math.
+  * Minimize crate changes from the audited version.
+* Having external/host methods as Wasm pre-compiled modules. Other option is to load another module as a linked wasm module to save size.
+* Check out proposal for requirements/guidelines for a new protocol change features: https://github.com/nearprotocol/NEPs/issues/99 
+
 ## 16.07.2020
 
 ### Notes
