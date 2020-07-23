@@ -20,6 +20,24 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+
+## 23.07.2020
+### Status:
+ * Bo, Nikolay are reviewing the cost estimation for Phase 1
+ * Found one concurrency issue in estimator, fixed
+ * Cost of function call is disproportional in current config (11k times difference)
+ * Contract size optimizations:
+     * submitted minifier tool to Rust SDK, contracts ~2x, but requires proof of correctness
+     * raises the issue of testability and test coverage
+     * decided as the next steps to focus on contract testability in standalone environment
+     * Parity uses common crates to replace std collectors and allocations, cannot use dynamic strings
+     * Compute contract size profile on every run of CI
+ * Contract are similar to serverless functions/lambdas, and could provide REST APIs and use that for testing and deployment
+ * @Max: we need to finish the standalone runtime for testing and contracts with REST APIs (Ganache from Etherium does the same)
+ * Polish up devx story with testing/deployment: Vlad F., Evgeny, Willem, Alex F., focus for upcoming few months (Mocknet project could be similar)
+     
+Action item:  (Willem) set up cloud agent for cost param estimator
+
 ## 16.07.2020
 ### Status:
 * Param estimator and threading: we cannot controil threads via Rust APIs, with C++ APIs there are more control, but still thread get created
