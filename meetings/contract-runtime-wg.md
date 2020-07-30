@@ -20,6 +20,19 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 30.07.2020
+### Status:
+ * Analyzed the cost breakdown of Illia's contract, found issue in costs computation
+ * Implement the cost profiler, in review
+ * Meeting with partner about possibilies of getting help with nostd mode for Rust SDK, start with Borsch non-std
+ * Contract runtime: discuss extending neard with built-in REST server, work as an application server, already exists in some form for chain testing
+ * Willem is running cost estimator with Wasmtime to see how much VM affects the cost
+ * Bo is working with ext contributor on threads disabling in Rocks DB, alsmot there, but in fork so far
+ 
+ Action items: 
+   * Max to create an issue for NEAR-Ganashe effort, chain team will participate
+   * Evgeny will help to properly what is a definition of each cost
+   * (Willem) set up cloud agent for cost param estimator
 
 ## 23.07.2020
 ### Status:
