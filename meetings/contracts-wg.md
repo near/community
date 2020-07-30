@@ -1,6 +1,24 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 30.07.2020
+
+### Testing
+
+* Voting contract testing with localnet
+
+### Contracts
+
+* Staking pool
+  * 0.3.0 - Added view methods for list of accounts. And each account.
+  * 0.4.0 - Helper methods for delegators. `deposit_and_stake`, `unstake_all` and `withdraw_all`
+* Multi-sig
+  * `DeleteKey` to cleanup requests created with this public key if it's on the multisig.
+  
+### Discussion
+
+* Native token support. https://github.com/nearprotocol/NEPs/issues/102
+
 ## 23.07.2020
 
 ### Testing
