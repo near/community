@@ -1,6 +1,15 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 30.07.2020
+
+## Current focus
+* NEAR Indexer. Bohdan K has finished implementation, resolved shortcoming bugs, manually deployed to a GCloud instance, saving all data about access keys (this is new, and was not the case with old explorer. Old explorer works on the level of transactions, which caused issues with multisig on the wallet -- they couldn't observe access keys added to account). Next week Bohdan K will finish README.md and docs, so we will be able to ship indexer for wallet. We will ask Sandi to create deploy strategy and CI;
+* Rosetta. Remains proper serialization of data for subaccounts (Rosetta concept). Account balance is liquid balance, and subaccount is locked balance, and staked storage balance is another subaccount. We need to map transfers between these balances as Rosetta operations. Vlad F uses changes API and gave up on following transactions receipts, instead we recreate transactions from changes API;
+* JSON RPC. Had some discussion with Bowen W and Max Z about: performance and errors. This whole week our RPC looked unstable to outsiders -- due to abuse of view calls by someone; and Bowen W implemented sanity check that we should serve RPC when node is syncing, but it turned out that nodes are very frequently in the syncing state, e.g. when they are lagging 2 blocks behind (2 secs). Unfortunately, it would take some time to implement to distinguish between very out of sync nodes and slightly out of sync. Bowen W will revert this check first.
+  * Medium term goals. First, we will address the errors, make them structured. This is a huge blocker for the Applayer;
+  * It seems like we might have a race condition inside RPC-server-ViewClient that results in node reporting "invalid nonce" error. Vlad F: even if we solve it it might be hard to write the test there. near-api-js attempts to resend transaction when RPC timeouts (e.g. due to slow block production).
+
 # 23.07.2020
 
 ## Current focus
