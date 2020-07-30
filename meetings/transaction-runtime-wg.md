@@ -7,6 +7,12 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 30.07.2020
+
+- Zeropool PR for private TX
+- Bowen discovered potential invalid state transitions on different machines
+- Discussion on Congestion with delayed receipts.
+
 ## 23.07.2020
 
 * Zeropool PR for private TXs.
