@@ -1,6 +1,20 @@
 # Ethereum-Near Bridge
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 30.07.2020
+
+### Current state
+* Audit is done, but they are writing the report;
+* Still figuring out the deadlines with marketing;
+* People working on the bridge: Bo Y, (1-2 days a week Max Z), Alex K (hopefully will start next week);
+* Good news: it seems to be running more or less stable on Mainnet testnet <> Ropsten (the only issues:  https://github.com/near/rainbow-bridge/issues/184 and https://github.com/near/rainbow-bridge/issues/232 ), the critical double-spending vulnerability is fixed by Bo Y, the other two important issue are (https://github.com/near/rainbow-bridge/issues/208 and https://github.com/near/rainbow-bridge/issues/207 where 207 has already a PR);
+
+## Action items (in reducing priority)
+* Max Z -- implement upgradability, e2e test for upgradability;
+* Bo Y -- P1 issues (especially 232 and 184), also setup e2e test for challenges;
+* Create issue for Sandi -- setup full archival nodes behind VPC with bridge;
+* Monitoring service decoupled from relays and setup prometheus for it. Create an issue and work item for Sandi and Mario (also add SRE label);l
+
 ## 23.07.2020
 
 ### Current state
