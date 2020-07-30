@@ -18,6 +18,7 @@ This thread contains agenda and/or summary of the regular Contracts sync meeting
 ### Discussion
 
 * Native token support. https://github.com/nearprotocol/NEPs/issues/102
+* Voting for bridge upgradability.
 
 ## 23.07.2020
 
