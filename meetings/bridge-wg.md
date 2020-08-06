@@ -1,6 +1,29 @@
 # Ethereum-Near Bridge
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 06.08.2020
+
+### Current state
+* Security audit reports are in;
+* We need bridge on Mainnet in 2 weeks with upgradability;
+  * Max Z have discussed upgradability design with Anton Bukov. The biggest difficulty would be the e2e tests;
+* P1 bugs are mostly closed, thanks to Bo Y;
+* Alex Kouprin is onboarding, will start with implementation `node index.js status` command;
+* Max Z will discuss testing of the bridge with Alex S and Bowen W;
+
+### Priorities
+1. Bridge on Mainnet with upgradability within 2 weeks from now;
+2. e2e tests for watchdog (already a PR by Bo Y), upgradability, and maybe fuzz testing proposed by Alex K;
+3. Dedicated node setup for the bridge -- Sandi will take care of it after next week;
+4. We need to close/address all security audit findings, including their comments about lack of testing, code quality and code style (renaming) -- Bo Y will start working on it (hopefully will address them next week), Alex K will join as soon as possible;
+5. Monitoring for the bridge using indexer and Graphana -- by Mario.
+
+## Action items (in reducing priority)
+* Max Z -- implement upgradability, e2e test for upgradability;
+* Bo Y, Alex K -- remaining P1 issues, security audit, `node index.js status` command, other e2e tests;
+* Create issue for Sandi -- setup full archival nodes behind VPC with bridge;
+* Create issue for Mario -- for monitoring infrastructure for bridge (assign Sandi, Mario);
+
 ## 30.07.2020
 
 ### Current state
