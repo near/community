@@ -1,6 +1,19 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 06.08.2020
+
+## Current focus
+Only Vlad F and Bohdan are working on RPC.
+* NEAR Indexer for Wallet. Bohdan is finishing the first iteration of the indexer, the last PR is pending. Trying to setup the indexer for Wallet for Mainnet to check access keys nuances, need help from Bowen W. This would require whitelisting IP addresses. Please don't crash mainnet please :)
+* Rosetta -- Vlad F had to drop entirely the idea of using transactions and receipts to derive Rosetta information. Had to throw away the code. Currently is rebuilding it using changes API and derivining balance changing transactions from it. It is not immediately trivial, had to do prefetching of the old state and diff it with new state. Have to simulate subaccounts for Rosetta, e.g. storage balance is a subaccount, and every storage usage becomes a transfer because of that. It takes time to map it out precisely, but there seem to be no unknowns now. Max Z: Might need help from Evgeny K to audit changes. Evgeny K approves. The plan is to finish Rosetta Data API tomorrow, plus or minus. There seems to be already intermediate success because the checker seems to be partially passing. Might still need some time to polish it, several hours;
+* JSON RPC -- last week Bowen W reverted PR that was blocking RPC endpoints when node was in syncing. We just need it for when the node just started and very much behind. Bowen W is investigating about 3 issues that cause the node to fall out of sync. These are issues because we are using RPC nodes for bootloading too.
+
+## Notes
+* For performance we need to review JSON RPC and ViewClient because we cannot load network through a single JSON RPC;
+* We will be using indexer for monitoring the bridge, do deep inspection of the bridge transactions to have alerts and dig into the data. This will be driven by Bohdan, Mario, and Bo. Action Item for Max: setup a channel for this discussion;
+* We need to have structured errors not just for the runtime.
+
 # 30.07.2020
 
 ## Current focus
