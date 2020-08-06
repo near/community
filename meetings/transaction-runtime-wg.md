@@ -7,11 +7,18 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 06.08.2020
+
+- Invalid state transition due to AVX instruction in Wasmer for floating point operations. Nikolai added a requirement for AVX for Wasmer.
+- Discussion on Congestion with delayed receipts. https://github.com/nearprotocol/NEPs/issues/104
+- DeFi/EVM - https://gist.github.com/evgenykuzyakov/3dcfb336fadcf242a215f1c16ce82d4e
+
 ## 30.07.2020
 
 - Zeropool PR for private TX
 - Bowen discovered potential invalid state transitions on different machines
 - Discussion on Congestion with delayed receipts.
+- 
 
 ## 23.07.2020
 
