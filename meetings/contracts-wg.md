@@ -1,6 +1,18 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 06.08.2020
+
+### Runtime
+
+* Random seed issue
+
+### Contracts
+
+* I reviewed "partner" code for launch
+* Need to add relative time vesting starting from the token transfer date. And absolute/fixed timestamp lockup (for unlocking)
+* EVM contract - needs optimizations.
+
 ## 30.07.2020
 
 ### Testing
