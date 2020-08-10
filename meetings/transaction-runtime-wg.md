@@ -9,7 +9,7 @@ The scope of the transaction runtime is the following:
 
 ## 06.08.2020
 
-- Invalid state transition due to AVX instruction in Wasmer for floating point operations. Nikolai added a requirement for AVX for Wasmer.
+- Invalid state transition due to AVX instruction in Wasmer for floating point operations. Nikolay added a requirement for AVX for Wasmer.
 - Discussion on Congestion with delayed receipts. https://github.com/nearprotocol/NEPs/issues/104
 - DeFi/EVM - https://gist.github.com/evgenykuzyakov/3dcfb336fadcf242a215f1c16ce82d4e
 
