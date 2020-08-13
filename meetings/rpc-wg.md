@@ -1,6 +1,22 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 13.08.2020
+
+## Current focus (same)
+* NEAR Indexer for Wallet -- highest priority. Bohdan had a chat with Bohdan on requirements. They need latest state of access keys, and they don't care when it was added. We will dump latest state and populate all the keys tp the database and then use streamer populate the rest;
+  * Other indexer projects are postponed -- monitoring for the bridge and indexer for explorer;
+* Rosetta by Vlad Frolov. Data API is feature-complete. Wrote the README and communicated with Coinbase. Also ran the node with Rosetta API so that they can access. Immediately after they checked Data API they told us they want to check all blocks starting from genesis;
+  * It is technically possible that some blocks noone has;
+  * Vlad tries to understand whether this is a priority and whether Coinbase needs it;
+  * Started working on construction API for Rosetta;
+  * Max Z. We need state checkpoints for past block recomputation, and we cannot compute checkpoints in parallel way -- so the longer wait without this feature the harder it will be to bootstrap;
+  * We need to map their operations to our receipt actions. They query our node for list of available actions. They don't know what operations would do, but they have a way to define various sequences of operations. There might be an issue with us accepting transaction in one block and processing in another. We might still be able to hack it together;
+* Regular RPC has discussions around removing on unnecessary parts of RPC from the network, e.g. RPC routing. We should keep nearprotocol spec as small as possible. Vlad F: We shouldn't build routing but provide RPC responses that are helpful, where to look for the rest of the data;
+* Unstructred errors -- Bowen W will be working on it soon;
+* RPC performance, might be hindered by storage read -- Bowen W. We need to be able to track down and diagnose the regressions in the future. Maybe we should re-use loadtesting benchmark by Bo Y;
+* ViewClient PR. Rosetta wants to sometimes know the tail after GC and Vlad Frolov added a way to query it from ViewClient. Previously we could only query by block hash, height, head. Now we can query by genesis, tail. Vlad Frolov is accepting is requests for other block ids to query.
+
 # 06.08.2020
 
 ## Current focus
