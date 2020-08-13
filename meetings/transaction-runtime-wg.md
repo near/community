@@ -7,6 +7,16 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 13.08.2020
+
+- Discussion topic:
+    - EVM native support
+        - EVM action or native function call
+    - Congestion / Gas price auction
+    - Transaction nonce to be random instead of integer
+    - Large contract deletion (storage cleanup). Pricing - we can take a fee from the storage stake and return less to beneficiary. Execution - might be really slow for large storage.
+    - Contract Compilation / Caching
+
 ## 06.08.2020
 
 - Invalid state transition due to AVX instruction in Wasmer for floating point operations. Nikolay added a requirement for AVX for Wasmer.
