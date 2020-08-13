@@ -1,6 +1,33 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 13.08.2020
+
+### Contracts
+
+* PR for lockup. Adds optional absolute timestamp for lockup. Adds relative release duration.
+* Fast `no_std` fungible token. Init given supply, transfer and get_balance. 1Kb of binary.
+
+### Runtime
+
+- [ ] Decrease max register limit to 128Mb or lower.
+- [ ] Test/verify limits
+- [ ] Decrease initial memory from 64Mb to 2Mb. But it might break large contracts.
+
+### Fees
+
+- Regular ops estimation. Calls `noop`, calls `cpu_ram_soak`, take gas difference as `base`. `cpu_soak_instruction - noop_instruction * NUM_ITERATION` for numerator.
+- [ ] Remove base cost from all cost estimators.
+- [ ] Data receipt cost should remove base for function calls.
+- [ ] All actions should remove Action creation cost
+
+## SDK
+
+- [ ] Optimize number of reads/writes. Non-iteratable collections.
+- Decrease size. Bounty for `no_std` with the team already working on it.
+- Optimize operations. Need to measure post `no_std`. Potentially re-implement `serde_json` or replace it.
+
+
 ## 06.08.2020
 
 ### Runtime
