@@ -20,6 +20,24 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 20.08.2020
+### Status:
+ * Gas profiler is merged
+ * Profiler to be used in deployed nodes
+ * AVX check yield problems in estimator, fix is ready (https://github.com/nearprotocol/nearcore/pull/3101)
+ * Thread pool in RockDB can be turned, now estimators runs with threads disabled
+ * Run with threads disable shown some variance 2-20% on some costs
+ * Willem completing wasmtime support, added estimator support from running with Wasmtime and Lightbeam, costs with Lightbeam are comparable with Singlepass
+ * Willem looked on using fuzzer to produce variations of existing Wasm binaries to test stability of compiler/VM
+ * Stabilization of the contract runtime: Avocado
+ 
+ Action items:
+   * Take a look on Wasmer 1.0 (compiles with stable Rust)
+   * Write a full spec of Wasmer? Maybe in form of tests
+   * Nikolay: decide on how we don't blindly trust Wasmer, and get better safety
+   * Bo set up cloud agent for cost param estimator, code written, need to create PR and add cron jobs, blocked on AVX checker
+   * Evgeny and Nikolay to work on proper definition of costs
+
 ## 06.08.2020
 ### Status:
  * Continue gas profiler effort
