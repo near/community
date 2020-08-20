@@ -1,6 +1,17 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 20.08.2020
+
+## Current focus
+
+* NEAR Indexer:
+  * NEAR Indexer for Wallet: Bohdan: sync/streaming performance issues (~5k blocks behind the latest finalized block after a few hours of running) is now seems to be resolved. It is not a blocker right now for the Wallet team. Added a trick to dump the state directly to the database and continue streaming from the block that we dumped.
+  * NEAR Indexer framework: we have a requested feature to resume/start from some specific block height. Bohdan: half-baked (eta is Monday).
+  * NEAR Indexer for Explorer: Yifanh is going to onboard to the project.
+* Rosetta API: the PR for Data API is under review. Construction API is under design (needs mapping from Rosetta Operations -> NEAR Actions)
+* JSON RPC: Bowen is working Strutured errors for RPC (required to refactor ViewClient Actor result errors from String-typed to enums; `thiserror` crate to reduce boilerplate for error structs); the PR is under review; Bowen: we need to deploy a separate node to implement a support in near-api-js for both types of errors (string-typed and structured).
+
 # 13.08.2020
 
 ## Current focus (same)
