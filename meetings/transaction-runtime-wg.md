@@ -7,6 +7,21 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 20.08.2020
+
+### Agenda
+- Burn all prepaid gas or just gas priority. -> still burning the prepaid gas
+- DDOS on RPC -> skip
+- Fees estimator ->
+    - Most actions are very cheap.
+    - Non-sir receipts are more expensive. 0.6Tgas
+    - Good progress on fees
+    - [ ] Do a macro for fees inside the VM code.
+
+### Not discussed (out of time)
+- `Comment` action for transfers to exchanges vs standard on `deposit` method `FunctionCall`.
+    
+
 ## 13.08.2020
 
 - Discussion topic:
