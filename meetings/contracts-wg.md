@@ -1,6 +1,15 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 20.08.2020
+
+### Agenda
+
+* `LookupMap` and `LookupSet`. Optimized version of `UnorderedMap` and `UnorderedSet` without iterators. Check if `TreeMap` can be changed to use `LookupMap`.
+* I started testing `lockup` contract on testnet with validators. https://gist.github.com/evgenykuzyakov/0d92fbcb59666bd30a15640bca06f8cc
+* Discussion exchange issue.
+* Nikolai to find the owner for `no_std`.
+
 ## 13.08.2020
 
 ### Contracts
@@ -17,13 +26,13 @@ This thread contains agenda and/or summary of the regular Contracts sync meeting
 ### Fees
 
 - Regular ops estimation. Calls `noop`, calls `cpu_ram_soak`, take gas difference as `base`. `cpu_soak_instruction - noop_instruction * NUM_ITERATION` for numerator.
-- [ ] Remove base cost from all cost estimators.
+- [x] Remove base cost from all cost estimators.
 - [ ] Data receipt cost should remove base for function calls.
-- [ ] All actions should remove Action creation cost
+- [x] All actions should remove Action creation cost
 
 ## SDK
 
-- [ ] Optimize number of reads/writes. Non-iteratable collections.
+- [x] Optimize number of reads/writes. Non-iteratable collections.
 - Decrease size. Bounty for `no_std` with the team already working on it.
 - Optimize operations. Need to measure post `no_std`. Potentially re-implement `serde_json` or replace it.
 
