@@ -5,7 +5,7 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 We pursue safety and usability at the same time.
 * Current focus:
   * Safety. We close all findings related to the audit, see: `2020-07 audit` label: https://github.com/near/rainbow-bridge/issues?q=is%3Aopen+is%3Aissue+label%3A%222020-07+audit%22
-  * Usability. [We extract RainbowLib](https://github.com/near/rainbow-bridge/issues/297);
+  * Usability. [We have already split the repo](https://github.com/near/rainbow-bridge/pull/319). [Now we extract RainbowLib](https://github.com/near/rainbow-bridge/issues/297);
 * Next focus:
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
   * Usability. We work on documentation.
