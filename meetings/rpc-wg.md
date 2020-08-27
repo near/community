@@ -1,6 +1,32 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 27.08.2020
+
+## Current focus
+
+Bohdan K:
+* Indexer can start from any block height, can also start after interruption;
+* Improved the speed of Indexer for Wallet. Should be quite fast now :) Will implement storing of functional call args needed for multisig contracts;
+
+Vlad F:
+* Rosetta RPC: Construction API design is under Coinbase review
+* JSONRPC: We are deprecating EXPERIMENTAL genesis records API to free up RAM on nodes, this requires an update on Explorer side (there is a PR under review)
+* JSONRPC: we increased the payload limit from 2MB to 10MB and made it configurable via config.json
+* JSONRPC: the structured errors are still awaiting the applayer support
+
+Data API might take approx 3 more weeks.
+
+## Notes
+* Bohdan K was trying to figure out how to have all keys for the Wallet indexer. Was trying to repurpose state viewer, unfortunately state viewer is not library at all. So Bohdan K started copying pieces from state viewer. Unfortunately state viewer requires the node to be shut down. Bowen W: Create a snapshot on the database and then read the snapshot, check with Mikhail K whether he has merged the snapshots. Let's follow up with Alex S whether snapshot PR can be merged;
+
+## Action items
+* Ask Alex S when snapshots are going to be merged.
+
+## Future topic
+
+* RPC and ViewClient performance. Goal: be able to saturate network through a single node.
+
 # 20.08.2020
 
 ## Current focus
