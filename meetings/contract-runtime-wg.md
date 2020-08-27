@@ -20,6 +20,25 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 27.08.2020
+### Status:
+ * Wasmer 1.0-alpha is released, plan to release regular version in timeframe about a month
+ * Can start prototyping runtime with Wasmer 1.0
+ * No success in getting rid of AVX in Wasmer, but estimate that as effort working week
+ * Merged AVX conditional, can run estimators out of the box
+ * Getting consistent results from param estimators (most fees in range of 1-2%, worst case is 20%)
+ * Nikolay started combined mode of execution
+ * Willem started working on Ganache-like testing environment for contracts
+ * Willem merged improved compiler estimation, lightbeam shows better performance in compilation than singlepass
+ * Willem tried fuzzing contracts to detect bugs in compiler
+
+ Action items:
+   * Bo attempt migration to Wasmer 1.0
+   * Write a full spec of Wasmer? Maybe in form of tests
+   * Param estimator is now running in cloud, sometimes hangs
+   * Evgeny and Nikolay to work on proper definition of costs
+   * Nikolay: disk performance must be accounted in fees
+
 ## 20.08.2020
 ### Status:
  * Gas profiler is merged
