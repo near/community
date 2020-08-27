@@ -1,6 +1,15 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 27.08.2020
+
+### Agenda
+
+* `near-sdk` breakage + postmortem (resolved with near crates `2.0.0` + near-sdk `1.0.1`)
+* `near-sdk` published `2.0.0`.
+* `lockup` contract at `1.0.0`.
+* `lockup` contract vesting/release work.
+
 ## 20.08.2020
 
 ### Agenda
@@ -9,6 +18,8 @@ This thread contains agenda and/or summary of the regular Contracts sync meeting
 * I started testing `lockup` contract on testnet with validators. https://gist.github.com/evgenykuzyakov/0d92fbcb59666bd30a15640bca06f8cc
 * Discussion exchange issue.
 * Nikolai to find the owner for `no_std`.
+* AS decreased size by about 500 bytes due to static contracts before.
+* EVM might not happen within a month
 
 ## 13.08.2020
 
