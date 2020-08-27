@@ -7,6 +7,15 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 27.08.2020
+
+### Agenda
+
+- Implicit account creation (PR in progress). https://github.com/nearprotocol/NEPs/pull/71
+- Decorators on the fees.
+- State changes decorators.
+- Bowen is writing a Runtime spec for transactions (for exchanges).
+
 ## 20.08.2020
 
 ### Agenda
