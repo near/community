@@ -5,10 +5,21 @@ This thread contains agenda and/or summary of the regular Bridge sync meeting. P
 We pursue safety and usability at the same time.
 * Current focus:
   * Safety. We close all findings related to the audit, see: `2020-07 audit` label: https://github.com/near/rainbow-bridge/issues?q=is%3Aopen+is%3Aissue+label%3A%222020-07+audit%22
-  * Usability. [We have already split the repo](https://github.com/near/rainbow-bridge/pull/319). [Now we extract RainbowLib](https://github.com/near/rainbow-bridge/issues/297);
+  * Usability. [We have already split the repo](https://github.com/near/rainbow-bridge/pull/319). [Now we extract RainbowLib](https://github.com/near/rainbow-bridge/issues/297) Alex K discuss RaibowLib usages with Illia and Chad;
 * Next focus:
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
-  * Usability. We work on documentation.
+  * Usability. We work on documentation and examples.
+
+## 27.08.2020
+
+## Status
+* Max Z: Start looking into upgradability;
+* Bo Y: Separated Rust contracts and fixed some issues with packaging ethhash-proof so that we do not on github anymore. Fixed CI for all repos, rainbow-bridge-sol and rainbow-bridge-rs repos will trigger CI on the rainbow-bridge-cli repo. Resuming transfer PR had to be split into repos;
+* Alex K: Great job splitting repos really fast! RainbowLib is now separated too into a separate repo. The next steps are to get feedback from Illia and Chad to get better usability understanding. Created some small issues for all repos. Bo Y helped to fix cyclic dependencies, so we can test modules separately, allowing us to have better unit tests. In general, Alex K wants to figure out how to increase test coverage, including audit issues;
+* Illia P: Made generalized token locker with isolated tests for Rust side, which allows to mock the prover and test the connector side. The next steps are to introduce it into testing into CI. Need help from Bo Y or Alex K;
+* Chad O: Demo on sending ERC20 to NEAR. Will be blocked soon by not having addresses of contracts deployed to Ropsten and Testnet. <- Max needs to unblock by giving addresses, needs work Bo Y;
+* Ash C: Figuring out how many partners need bridge and what they need. Making sure fits everyone's expectations;
+* Evgeny K: Reading Solidity contracts. Find some undeeded parts, e.g. ECDSA code. Will move ED25519 generator into repo to generated it during build. Might turn into library, even though there are issues with deployment. Max Z: Please see https://github.com/near/rainbow-bridge-cli/issues/214 ;
 
 ## 06.08.2020
 
