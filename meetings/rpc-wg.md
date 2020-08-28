@@ -15,7 +15,7 @@ Vlad F:
 * JSONRPC: we increased the payload limit from 2MB to 10MB and made it configurable via config.json
 * JSONRPC: the structured errors are still awaiting the applayer support
 
-Data API might take approx 3 more weeks.
+Construction API release might take approx 3 more weeks.
 
 ## Notes
 * Bohdan K was trying to figure out how to have all keys for the Wallet indexer. Was trying to repurpose state viewer, unfortunately state viewer is not library at all. So Bohdan K started copying pieces from state viewer. Unfortunately state viewer requires the node to be shut down. Bowen W: Create a snapshot on the database and then read the snapshot, check with Mikhail K whether he has merged the snapshots. Let's follow up with Alex S whether snapshot PR can be merged;
