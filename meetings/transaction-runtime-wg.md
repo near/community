@@ -7,6 +7,17 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 03.09.2020
+
+### Agenda
+
+- Implicit account creation merged with protocol version 35
+- TODO: Publish runtime crate `2.2.0`.
+- Runtime changes should be backward compatible and hidden behind a protocol version.
+- PR for a param estimator fixes.
+- Bowen added more info into the TX spec.
+- TODO: Add a PR template to nearcore to include extra fields: documentation/spec update, linked issues/neps, devx effects.
+
 ## 27.08.2020
 
 ### Agenda
