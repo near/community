@@ -20,6 +20,13 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 03.09.2020
+### Status
+* Nikolay is working on combined runtime. He got it working, but he is now testing. Bo and Willem are currently testing it;
+* Bo is looking into Wasmer 1.0. They refactored errors;
+* Willem workign on improving simulation testing. Added compilation feature to current macro called "simulation" that forces the bindings to be generated. Consolidating Illia P's code;
+* Congratulations to Willem with his #10 AssemblyScript bounty!
+
 ## 27.08.2020
 ### Status:
  * Wasmer 1.0-alpha is released, plan to release regular version in timeframe about a month
