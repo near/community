@@ -10,6 +10,22 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
   * Usability. We work on documentation and examples.
 
+## 03.09.2020
+
+## Hackathon Status
+* Had a brainstorm on what to tell people to build on hackathon;
+* Might bundle EVM into hackathon;
+* Max still haven't launched it on Rinkeby, specifically ETH->NEAR direction. Bo will take over https://github.com/near/rainbow-bridge-cli/issues/336 ;
+
+## Stability and Robustness Status
+* Most work will be done by Alex K;
+* Evgeny K contracts -- audit (current focus), adressing Solidity splinters, uprgadability.
+  * Found an issue in prover code.
+* Mario need to talk to Alex K. Repurpose `status` command to setup https://github.com/near/rainbow-bridge-cli#deploying-and-using-locally ;
+
+## Notes
+* Chad. Local setup might be tricky, specifically Wallet and Contract Helper;
+
 ## 27.08.2020
 
 ## Status
