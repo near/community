@@ -1,6 +1,18 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 03.09.2020
+
+## Current focus
+
+* Indexer: Bohdan K: refactoring the implementation of Execution Outcomes during the indexing phase, specifically, storing the intermediate receipt hashes between blocks in Rocks DB to build a relation between receipts (parent/child + transactions). Vlad F: It is a separate RocksDB setup inside Indexer.
+* Rosetta API: Vlad F: tried to merge the Data API PR, but we had to revert it due to failing tests on nightly (ports collision); resolved it with disablic Rosetta API server by default. Construction API design was reviewed by a partner and updated the Rosetta spec to enable our case. Vlad F implementing the design on nearcore side.
+* JSONRPC: We are deprecating `EXPERIMENTAL_genesis_records` API to free up RAM on nodes, this requires an update on Explorer side (the PR is about to land). This will free up a few GB of RAM on testnet nodes at least.
+
+## Future focus
+
+* Max Z: Define public facing interfaces and documents for extension, so instead of us implementing "Rosetta 2.0" (just an example), we just enable others to do this if needed. High-level focus: externalize anything that is not directly related to NEAR Protocol.
+
 # 27.08.2020
 
 ## Current focus
