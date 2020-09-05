@@ -44,7 +44,7 @@ Mike: Seems working, Suma says some routes might not be implemented. Logging nee
 
 
 ### Links:
-https://docs.google.com/spreadsheets/d/1kiIR3WtF5XsvfgdHILn48o8mglMN_GikCHuBIjcdEQ0/edit#gid=0
-https://github.com/ilblackdragon/balancer-near
-https://github.com/near/rainbow-token-connector/blob/master/bridge-token/src/lib.rs
+* https://docs.google.com/spreadsheets/d/1kiIR3WtF5XsvfgdHILn48o8mglMN_GikCHuBIjcdEQ0/edit#gid=0
+* https://github.com/ilblackdragon/balancer-near
+* https://github.com/near/rainbow-token-connector/blob/master/bridge-token/src/lib.rs
 
