@@ -7,6 +7,16 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 10.09.2020
+- TODO: Add a PR template to nearcore to include extra fields: documentation/spec update, linked issues/neps, devx effects.
+- Published runtime crate `2.2.0`.
+- Update to fees param estimator
+- TODO: Update Runtime spec about implicit account creation.
+- Bowen added more into the docs
+- Random seed fix. 
+- Discuss upgradability
+
+
 ## 03.09.2020
 
 ### Agenda
