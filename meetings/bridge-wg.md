@@ -10,6 +10,29 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
   * Usability. We work on documentation and examples.
 
+## 10.09.2020
+
+## Hackathon Status
+* Rinkeby testnet is going to be available, but we need to fix P0 bug: https://github.com/near/rainbow-bridge-sol/pull/16 (Bo can help);
+* Generalized token locker. Alex K started integrating it today and need some help to complete integration of it;
+* Chad needs to make demo app work for specialized locker, and Chad is getting stuck on various pieces. Alex K and Willem are helping him;
+* Make sure documentation is polished -- Max Z. Documentation of the dApp is on Chad;
+
+## Notes
+* Daniela O says Rinkeby might be forky. Gotta be careful. Maybe we should launch our own testnet? Daniela can check if we can have PoA testnet running for it.
+* On Monday we might deprecate for nearup. The new nearup is a branch. We might merge it after the hackathon;
+
+## Post-hackathon goals
+* Let's focus on hackathon for now, after that let's focus on stability, e.g. testing infra, similarly to what we use for nearcore. Post hackathon we can also use the feedback to guide us further.
+* Mario is working on alerting system. Will just pipe block status of the relay. Will also somehow get number of transactions from the relay. Might make rainbow status service for exporting metrics.
+* Nick might be working on setting up Ethereum Testnet SRE -- can be just one node, but gotta be PoA.
+
+Please look at:
+https://github.com/near/rainbow-bridge-cli/issues/339
+
+https://github.com/near/rainbow-bridge-cli/issues/338
+
+
 ## 03.09.2020
 
 ## Hackathon Status
