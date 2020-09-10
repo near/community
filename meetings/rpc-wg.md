@@ -1,6 +1,19 @@
 # RPC Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 10.09.2020
+
+## Current focus
+
+* Indexer: Bohdan K: Some issues around local receipts (dicovered [the hard way] via the Indexer for Wallet, which is now a blocker); we missed the concept of local receipts, so had to find out how to deal with them (clarified by Eugeny K). Vlad F: We have two projects on the table: Indexer for Wallet and Indexer for Wallet + NEAR Indexer framework.
+* Rosetta API: Vlad F: Data API PR is merged into master and the partner is already experimenting with it (syncing the blocks, and testing the API). Construction API implementation is 80% done (the public interfaces are fully defined and the missing part is the implementation of mapping of Rosetta Operations -> NEAR Actions and back)
+* JSONRPC: `EXPERIMENTAL_genesis_records` API is ready to be removed from nearcore to free up RAM that is taken by the genesis records. It is just a matter of a PR.
+
+## Discussions
+
+* How to deal with "local receipts"? Eugeny K: local receipts are never recorded in a chunk even if they "arrive" (Incomming Receipts) not in the same block as the transaction.
+* What is "circulating supply"? (It was brought up by Erik in Slack as "It’s a requirement to get listed on CoinGecko and I suspect they’re not the only ones who want a simple endpoint to grab this from".) Max Z will clarify the requirements
+
 # 03.09.2020
 
 ## Current focus
