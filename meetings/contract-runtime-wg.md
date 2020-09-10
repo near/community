@@ -20,6 +20,20 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 10.09.2020
+### Status
+* Combined runner is functional, but we have certain conceptual discussions around, and not sure if going to merge
+* Bo encountered issues with error mapping in Wasmer 1.0 alpha, no luck with running the runtime so far
+* Willem can transform contract to expose its methods externally via macroses, PR 226 in Rust SDK ready for review
+* Moving contract compilation from execution to deployment
+* AS SDK will be published soon and moved mostly to bounties mode afterwards
+* EVM gas cost estimation work by Bo
+
+ Action items:
+   * Bo attempt migration to Wasmer 1.0, blocked on Wasmer side so far
+   * Write a full spec of Wasmer: provide functional tests and measure code coverage of VM code
+   * Nikolay: disk performance must be accounted in fees
+
 ## 03.09.2020
 ### Status
 * Nikolay is working on combined runtime. He got it working, but he is now testing. Bo and Willem are currently testing it;
