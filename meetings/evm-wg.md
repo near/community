@@ -8,6 +8,25 @@ Current eng team:
 * Misha Kever, Evgeny Kuzyakov -- final PR reviews (Evgeny as codeowner and Misha as an expert);
 * Evgeny Kapun -- security-related reviews.
 
+## 11.09.2020
+
+Let's define clear criteria for:
+* Merging PR;
+* Enabling on Betanet (blocked on param estimator and gas meter by Bo. Decide what to do with storage.); 
+* Enabling on Testnet;
+* Enabling on Mainnet.
+
+It should be relatively safe to merge, because we don't have anyone deployed evm.
+
+### Notes
+* Bo approved the PR already. Ready for reviews by Evgeny Kuzyakov and Misha.
+* Bo could not connect EVM gas counter correctly yet. Sometimes it fails because it is out of gas.
+* Illia: Let's double check that entrance point is fine;
+* Evgeny Kapun: Suggests to hardcode that every contract in .evm namespace only has EVMs;
+* Illia: Storage is problematic, we need to make every function callt to EVM payable. Evgeny Kapun: What if we don't enforce storage staking on evm.
+  * Illia: Things to consider: maybe we should consider how to improve state fees (should be introduce gas into storage?).
+  * Let's make sure EVM-type storage is not abusable (receipt cost should prohibit abuse).
+
 ## 04.09.2020
 
 ### High-level info
