@@ -8,6 +8,15 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 09.15.2020
+Michael: fix issue with slowdown when there are many (10k) transactions submitted to the node
+Marcelo: network upgrades, state sync tests, spec for new sync. Investigate memory spike during state sync
+Piotr: procedural macros for measuring the size of the structs in memory. More investigation on memory usage
+Misha: Fixed storage inconsistencies. Fixed a nightly test
+Alex: Syncing for archival nodes
+Bowen: remove holding genesis records in memory, get execution outcomes for chunks in view client
+
+
 ## 09.08.2020
 
 Marcelo: Network protocol upgrades regarding the change of handshake format. Fixing state sync test
