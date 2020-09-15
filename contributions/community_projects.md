@@ -46,6 +46,8 @@ Have a look at the full contribution section in the [docs](https://docs.near.org
 * [The Beginner Guide to the NEAR Blockchain](https://medium.com/@nearprotocolgermany/das-starter-handbuch-zur-near-blockchain-c1ea60147ea6). The translation was done by Markus.
 * Introduction to Sharding [Part 1](https://medium.com/@nearprotocolgermany/ein-leitfaden-zum-blockchain-sharding-teil-1-e90859ac94a8) and [Part 2](https://medium.com/@nearprotocolgermany/ein-leitfaden-zum-blockchain-sharding-teil-2-cb38303bd2de). The translation was done by Markus.
 
+#### Filipino (Modern Tagalog and English)
+* A number of translated and **original** explanatory articles for NEAR and the blockchain may be found in [this Medium publication](https://medium.com/nearphilippines).
 
 ## List of Communities to Join
 
@@ -54,8 +56,13 @@ Have a look at the full contribution section in the [docs](https://docs.near.org
 * [NEAR Russsia](https://twitter.com/near_protocol)
 * [NEAR Nation](https://twitter.com/Near_Nation)
 * [NEAR India](https://twitter.com/NEARProtocol_IN)
+* [NEAR Philippines](https://twitter.com/NEARPhilippines)
 
 #### Telegram Channel
-
 * [Russian Telegram](https://t.me/near_protocol)
 * [India Telegram](https://t.me/cryptonear_IN)
+* [NEAR Philippines Telegram Group](https://t.me/NEARPhilippines)
+
+#### Facebook Pages and Groups
+* [NEAR Philippines Facebook Page](https://www.facebook.com/NEARPhilippines/)
+* [NEAR Philippines Facebook Group](https://www.facebook.com/groups/NEARPhilippines/)
