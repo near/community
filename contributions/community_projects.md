@@ -54,7 +54,7 @@ Have a look at the full contribution section in the [docs](https://docs.near.org
 #### Twitter Accounts
 * [NEAR Japan](https://twitter.com/NEARProtocolJP)
 * [NEAR Russsia](https://twitter.com/near_protocol)
-* [NEAR Nation](https://twitter.com/Near_Nation)
+* [NEAR Nation](https://twitter.com/Near_Nation_)
 * [NEAR India](https://twitter.com/NEARProtocol_IN)
 * [NEAR Philippines](https://twitter.com/NEARPhilippines)
 
