@@ -1,5 +1,18 @@
-# RPC Work Group Agenda and Notes
+# Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
+
+# 17.09.2020
+
+## Current focus
+
+* Indexer: Bohdan K: Replaced/redeployed all the indexers for Wallet (with proper local receipts handling). Started working on Indexer for Explorer. High-level goal: store all the "raw" data (blocks, transactions, receipts, execution outcomes) in a database (postgres), and extend it later to also index Access Keys (merge Indexer for Wallet into Indexer for Explorer) and Accounts.
+* Rosetta API: It is feature-complete (Data API and Construction API are implemented according to the Rosetta spec). Kudos Evgeny for review.
+* Telemetry: Vlad F: planning to fix a long-standing issue of stuck "not a result of error" (believed to be related to HTTP2 quirks in actix-web or http2 crate).
+* JSONRPC: Bowen W: removed `EXPERIMENTAL_genesis_records` JSON-RPC API which should lower the memory footprint. Vlad F: we need CHANGELOG for the breaking changes.
+
+## Highlight
+
+* near-cli in Rust allowed to reuse and clean up some of our nearcore interfaces.
 
 # 10.09.2020
 
