@@ -20,6 +20,19 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 17.09.2020
+### Status
+* Filesystem-based contract precompilation using Wasmer code serialization
+* First version of contract testing infra is here, got feedback fro Illia
+* Still stuck with error handling in Wasmer 1.0 due to changed APIs
+* EVM cost counting and deduction of gas cost in EVM by Bo: mostly done, needs review
+
+TODO:
+* Willem: address feedback for contract testing infra for cross-contract calls
+* Willem: to take a look at https://github.com/nearprotocol/nearcore/issues/3120 https://github.com/nearprotocol/nearcore/issues/3122
+* Bo + Nikolay + Evgeny: next step is to use database to store complied contracts, compile on deploy and recompute the fees
+* Nikolay: evaluate approaches to accounting IO costs in gas price (3-4 days), discuss with Evgeny and Mikhail
+
 ## 10.09.2020
 ### Status
 * Combined runner is functional, but we have certain conceptual discussions around, and not sure if going to merge
