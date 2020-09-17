@@ -10,6 +10,31 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
   * Usability. We work on documentation and examples.
 
+## 17.09.2020
+
+## Status
+* Max Z: Started bridge on Rinkeby (enabled by Bo allowing trustful mode);
+* Chad setup ERC20 that anyone can mint (TODO: Add to CLI documentation);
+* Evgeny Kapun found 3 critical issues with Solidity contracts post security audit (having trouble with testing):
+  * AI for Max (or Alex Kouprin) -- add very specific step by step documentation on how to make changes to any repo, test, and publish it (Bo updated documentatino in https://github.com/near/rainbow-bridge-cli/pull/335 which is blocked by https://github.com/near/rainbow-bridge-sol/pull/11). FYI can ask Bo questions about testing;
+* Illia sent a proposal for Rust upgradability see https://github.com/near/rainbow-bridge-cli/issues/298 ;
+
+## Focus next 2 weeks:
+* By Evgeny Kapun
+   * upgadability for Solidity;
+   * JS tooling;
+ 
+## Notes
+* Chad: No good documentation for deploying generic token locker;
+* Mario updated bridge to use fresh nearup (we will be using old nearup until hackathon is done);
+
+## Problems
+* Security of JS code -- passing secret keys is not security;
+* Need to separate testing (should live entirely in npm test) and production commands (rainbow) (separate Ganache and nearup);
+* Better UI, usability, separation of UIs (many things might be solved through good documentation):
+  * Relayer role (should be able to run `rainbow up` on the given config);
+  * Developer role (ideally for development they don't even need CLI);
+
 ## 10.09.2020
 
 ## Hackathon Status
