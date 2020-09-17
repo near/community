@@ -1,6 +1,21 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 17.09.2020
+
+* Updating lockup contract for anonymity around vesting schedule by using hash of (vesting_schedule, salt)
+* `nead-sdk` updates
+   * - `init_once` - check state is not initialized before
+   * - `private` - for callbacks. Checks predecessor = current_account
+   * - `log!` - wrapper. It also has a bunch of testing tools, such as VMContextBuilder, Constants, get_logs
+   * - `NoDefault` - panics on call to `default()`. TODO: rename to `PanicOnDefault`
+   * - switched all `Cargo.toml` to use `overflow-check = true` and `opt-level = "s"`
+   * - `test_contract` example, to verify corner cases of `near-sdk`.
+* TODO: Link core-contracts into near-sdk README
+* TODO: Update docs to point to lockup-contract
+* TODO: `near-sdk` upgrade to `2.2.0` that has newer borsh and a protocol version as input arg
+* TODO: `near-sdk` callback input result can fail `Result<ReturnedValue, ()>`
+
 ## 27.08.2020
 
 ### Agenda
