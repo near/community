@@ -7,7 +7,17 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 17.09.2020
+
+- Updated Runtime spec about implicit account creation.
+- PR for fee param estimator is merged
+- TODO: Add a PR template to nearcore to include extra fields: documentation/spec update, linked issues/neps, devx effects.
+- Future work item for upgrading Fees as a protocol change. Move compilation cost to Deploy action.
+- Disk compilation cache - mostly done (works as a cache - compiles on call). Need to plug RocksDB and include the current VM-version into the cache-key.
+
+
 ## 10.09.2020
+
 - TODO: Add a PR template to nearcore to include extra fields: documentation/spec update, linked issues/neps, devx effects.
 - Published runtime crate `2.2.0`.
 - Update to fees param estimator
