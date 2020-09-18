@@ -8,6 +8,16 @@ Current eng team:
 * Misha Kever, Evgeny Kuzyakov -- final PR reviews (Evgeny as codeowner and Misha as an expert);
 * Evgeny Kapun -- security-related reviews.
 
+## 18.09.2020
+
+### Status
+* Illia P was workign on adding ecrecovery. ecrecovery is critical for many existing Ethereum contracts. ecrecovery -- recover public key from signatures. Metatransaction -- user signs the message and relayer send it on behalf of the user. Go read https://github.com/nearprotocol/NEPs/pull/106 about metatransactions and mapping NEAR-EVM accounts;
+* Bo Y finished EVM gas benchmarking, adding number to EVM fee config. Makes sure EVM gas does not include NEAR gas. Need to investigate why `funcall_cost_per_evm_gas` is so 20k times larger than ecrecovery cost.
+* Mike P deployed a test netowrk (not to be confused with The Testnet) with EVM and some people are deploying and testing on it right now.
+
+### TODOs
+* Max Z, Evgeny Kuzyakov, and Evgeny Kapun to review PR;
+
 ## 11.09.2020
 
 Let's define clear criteria for:
