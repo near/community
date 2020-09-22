@@ -8,6 +8,19 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 09.22.2020
+
+Marcelo: working on fixing massive state sync test.
+
+Piotr: Investigating memory leak. 500 MB out of 1.8 GB is used by rocksdb. Need to look into memory used by wasmer. Investigate actix memory usage
+
+Alex: Syncing from archival nodes. MOONGLOW
+
+Bowen: Testing syncing from archival on mainnet. Fixed several issues with block sync and partial chunks in storage. Fix an inconsistentcy with final state.
+
+
+
+
 ## 09.15.2020
 Michael: fix issue with slowdown when there are many (10k) transactions submitted to the node
 
