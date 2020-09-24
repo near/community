@@ -7,6 +7,15 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 24.09.2020
+
+- TODO: Delete Account action change. It currently creates Refund receipt to transfer remaining balance. It will not create an implicit account. Solution is to switch to Transfer action with regular `predecessor_id`.
+- Moonglow:
+    - Allows to not burn all prepaid gas
+    - Don't need to do cross-shard refunds, because it uses the exact amount
+    - Q: Do you need to specify gas amount per cross-contract call? If you use global counter per transaction. Your parallel threads can charge this counter post every contract execution. When exceeded, the entire transaction is rolled back and the account is charged for the burned prepaid gas (up to the limit). Allow to dip into negative.
+    - We may prioritize gas price priority instead of bunring gas.
+
 ## 17.09.2020
 
 - Updated Runtime spec about implicit account creation.
