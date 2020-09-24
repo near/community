@@ -1,6 +1,15 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 24.09.2020
+
+## Current focus
+
+* Indexer: Bohdan K: Continue working on NEAR Indexer for Explorer. Was in a bit hurry to finish necessary data processing that was needed for Indexer for Exchange (Bowen W). Currently we are processing all the data except State Changes and handlers from Indexer for Wallet (like AccessKeys and Accounts). Need to polish big PR and handle async calls for saving blocks and chunks to avoid some sort of race conditions.
+
+There is a bug we don't get ExecutionOutcome for Transaction in the same block, but we assume it must be there, design of NEAR Indexer Framework is based on this assumption. Maybe it is in the implementation of method in ViewClient Bowen has made for us.
+ref: https://github.com/nearprotocol/nearcore/issues/3370
+
 # 17.09.2020
 
 ## Current focus
