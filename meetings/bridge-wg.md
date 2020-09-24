@@ -10,6 +10,24 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
   * Usability. We work on documentation and examples.
 
+## 24.09.2020
+
+### High-level goals
+#### Safety
+* Follow Alex Kouprin's issues: https://github.com/near/rainbow-bridge-cli/issues/338 and https://github.com/near/rainbow-bridge-cli/issues/339
+* Evgeny Kapun, Marcelo Fornet and Max Zavershynskyi working on it.
+  * Extract near-api-js kludges and submit them to near-api-js repo if they are actually still needed. Requires Marcelo to be able to start bridge on Rinkeby and NEAR Testnet.  Also see https://app.zenhub.com/workspaces/mainnet-guild-5cea2bcf78297c385cf0ec81/issues/near/rainbow-bridge-cli/307
+  * Then start working on P1 issues from "Fully Tested Bridge" release (together with Max)
+  * Evgeny Kapun still working on merging rewrite of NearOnEthClient. CI fails, but local run passes. There is a serious problems with near-api-js that does not allow distinguishing timeouts and account does not exist. Web3js just slightly easier to use with errors. Relevant: https://app.zenhub.com/workspace/o/nearprotocol/nearcore/issues/2536 . Need help from Bo Yao to debug CI issue;
+  * Evgeny will optimize serialization (there is already a PR that needs to be merged). Evgeny is currently writing a design doc on improving the bridge, not just about not storing excessive storage. Currently API is not compatible with upgradability. Token connectors include code that parses events, which makes it non-upgradable: https://github.com/near/rainbow-bridge-sol/issues/19
+
+#### Usability
+* Alex Shevchenko needs to revisit https://github.com/near/rainbow-bridge-cli/issues/313 and figure out the exact interface of Rainbow Lib and user the stories behind this. Definitely should work with Chad on it. (Generic connector is a separate library). Relevant: https://github.com/near/rainbow-bridge-lib/pull/12
+
+#### Hackathon Status
+* Chad's next work would update the current example to generic token connector. Marketing also wants to have a landing page for the bridge. These two might actually be integrated. Maybe someone else should be implementing the landing page, talk to Jake about design and implementiation.
+* Technical support -- seems like we are keeping up with questions.
+
 ## 17.09.2020
 
 ## Status
