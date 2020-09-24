@@ -20,6 +20,19 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 24.09.2020
+### Status
+* Nikolay Igotti is OOO this week.
+* Precompilation with on-disk cache. Bo made a pull request for on-disk cache for precompilation, but Misha and Bowen are discussing what is the right way to do it. It currently uses Singleton. Misha suggested to do it from trie update by exposing store. Eugene suggests to introduce Singleton cache, which would also make it relatively easy to disable, we might also get rid of the `cached_key!` macroses, which are already hard to disable because we need to use 
+compiler flags. We should address `cached_key!` later;
+
+* Contract testing infra. Waiting on the next round of feedback from Chad and incorporated feedback from Illia. Trying to make it work without macros first. Not blocked on it though.
+
+* Willem talked to Matt and created an AssemblyScript stripped down example to compare it to a similar EVM contract.
+
+* Wasmer 1.0. We are waiting for Syrus to provide documentation on error handling.
+
+* EVM fees counting are having some issues that Bo is working on. After Illia introduced new changes the code needs to be updated.
 ## 17.09.2020
 ### Status
 * Filesystem-based contract precompilation using Wasmer code serialization
