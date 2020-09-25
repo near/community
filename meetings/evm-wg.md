@@ -8,6 +8,24 @@ Current eng team:
 * Misha Kever, Evgeny Kuzyakov -- final PR reviews (Evgeny as codeowner and Misha as an expert);
 * Evgeny Kapun -- security-related reviews.
 
+## 25.09.2020
+
+### Status
+* See checklist in the PR that needs to be done. Illia Polosukhin is still working on it;
+* Mike Purvis is still working on web3js, connecting with partners, and relayer;
+* Eugene Kuzyakov -- Reviewed EVM PR and found a bunch of critical bugs. Eugene has a major concern about introduction of remove subtrie operation on storage. When ETH contract suicides we need to remove all keys under it, which is similar to our account deletion. However for NEAR account deletion we use prefix iterator, which it cannot be used directly on EVM because of how Ethereum accounts are mapped to the trie. Deletion and iteration might be different implementations entirely. Also, we want to flatten the trie in the future and maybe replace merklelization which means iterate and delete operation might not be a good choice. Maybe we want to introduce sub-structure fro Ethereum accounts;
+  * We cannot support operation to get block has for the given height. We have a hack for it. Evgeny Kapun: EVM only returns blocks up to some number, not up to genesis. This number is 256, which should be super easy to store for us even with GC enabled. It might require some changes in the chain. Unfortunately NEAR skips the block height, maybe we should return empty hash instead;
+  * Eugene found a bunch of issues that allow passing data to precompiles and they would blow up the memory. However it is unclear whether EVM has extra protection against passign bad data, e.g. through pre-charging.
+  
+* Max Zavershysnkyi -- starting familiarizing with meta-transactions.
+
+### Context
+
+* Illia Polosukhin -- we are adding native support of metatransactions in NEAR EVM. (We can recover address of the user of ECDSA signature). In Ethereum smart contracts require extracting the address of the user (e.g. GSN contracts), while on NEAR we are going to have it natively. Our EVM will do the work of GSN, every contract inside EVM will see recovered address as `msg.sender`, unfortunately it requires end-contract to be modified.
+  * Alex Shevchenko FYI. In NEAR metatransactions are not exactly needed, because we have allowance and predecessor_id. Evgeny Kapun: in NEAR or even on ETH we can have a smart contract that works as a wallet and proxies meta-transactions into regular operations. Unfortunately the UX flow is not clear.
+* The way the flow works is that we are going to have a JS wrapper library on top of Web3js. Alex Shevchenko to write down detailed user flow, with interaction of components.
+* The purpose of `msg.origin` in EVM -- is the signer. Currently we replace both `msg.sender` and `msg.origin` with recovered address for metatransactions, for non-metatransactions we use `predecessor_id` (maybe we can pass it as `signer_id` though).
+
 ## 18.09.2020
 
 ### Status
