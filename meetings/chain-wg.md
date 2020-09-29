@@ -8,6 +8,14 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 09.29.2020
+
+Marcelo: Fix several issues with network. Fix massive state sync test. Implement achival peer anchoring
+
+Piotr: Debug memory leaks. Add jemalloc stats. Counting memory allocated per thread. We use 20MB for some peer actors. Add cache size counting. Rocksdb reports using 0 in block cache.
+
+Michael: working on merging post-phase-1 branch. Need to figure out how to add protocol version to ShardChunkHeader.
+
 ## 09.22.2020
 
 Marcelo: working on fixing massive state sync test.
