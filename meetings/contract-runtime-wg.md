@@ -20,6 +20,12 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 01.10.2020
+
+### Status
+* Bo, did some work on volatility of the EVM cost, but haven't finished it yet;
+* Willem did a talk on wasm vs EVM on Friday that went well.  And the latest generation of the simulation testing now compiles, but it is just the hand crafted version so still need to turn it into a macro;
+
 ## 24.09.2020
 ### Status
 * Nikolay Igotti is OOO this week.
