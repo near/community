@@ -23,7 +23,7 @@ Long-term goal: Near-independent and non-specific to Near contract execution run
 ## 01.10.2020
 
 ### Status
-* Bo, did some work on volatility of the EVM cost, but haven't finished it yet;
+* Bo, did some work on volatility of the EVM cost, but haven't finished it yet. Make evm now count cost in the same way as near function calls (included cost to finalized block, deduct action receipt cost), it's more expensive than previously just counting function run_evm, in one number get can do 660 tps erc20 transfer under current block gas limit;
 * Willem did a talk on wasm vs EVM on Friday that went well.  And the latest generation of the simulation testing now compiles, but it is just the hand crafted version so still need to turn it into a macro;
 
 ## 24.09.2020
