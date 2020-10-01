@@ -1,6 +1,17 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 01.10.2020
+
+## Current focus
+
+* Indexer: Bohdan K: Merged a PR on NEAR Indexer for Explorer "rewrite" (blocks, chunks, transactions, receipts, execution outcomes, actions). The only feature-complete thing left is Accounts tracking (new/deleted ones). 
+* Streamer (NEAR Indexer framework): Bohdan K: Extend execution outcomes with receipts (actions) on block streaming. Vlad F: this change needs to be PRed into nearcore.
+* JSON RPC: receipts exposed on tx status endpoint (EXPERIMENTAL_tx_status JSON RPC endpoint).
+* Rosetta API: Vlad F: Q&A and support. /block/ Data API has a bug in exposing the "fake" transactions (duplicates on "block transaction" hash). "hardcoded" lockup contracts support in Data API (under discussion). We need to update rosetta.cfg to support their latest rosetta-cli.
+* Telemetry being stuck: needs investigation.
+
+
 # 24.09.2020
 
 ## Current focus
