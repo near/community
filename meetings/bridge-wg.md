@@ -10,6 +10,18 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
   * Usability. We work on documentation and examples.
 
+## 01.10.2020
+
+### Status
+* Onboarding Marcelo and Vlad to work on the bridge;
+* Two severe incidents: https://nearprotocol.pagerduty.com/incidents/PYCB5WQ and https://nearprotocol.pagerduty.com/incidents/PRKD6UO. Maybe should've been SEV-1;
+
+### Focus
+* Safety
+  * Evgeny Kapun still haven't merged https://github.com/near/rainbow-bridge-sol/pull/20, stuck on publishing the packages. CI tests are actually passing, but the way our CI is setup it causes the CI to fail. Ideally the repositories should not having interfering CI;
+* Usability
+  * Still blocked by not know exact usages for all roles. Alex Shevchenko discussed it with Chad and Evgeny Kapun. Alex will draft a document on roles and user flows to help us clarify the interfaces and the repo split; 
+
 ## 24.09.2020
 
 ### High-level goals
