@@ -7,6 +7,17 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 01.10.2020
+
+- Fee upgrade PRs are not done this week. Will continue work into the next week.
+    - Bo was working on singleton `Cache` for entire node client.
+    - TODO (Evgeny): Disk estimation. Compare RAM-disk vs SSD measurements with instructions/wall-time measurements to get the idea about the disk overhead.
+    - Bowen: Network and disk from chain is not accounted in the fee estimator.
+- Runtime Fee Spec is in progress.
+- TODO: Write a NEP for moonglow-like sync transactions within Runtime.
+    - Max: Both async and sync calls.
+- TODO: Delete Account action change. Next step: write a NEP for this change.
+
 ## 24.09.2020
 
 - TODO: Delete Account action change. It currently creates Refund receipt to transfer remaining balance. It will not create an implicit account. Solution is to switch to Transfer action with regular `predecessor_id`.
