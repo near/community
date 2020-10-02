@@ -8,6 +8,25 @@ Current eng team:
 * Misha Kever, Evgeny Kuzyakov -- final PR reviews (Evgeny as codeowner and Misha as an expert);
 * Evgeny Kapun -- security-related reviews.
 
+## 02.10.2020
+
+### Status
+* Not much update from Illia P an Mike P;
+* Mike P added a simple express relay for Metamask. Mike P and Illia P to sync on multiple web3-providers :)
+* Bo Yao: The fees are volatile, spent week debugging it. The EVM itself is not volatile -- at most 1% volatility. However, finalizing into blocks and writing state creates 30% volatility, which does not decrease when we increase the batch size. Also, note that regular state operations are actually not volatile, so this looks suspicious. Spent 2 days on investigating code. Max Z: Please create GH issues for next cycle and set estimates;
+* Illia P: Needs to address comments form Eugene K on PR. Also coordinating with Bowen W to have EVM accounts ready on all networks, i.e. we need `evm` top account (we would have to erase an existing `evm` accoutn on Testnet during hardfork).
+* Illia P: Added nonce to metatransactions. We need to register NEAR chain id in Ethereum repos, this is needed to prevent users from replaying the same transacions on multiple chains.
+  * We might consider adding extra protection in metatransactions to prevetn replay, e.g. add block hash. To prevent the transaction from being delayed for more than some time. This might also be used instead of chain id, because it is safer;
+* Bo Yao has investigated how to test contracts. EVM test suite is already testing Parity crates. Illia P: Web3 provider with truffle test suite already works, and we tested it with our partners.
+ * Illia P: Suggests to add tests of some partners to nightly to run with truffle test suit.
+
+### Notes
+* 80% of Ethereum endpoints are implemented and others are not that frequently used. We were able to replace most of the stuff with similar semantics;
+  * Max Z: We might need to add support of event subscription in the future, for which we might need to use indexer.
+  * FYI We don't need proxy right now, it is good to have though. It is currently implemented through implementation of web3 provider.
+* Alex Shevchenko: We need to put fees on metatransactions. E.g. charge custom ERC20 token inside NEAR EVM (e.g. bridged DAI) to be paid with, see dicussion in NEP about it. This should be done as a separate PR and assigned to Bo Yao.
+* Another work item for Bo Yao: Make sure EVM is upgrade-friendly.
+
 ## 25.09.2020
 
 ### Status
