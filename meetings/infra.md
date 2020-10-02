@@ -2,7 +2,7 @@
 
 This thread contains agenda and/or summary of the regular Infra sync meeting. Please propose agenda items through the PRs and Issues.
 
-The meetings are scheduled for Thursday at 7PM CET and you can find the event invite on the NEAR Community calendar.
+The meetings are scheduled for Thursday at 8PM CET and you can find the event invite on the NEAR Community calendar.
 
 The scope of the infra team is the following:
  - Releases and Testing 
