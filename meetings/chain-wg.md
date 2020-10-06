@@ -8,6 +8,19 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 10.06.2020
+
+Michael: version shard chunk header. Almost done
+
+Piotr: finish adding jemalloc stats per thread. most of the leak is outside of rust code. Leaks happen mostly on the main thread. Peer manager is also leaking memory. Investigating leak in C code
+
+Misha: finding possible attacks.
+
+Alex: fix stress.py. In doing so also address the issue of requesting chunk parts from nonvalidator nodes.
+
+Bowen: Return receipts from transaction status query rpc.
+
+
 ## 09.29.2020
 
 Marcelo: Fix several issues with network. Fix massive state sync test. Implement achival peer anchoring
