@@ -35,7 +35,7 @@ Short and medium term goals:
 
 - Mario has finished the hard-fork automation and worked on getting the hard-fork on testnet done. Working on nearup support for rainbow bridge, as it still is pinned on the v1 on master. He has issues with a test he is trying to debug. Archival nodes have backups now on testnet
 
-- Sandi has worked on weekly release and the hardfork, spent bucnh of time on the testnet down SEV and mainnet RPC overload SEV.I was writing postmortems for all of them and incident review meeting. Canary were broken due to hardfork, fixing logs issue on the canaries, debugging network indexer after hard-fork, rainbow bridge nearup pinning added, added crashnet support to nearup, added archival on testnet, upgraded bulldozer which was broken due to a github API change, oncall.
+- Sandi has worked on weekly release and the hardfork, spent bunch of time on the testnet down SEV and mainnet RPC overload SEV.He was writing postmortems for all of them and incident review meeting. Canary were broken due to hardfork, fixing logs issue on the canaries, debugging network indexer after hard-fork, rainbow bridge nearup pinning added, added crashnet support to nearup, added archival on testnet, upgraded bulldozer which was broken due to a github API change, oncall.
 
 ### Priorities for the next week:
 - Nick will continue working on this to get the RPC nodes done first until next week.
