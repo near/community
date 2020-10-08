@@ -1,6 +1,12 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 08.10.2020
+
+* Bootstrapping native NEAR ecosystem: https://github.com/nearprotocol/NEPs/issues/121
+* New fungible token standard: https://github.com/nearprotocol/NEPs/issues/122
+* TODO: Check OWNERS on near-sdk-rs
+
 ## 17.09.2020
 
 * Updating lockup contract for anonymity around vesting schedule by using hash of (vesting_schedule, salt)
