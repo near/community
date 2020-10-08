@@ -7,6 +7,20 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 08.10.2020
+
+- PR to refactor `Runtime` class by moving `RuntimeConfig` into `ApplyState`.
+- NEP to upgrade fees: https://github.com/nearprotocol/NEPs/issues/120
+- RAM-disk vs SSD performance. With 4M accounts in a trie and 400K accounts used with 20 iteration using `time` metric.
+- TODO: Final param estimation
+    - shift compilation costs into deploy action
+    - set runtime compilation cost within function call to 0
+    - run it with 10M+ accounts trie with `icount`
+    - multiply it by coefficient based on SSD / RAM perf
+- TODO: PR for fee upgrade with protocol change
+- TODO: NEP for refactoring Runtime into one block state-based transition
+- Not happening: Write a NEP for moonglow-like sync transactions within Runtime.
+
 ## 01.10.2020
 
 - Fee upgrade PRs are not done this week. Will continue work into the next week.
