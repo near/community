@@ -26,3 +26,12 @@ Short and medium term goals:
 - Building a stable version of nearup with systemd support
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
+
+## October 8th 2020
+### Weekly team updates:
+
+### Plans for the next week:
+
+### Discussion notes:
+
+
