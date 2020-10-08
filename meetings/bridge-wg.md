@@ -10,6 +10,22 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
   * Usability. We work on documentation and examples.
 
+## 08.10.2020
+
+### Status
+* Evgeny Kapun -- found a problem with test with downloaded proofs, i.e. proof dump. However, it is not a good approach, because they don't guarantee to cover all corner cases, e.g. with max num of validators, tests with different lengths of merkle paths. Evgeny Kapun suggests to keep prover simple, so that we can remove block hashes. We need to decide what to do with: https://github.com/near/rainbow-bridge-sol/pull/25 Discuss async;
+* Marcelo Fornet -- trying to figure out how Ethereum logs work to check for all corner cases;
+* Vlad Frolov -- started with onboarding with CLI and rainbow LIB. Had dicussion with Alex Kouprin. Alex Kouprin has a plan how to split CLI in two entities: user facing and CLI for testing;
+* Alex Kouprin -- collecting insights of what happened in the past several weeks. Alex's current focus: let's finalize high-level view of the architecture, and there are still some issues;
+* Chad Ostrowski and Alex Shevchenko also came up with a high-level design of the bridge;
+* Chad Ostrowski -- partner needs a fiat onramp by January, they might need to only send DAI across. Moved front-end to near organization and Vlad Grichina helped with some Borsh handling, and use it from near-api-js. Published a new 1.1.0 of the UI that uses new contract, so people lost old tokens;
+* Mario Halambek is blocked on upgrading nearup for bridge, and then will be working on monitoring;
+* Alex Shevchenko -- created a doc with user needs. We need to pay attention to ability NEAR NEP21 with nERC20 running in NEAR EVM. Will be consulting with partners to get feedback on it. Will work with everyone here to come up with the roadmap that we can communicate to the outsiders;
+
+### Notes
+* Hakacthon participants are still not evaluated, and we need to keep bridge running for them;
+* Evgeny Kapun -- the upgadability is slowed down by difficulty developing on our repos;
+
 ## 01.10.2020
 
 ### Status
