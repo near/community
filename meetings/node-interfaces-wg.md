@@ -1,6 +1,20 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 08.10.2020
+
+## Current focus
+
+* Indexer: Bohdan K: Deployed Explorer for Indexer for testnet, betanet, mainnet. It operates snappy and correctly, but it is still early to make the final judgement. Explorer rewrite is already unblocked and Explorer backend can be migrated to the new storage (SQLite -> Postgres with some structure changes)
+* Rosetta RPC: Vlad F: maintenance work has been done (fixed a few issues) to unblock the partners.
+* Telemetry: Vlad F: haven't had a bandwidth to look into it yet.
+
+## Notes
+
+* JSON RPC received the policy rules on adding new methods / upgrading and removing the existing ones with and without `EXPERIMENTAL_` prefix: https://github.com/nearprotocol/nearcore/blob/master/chain/jsonrpc/README.md
+* near-cli re-write in Rust: https://github.com/nearprotocol/NEPs/pull/31
+* Consider using stored procedures for Indexers
+
 # 01.10.2020
 
 ## Current focus
