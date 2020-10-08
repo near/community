@@ -20,6 +20,19 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 08.10.2020
+
+### Status
+
+* Willem working on memory growth cost computations, basing on insn count as function of requested amount of memory
+* Macroses for the testing infra almost there: only final testing remaining
+* Caching precompiled contracts. We need to decide on how to cache data: runtime shall be independent of DB service. Cache shall be
+ trait on its own, not store trait. Shall cache be singleton, or explicitly passed to the runtime? We shall pass it to runtime's constructor.
+* EVM cost volatility investigation: cost deploy varies, will increase number of contracts. EVM cost is not always linear from NEAR computed cost.
+* Netlink approach for disk IO counting seems to work: so could use if for gas estimation
+* Evgeny figured out RocksDB issue with huge number of contracts: as we disabled multiple threads, DB cannot flush the data without the background
+
+
 ## 01.10.2020
 
 ### Status
