@@ -8,6 +8,41 @@ Current eng team:
 * Misha Kever, Evgeny Kuzyakov -- final PR reviews (Evgeny as codeowner and Misha as an expert);
 * Evgeny Kapun -- security-related reviews.
 
+## 09.10.2020
+
+### Status
+* Mike Purvis
+
+**Progress**:
+- Reworked a JavaScript test from EIP712 into a function that'll do abi.encodePacked for typed data, which is needed to create the digest that is passed to ecrecover.
+- Created basic relayer which can recover address and check the validity of signature passed to it
+- Switched to using web3's Contract class instead of TruffleContract because of odd inconsistencies
+- Getting nonce from EVM account id on frontend
+**Need to**:
+- Promisify all functions to use async await (I think only one left)
+- Refactor providers to mimic how Gas Station Network does it
+- Modify typed data "message" to be structured as NearTx which is expected by EVM
+- Get relayer using more robust JS packages like nodemon, possibly TypeScript, move functionality out of a single file
+**Concerns**:
+We'll want to be able to use NEAR Web3 Provider if they've logged in with Wallet, but right now the GCP instance doesn't have Wallet, Explorer, and I assume some indexing between them? Would be great to have the `evm-precompile` branch merged so we can start seeing this example on a "live" network.
+
+* Eugene Kuzyakov -- need to review the new EVM fixes from Illia Polosukhin, and think we would need at least a few months to run it on a separate chain before Mainnet. We might need to hide it behind a separate compilation feature. We should create rewards for runnin EVM network and try to break it. We will preserve the state during hardforks;
+
+* Bo Yao
+  * debug genesis-populate hang
+  * refactor count evm deploy contract cost to use testlib instead of hack
+  * pin size of state to count evm cost to reduce one volatility factor
+  * there's another volatility of evm deploy contract cost, found reason is difference between runs is little, but already greater than different contract in the same run. solution is using evm contract has bigger difference in size and count (got it to 4% error volatility).
+
+### Notes
+* Alex Shevchenko -- requirement for Mainnet launch is having explorer supporting detailed EVM info;
+* Alex Shevchenko: We might not implement GSN exactly the same way they did it. It has a very large scope. Alex Shevchenko and Mike Purvis need to discuss it
+* Max Zavershynskyi: If we want EVM to be on Mainnet EOY and Eugene wants to run it on separate network for several months then we need to speed up current code iterations so that Eugene Kuzyakov and Illia Polosukhin are done in less than 1 month. We might need more people working on it.
+
+### AI
+* Alex Shevchenko and Max Zavershynskyi need to sync what blockers EVM creates for the bridge;
+* Disuss extra network with Infra Team;
+
 ## 02.10.2020
 
 ### Status
