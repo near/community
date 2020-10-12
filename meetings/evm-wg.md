@@ -18,11 +18,13 @@ Current eng team:
 - Created basic relayer which can recover address and check the validity of signature passed to it
 - Switched to using web3's Contract class instead of TruffleContract because of odd inconsistencies
 - Getting nonce from EVM account id on frontend
+
 **Need to**:
 - Promisify all functions to use async await (I think only one left)
 - Refactor providers to mimic how Gas Station Network does it
 - Modify typed data "message" to be structured as NearTx which is expected by EVM
 - Get relayer using more robust JS packages like nodemon, possibly TypeScript, move functionality out of a single file
+
 **Concerns**:
 We'll want to be able to use NEAR Web3 Provider if they've logged in with Wallet, but right now the GCP instance doesn't have Wallet, Explorer, and I assume some indexing between them? Would be great to have the `evm-precompile` branch merged so we can start seeing this example on a "live" network.
 
