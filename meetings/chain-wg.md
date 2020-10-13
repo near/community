@@ -8,6 +8,16 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 10.13.2020
+
+Michael: version shard chunk header. fixing test
+
+Piotr: measure memory usage from libc. Jemalloc only shows stats for rust code. Writing a tool to dump memory from a process. Need to figure out the code that allocates the leaked memory.
+
+Misha: fixed applying genesis state on node restart
+
+Bowen: Investigated and fixed lock contention on trie cache; fixed the issue with execution outcome on forks so that the execution outcomes on canonical chain cannot be overwritten.
+
 ## 10.06.2020
 
 Michael: version shard chunk header. Almost done
