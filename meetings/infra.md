@@ -54,3 +54,24 @@ First start with open sourcing the terraform, open source collection of grafana 
 We need better communication with validators on what do they need or what is missing. 
 Creating more posts and blogs about how to setup infrastructure in general, like DOcean does.
 Make backups for data, more accessible to the community, publicly hosted.
+
+## October 15th 2020
+### Weekly team updates:
+Nick has a first version of the Terraform configuration for RPC, figuring auto-scaling is non-trivial and we are having discussions how to replicate the data while spawning new RPC nodes with nodes being distributed across zones. Archival node not attached to the GLB which will be snapshotting the data and the new nodes will just sync from that snapshot. 
+Mario added and fixed monitoring and graylog to mainnet, minor oncall issues, added latency graphs for RPC.
+Sandi weekly release, added mainnet support to deploy scripts, working on a PR to add mainnet support for nearup, added logrotate for nearup, Setup discourse. Rest of the time off. 
+
+### Priorities for the next week:
+Nick will land the first version and test if it out works on crashnet first. Test scenenarios of adding nodes, removing nodes, etc. 
+Mario more logging and better monitoring for detecting what is causing RPC to fail. Monitoring for bridge.
+Sandi: finalize mainnet support, users created issues on nearup clean up. 
+
+
+### Discussion notes:
+What is the actual bottleneck on the RPC is nodes is unknown. We currently have the RPS per endpoint, but don't have latency per endpoint. Look into adding this to grafana? Label endpoint in the prometheus call with endpoint.
+
+We need to change the GLB /status to use /healthcheck instead. Also we have to implement /healthcheck to fail on node syncing.
+
+Betanet with become a bleeding edge network and centralized. Bleeding edge also means with all the feature flags being enabled.
+
+Biweekly release sync has been cancelled and we should use this meeting for coordinating releases. Incident reviews are moved to Monday.
