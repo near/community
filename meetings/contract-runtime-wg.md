@@ -20,6 +20,21 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 15.10.2020
+
+### Status
+
+* Nikolay implemented IO measurement mechanism in QEMU plugin
+* Applied IO measurement tool to the genesis tool to see if dependency is linear, seems to be so up to 1M contracts
+* Merged Bo's contract cache effort into Nikolay's PR
+* `cargo test --all` mostly passes with caches, modulo transactioncs per second tests
+* Bo did EVM cost estimation: machinery is mostly done, but function calls pretty volatile ~20%, other more stable ~3%
+* Willem got testing infra basically working: including cross-contract calls
+* Failed promises are not properly handled by the standalone runtime, to be fixed
+
+TODO: Willem to complete memory growth cost computations
+TODO: Willem to add ability to see all execution outcomes coming from a transaction
+
 ## 08.10.2020
 
 ### Status
