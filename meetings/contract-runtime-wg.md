@@ -33,6 +33,7 @@ Long-term goal: Near-independent and non-specific to Near contract execution run
 * Failed promises are not properly handled by the standalone runtime, to be fixed
 
 TODO: Willem to complete memory growth cost computations
+
 TODO: Willem to add ability to see all execution outcomes coming from a transaction
 
 ## 08.10.2020
