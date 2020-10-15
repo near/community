@@ -8,7 +8,22 @@ We pursue safety and usability at the same time.
   * Usability. [We have already split the repo](https://github.com/near/rainbow-bridge/pull/319). [Now we extract RainbowLib](https://github.com/near/rainbow-bridge/issues/297) Alex K discuss RaibowLib usages with Illia and Chad;
 * Next focus:
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
-  * Usability. We work on documentation and examples.
+* Usability. We work on documentation and examples.
+
+## 15.10.2020
+
+### Status
+* Alex Kouprin shared a plan for bridge structure, see: https://docs.google.com/document/d/1b1MH0WSR3eHLow7iJ4qlcDJy207Kgrfdls7ZG3AB2ak/edit
+  * Alex Shevchenko: Supposed users want to use multiple token connectors, does it mean they will use multiple CLIs? Does the CLI tool need to know about all connectors that will be released? Supposed we have 3 types of connectors: native tokens, fungible tokens, and non-fungible tokens. Alex Kouprin: we will include common token connectors into the library. Chad: We might want to have some pluggable architecture. Vlad Frolov: Let's start with the current plan and adjust later. Max Z: How to test bridge without token connector? Vlad Frolov: Evgeny Kapun said we can use low-level API to check that we can pass headers and verify proofs.
+* Max Z: Please plan today and tomorrow what you will be working on in the next two weeks.
+  * Vlad F: Started working on https://github.com/near/rainbow-bridge-lib/issues/16 but did not have a chance to close any issues yet;
+  * Evgeny Kapun: Closed https://github.com/near/rainbow-bridge-sol/issues/23. There is optimization PR https://github.com/near/rainbow-bridge-sol/pull/24 that is ready to be merged. Will work on improving tests for Solidity contracts, and they need refactoring. Then will work on further optimization of Solidity. Make sure to communicate with Marcelo Fornet when you start looking into Rust contracts. Alex Kouprin: Needs help to review currently open PRs, and decide if we close them or open them. Many findings of the audit are already outdated because of Evgeny's optimizations. Alex Koupring: Let's sync with Evgeny Kapun;
+  * Marcelo Fornet: Still working on https://github.com/near/rainbow-bridge-rs/issues/10 turned out to be much more complex to learn about all corner cases of RLP, event serialization, and MPT. Alex Kouprin: Asked Marcelo to synced with Bo Yao, since Bo Yao already worked a lot on RLP encoding and such.
+* Alex Shevchenko -- had calls with partners, will continue collecting feedback with partners. Will address planning issues and create milestones for the next 2 months. It is a bit waterfal-ly :) because we have hard expectations by business partners. Would have to sync with Alex Kouprin and the team on when we are going to deliver.
+  
+### Notes
+* Please take over Rinkeby bridge, please make sure documentation in main repo is up to date. Alex Kouprin: Let's have a sync to do transition.
+* Hackathon: Alex Kouprin please reach out to Nima and discuss the hackathon evaluation timeline.
 
 ## 08.10.2020
 
