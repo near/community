@@ -1,6 +1,16 @@
 # Contracts Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Contracts sync meeting. Please propose agenda items through the PRs and Issues.
 
+## 15.10.2020
+
+* Implemented safe-based fungible token https://github.com/near/core-contracts/pull/111.
+* Added account registration for safe-based token. https://github.com/near/core-contracts/pull/112
+* Started to implement uniswap with safe-based tokens. 
+* TODO: Next finish uniswap (adding liquidity to a pool).
+* TODO: Look into NFT standard.
+* Discussion around parsing the contract state: https://github.com/nearprotocol/NEPs/issues/127
+
+
 ## 08.10.2020
 
 * Bootstrapping native NEAR ecosystem: https://github.com/nearprotocol/NEPs/issues/121
