@@ -8,6 +8,41 @@ Current eng team:
 * Misha Kever, Evgeny Kuzyakov -- final PR reviews (Evgeny as codeowner and Misha as an expert);
 * Evgeny Kapun -- security-related reviews.
 
+## 16.10.2020
+
+### Status
+
+**Mike Purvis**:
+- `ECRECOVER` is not working properly. `EthSigUtil` seems to solve this issue
+- Migrations are not working properly, added troubleshooting to the README.
+- RLP Encoding: `ethereum.js` is the library that should be used:
+- Signing in Metamask: how to make it human-readable within Petshop example => translate it into ABI encoding (Illia: methods in Ethereum are just integers)?
+  - Possible solution: show method name, parameter, attach the ABI encoding to transaction 
+ 
+**Peter, Community update**:
+- Contributor (compilers experience) can help with implementation
+- 3 super competent teams that can be used within Bounty programs
+- Need to help to Austin Griffin (deployment of his tutorial project in a private network, shot a video out of it)
+
+**Eugene Kuzuyakov**
+- Gas calculations are set to higher limits now
+- Bo work blocks the PR
+- Feature flags as a protocol change from the chain team (assigned to Bowen)
+ 
+**Bo Yao**
+- Volatility depends on the size of the contract
+- Linear regression seems to be a good approximation
+- Massive testing is on the way (gas costs depend on the state size), all works good
+- Sometimes costs are below 1 EVM Gas / byte, which is rounded to 0. What to do with this?
+  - Illia: We need to have a function depending on the length. Why don't use the gas calculations from Parity and then rescale?
+
+**Action points**
+- Alex: to share the RLP encoding findings with bridge team (`ethereum.js` is an appropriate lib to do it, others may do it wrong)
+- Max: to sync with Peter with regard to tutorial video from Austin
+- Alex: to sync with Bowen on the importance of the feature flags epic on the protocol level
+- Alex: to share the roadmap and collect the feedback internally
+
+
 ## 09.10.2020
 
 ### Status
