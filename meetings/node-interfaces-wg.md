@@ -1,6 +1,13 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 16.10.2020
+
+## Current focus
+
+* Indexer for Explorer: Bohdan K: Almost finished the plans we had for the current milestone (except state changes). Improved the stability of the Indexer (added support for implicit accounts, and access keys [in PR state]). We unblocked Explorer migration to the new data source (Vlad F: the old backend is going to be deprecated). The Indexers need to be resync the data from genesis into the DB. Vlad F: we need to get Execution Outcomes in their execution order (Bowen will work on it)
+* Rosetta RPC: Vlad F: new `/call` endpoint on Rosetta Spec to enable view calls (to be able to view the lockup information).
+
 # 08.10.2020
 
 ## Current focus
