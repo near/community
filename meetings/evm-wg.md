@@ -10,8 +10,6 @@ Current eng team:
 
 ## 16.10.2020
 
-### Status
-
 **Mike Purvis**:
 - `ECRECOVER` is not working properly. `EthSigUtil` seems to solve this issue
 - Migrations are not working properly, added troubleshooting to the README.
