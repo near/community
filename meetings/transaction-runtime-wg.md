@@ -7,6 +7,17 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 16.10.2020
+
+- TODO: Final param estimation
+    - shift compilation costs into deploy action
+    - set runtime compilation cost within function call to 0
+    - run it with 10M+ accounts trie with `icount`
+    - multiply it by coefficient based on SSD / RAM perf
+- TODO: NEP for refactoring Runtime into one block state-based transition
+- Running io_costs estimator with 10M accounts.
+- Need to adjust pessimistic gas computation by adding a max upper limit of 64.
+
 ## 08.10.2020
 
 - PR to refactor `Runtime` class by moving `RuntimeConfig` into `ApplyState`.
