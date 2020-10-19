@@ -2,11 +2,22 @@
 This thread contains agenda and/or summary of the regular EVM sync meeting. Please propose agenda items through the PRs and Issues.
 
 Current eng team:
-* Illia Polosukhin TL (running this meeting);
-* Bo Yao. Eng, helping with fees, PR reviews, code audit;
-* Mike Purvis -- trying to launch existing dApps (includes JS, examples);
-* Misha Kever, Evgeny Kuzyakov -- final PR reviews (Evgeny as codeowner and Misha as an expert);
+* Evgeny Kuzyakov -- TechLead (running this meeting);
+* Bo Yao -- Gas estimates, PR reviews, code audit;
+* Mike Purvis -- Launching existing dApps (includes JS, examples);
+* Illia Polosukhin -- initial bulk code development;
+* Misha Kever -- final PR reviews as an expert;
 * Evgeny Kapun -- security-related reviews.
+
+## Action point long list
+- [ ] 16 Oct, Alex: to share the roadmap and collect the feedback internally
+- [X] 16 Oct, Alex: to sync with Bowen on the importance of the feature flags epic on the protocol level
+  - Mainnet guild is fully aware of the blocker and Bowen already created a PR: https://github.com/near/nearcore/pull/3503
+- [X] 16 Oct, Alex: to share the RLP encoding findings with bridge team (`EthereumJS` is an appropriate lib to do it, others may do it wrong)
+  - Done, detailed internal conversation between EVM & Bridge team started 
+- [X] 16 Oct, Max: to sync with Peter with regard to tutorial video from Austin
+  - Everybody synced, the video will be produced once the EVM deployed at Crashnet or any other network. As an additional AP: to prepare a set of issues for the community (bounties).
+
 
 ## 16.10.2020
 
@@ -33,13 +44,6 @@ Current eng team:
 - Massive testing is on the way (gas costs depend on the state size), all works good
 - Sometimes costs are below 1 EVM Gas / byte, which is rounded to 0. What to do with this?
   - Illia: We need to have a function depending on the length. Why don't use the gas calculations from Parity and then rescale?
-
-**Action points**
-- Alex: to share the RLP encoding findings with bridge team (`ethereum.js` is an appropriate lib to do it, others may do it wrong)
-- Max: to sync with Peter with regard to tutorial video from Austin
-- Alex: to sync with Bowen on the importance of the feature flags epic on the protocol level
-- Alex: to share the roadmap and collect the feedback internally
-
 
 ## 09.10.2020
 
