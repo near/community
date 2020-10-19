@@ -6,6 +6,95 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Oct 19, 2020
+
+### Chain (Bowen)
+
+Versioning ShardChunkHeader change by Michael is in.
+ 
+ - Took a bit longer due to a failed test, that appeared flacky at first, but turned out actually revealing a bug.
+ 
+Piotr keeps on investigating the memory leaks. All the tools are done. There are already some insights, but don't want to share prematurely.
+
+Misha fixed the issue with repeatedly applying genesis state.
+
+Discussion on protocol upgrades doing forward, came up with a good plan with feature flags and separation between nightly and stable.
+
+Alex and Bowen are finalizing the approach towards enabling sharding. Have a good plan, need to polish details.
+ 
+ - The plan is to increase the number of validators.
+ 
+Alex also works on rewriting syncing code.
+
+### TX runtime (Eugene Kuzyakov)
+
+Still working on the fees. Nikolay has a PR that measures disk instructions, in addition to CPU instructions. Measuring the impact of RocksDB.
+
+PR to reduce most of the fees this week.
+
+Work on caching contracts. Shifting cost of compilation from running to deploying.
+
+### Node interfaces (Frol)
+
+Indexer and Rosetta are the current focus.  
+Current explorer was misssing receipts and execution outcomes.  
+Bohdan already populated all of those to Postgres, except for validator rewards. They are coming from the state changes, not part of any receipt, so harder to extract. Will work on them in the coming week.
+
+Today do not preserve the order of execution outcomes in the nearcore database, doesn't allow properly reporting the results of the transactions.
+
+### Explorer (Frol)
+
+Migrating from the old backend to the new indexer. Will take some time, since the data layout is different.
+
+Some things that confuse people and are being fixed, e.g. account balances.
+
+Mike points out that when EVM comes, will be heavily relying on Receipts, will need support from Explorer.
+
+### Wallet (Kendall)
+
+- Ability to withdraw from exchanges. Have a temp verstion coming out today.
+- Wednesday release targeting partial unstaking, and staking from base account (today only support staking from lockup).
+
+### Infra (Sandi)
+
+New release for Mainnet.
+Mostly working on figuring out RPC. Terraform PR is out.
+
+ - Allows setting up RPC for any network.
+ - Figuring out how to spin up new RPC nodes quickly.
+ 
+Mario added new monitoring, Greylock for mainnet.  
+nearup improvements: log rotation  
+Discourse for the community  
+PTOs last week
+
+Learned that Archival nodes die on migration on Betanet, figuring out why. Likely some big allocations.  
+Bowen suggests that he didn't take into account that Betanet had lots of full blocks, and the migration doesn't take it into account.
+
+### EVM
+
+Figuring out the scope of all the deliverables. Working on the Roadmap.  
+Likely several stages.
+ 1. Merge what we have now with couple small fixes, with feature flags, and ship to crash net.
+ 1. Several larger features, likely via bounties, ship by the end of the year. At that time ideally have sufficiently stable EVM to ship to testnet.
+
+With the current resources no way to have stable EVM this year.
+
+Max points out that EVM will create more work for Rosetta, namely exposing EVM accounts.
+
+Mike asks on what networks will the EVM be enabled. It will only be the crashnet (to be renamed to Betanet as we wind down the current Betanet)
+
+### Bridge
+
+Alex K has an architecture proposal, that everybody appears to agree with.  
+Alex K also has a proposal for test infra.
+
+Likely can ship this year, naturally not including work items related to integration with EVM.
+
+### Further discussion
+
+Mike asked about NEP to burn all attached gas, Evgeny Kuzyakov responds that it has issues, and is not short term focus.
+
 ## Agenda -- Monday Oct 12, 2020
 
 1. Updates from work groups
