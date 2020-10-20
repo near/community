@@ -8,6 +8,16 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 10.20.2020
+
+Michael: merged version shard chunk header. Working on post phase 1 branch. Fixing some pytests
+
+Piotr: finish the first iteration of memory debugging tools. Can see the allocations in the C code. Memory report for rocksdb is incorrect
+
+Misha: working on state sync. Making sure we can combine state parts when they are large.
+
+Alex: rewriting sync code: light client sync and garbage collecting headers
+
 ## 10.13.2020
 
 Michael: version shard chunk header. fixing test
