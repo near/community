@@ -20,6 +20,22 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 22.10.2020
+
+### Status
+
+* Nikolay got cached contracts work close to the end: caching is working, key is Wasm code hash + VMConfig hash, we cache both code or compilation error
+* Eugene made experiment with 10M contracts on SSD and RAM drive: no difference in measured data as expected
+* Need to disable single threaded mode, as otherwise estimator cannot proceed
+* Willem built vmrunner using Wasmer with dynasm dependency modified to not depend on nightly, and built with stable Rust (1.47), seems be the way to build
+  nearcore with Stable, unless there are other deps
+* Getting rid of in-memory caches for contracts Wasm bytes
+* Test runner can run most contracts, can test cross-contract calls
+* Eugene suggests to introduce feature discriminating actual contract compilation for deployment vs. tests running in Near SDK (now we check target platform)
+* Bo corrected few costs where EVM interpreter wasn't started. EVM costs are now stable and PR is finalized and ready to land.
+* Willem written the contract to measure memory growth cost, not yet integrated it into estimator
+* Willem implemented ability to see all execution outcomes coming from a transaction
+
 ## 15.10.2020
 
 ### Status
