@@ -7,6 +7,10 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 22.10.2020
+
+- Fee changes -- Eugene Kuzyakov is still working on it;
+
 ## 16.10.2020
 
 - TODO: Final param estimation
