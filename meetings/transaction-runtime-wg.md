@@ -9,7 +9,9 @@ The scope of the transaction runtime is the following:
 
 ## 22.10.2020
 
-- Fee changes -- Eugene Kuzyakov is still working on it;
+- Fee changes -- Eugene Kuzyakov is still working on it; In progress, depends on `nightly_protocol` feature.
+- Need to update param estimator to move compilation to exec instead of `send/2 exec/2`
+- Re-run estimator with Nikolai changes for on-disk compilation.
 
 ## 16.10.2020
 
