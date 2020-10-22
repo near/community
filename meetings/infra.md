@@ -75,3 +75,53 @@ We need to change the GLB /status to use /healthcheck instead. Also we have to i
 Betanet with become a bleeding edge network and centralized. Bleeding edge also means with all the feature flags being enabled.
 
 Biweekly release sync has been cancelled and we should use this meeting for coordinating releases. Incident reviews are moved to Monday.
+
+## October 22th 2020
+
+### Weekly team updates:
+Sandi:
+- oncall setup
+- mainnet support for nearup
+- fixing an issue with bulldozer after the repo migration
+- looked into gperf setup on one machine
+- talks with devx about rpc infra
+- pagerduty slack integration
+
+Mario:
+- mainnet updates are currently manual, so that is taking additional time -> should change with terraform migration
+- bug in archival nodes in mainnet release (issue discussion)
+
+Nick:
+- helping Sandi to figure out the oncall setup
+- first version of terraform has landed, demo of the prototype and discussions about snapshotting. We need to stop neard (issue discussion). Figure out the load balancing properly, as the current configuration only allows to point a load balancer to only one region which is suboptimal as we want a global load balancer.
+
+
+
+### Priorities for the next week:
+
+Mario:
+- RPC observability: RPC latency per route and other metrics
+- investigate the bug: neard terminates the RPC connection causing the healthchecks to fail? make an issue writeup: link the logs.
+- migration for nearup to mainnet (figure out phased rollouts)
+
+Nick:
+- Rollout of the RPC Terraform to crashnet/betanet
+
+Sandi:
+- finalize the systemd and configuration support for nearup
+- finalize the oncall schedule
+- migration for nearup to mainnet (figure out phased rollouts)
+- most likely help debug current RPC issues: backup issue, connection termination issue, migration issue, ...
+- figure out if the migrating commit path is executed.
+
+### Discussion notes:
+Terraform migration for betanet. Just make sure to have a seperate GLB and rediredirect the DNS, figure out if we can reuse the certifactes (99percent it does).
+
+
+Any RPC related questions we haven't covered before tomorrows RPC meeting?
+- Archival nodes issue while migrating. Figure out if the code path after the commit gets executed.
+- Backup is not really a backup issue. :)
+- Connection termination issue on RPC nodes.
+- Discuss archival vs non-archival nodes discussion for tomorrow. 
+- Archival nodes are running a hotfix and we have to figure out a way to upgrade that. The new release should fix this across the network.
+
