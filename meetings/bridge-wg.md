@@ -39,6 +39,11 @@ We pursue safety and usability at the same time.
   - AI: Alex Kouprin and Chad Ostrowski to investigate. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
 - After Chad is done adding support of token transfer in 4 directions, will make a library out it.
 
+**Alex Shevchenko**
+- Worked with Alex Kouprin on product positioning
+- Several calls with partners on their needs and timeline for rollout
+- Coordinating the discussion on the next bridge release
+
 ## 15.10.2020
 
 ### Status
