@@ -1,6 +1,20 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 22.10.2020
+
+## Current focus
+
+* Indexer for Explorer: Bohdan K: Started Indexer for Explorer for mainnet it is still migrating DB from 12 to 13 (almost 24h already). Vlad F: still have issues with 12->13 db migration from the mainnet backups. Bowen is helping with that.
+* Indexer for Explorer: Working indexer for testnet from genesis showed some weak points of indexer (created an [issue about it](https://github.com/near/near-indexer-for-explorer/issues/24))
+* Indexer Framework in nearcore: Refactored Indexer Framework implementation a bit to attach local receipts to the chunks where original transactions were found and split big `streamer.rs` file into smaller modules for sanity. Working on improving Indexer for Explorer.
+* Rosetta RPC: Vlad F: Invstigating the issue of Rosetta node for testnet running out of memory.
+* JSON RPC: Structured errors - Vlad F: laid out the plan: ([first step](https://github.com/near/nearcore/issues/3517)) merge view-client implementation first without breaking change to the string error messages; ([second step](https://github.com/near/nearcore/issues/2976#issuecomment-714494951)) expose those structured errors side-by-side with the string error messages.
+
+## Requests
+
+* Matt L: issues with Wallet users from China, who have diffiiculties reaching RPC. Can we put something on schedule to resolve the situation for China users? Vlad F: proposed to add a helper into near-api-js for auto-retry logic (but don't bake it into the provider methods). Matt L: Wallet helper is completely locked down in China since it is deployed on Render. Vlad F: suggest to follow up with Bo and Amos on the topic since they already tried to approach the problem space with DNS tricks.
+
 # 16.10.2020
 
 ## Current focus
