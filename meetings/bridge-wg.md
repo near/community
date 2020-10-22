@@ -10,6 +10,28 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
 * Usability. We work on documentation and examples.
 
+## Action point long list
+- [ ] ???
+
+## 22.10.2020
+
+**Alex Kouprin**
+- Working on architecture for isolating components, enabling testing and fixing dependencies
+
+**Vlad Frolov**
+- Working on redesign & naming (together with Alex Kouprin)
+- Current focus is the near/rainbow-bridge#344 approx. 20%
+
+**Evgeny Kapun**
+- Proposal of architecture change (transmission of the events): *link*
+- Security issue found for token connector, though it's the issue of the events transmission
+- Architecture change can lead to significant reduction of the Ethereum side gas costs for client
+
+**Marcelo Fornet**
+
+**Chad Ostrowski**
+
+
 ## 15.10.2020
 
 ### Status
