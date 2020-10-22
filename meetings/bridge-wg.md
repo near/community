@@ -25,12 +25,19 @@ We pursue safety and usability at the same time.
 **Evgeny Kapun**
 - Proposal of architecture change (transmission of the events): *link*
 - Security issue found for token connector, though it's the issue of the events transmission
-- Architecture change can lead to significant reduction of the Ethereum side gas costs for client
+- Architecture change can lead to significant reduction of the Ethereum side gas costs for client;
 
 **Marcelo Fornet**
+- Found an issue with generalized token connector that can be exploited where a malicious actor can submit an incorrect proof. Currently fixing it;
+- Working on specific tests following discussion with Alex Kouprin;
+  - Checking proofs from Ethereum on NEAR side, which also includes checking events deserialization. It turned out to be easier to cover all corner cases of Eth event verification;
 
 **Chad Ostrowski**
-
+- Will work on support generic token connector on the front-end app. 
+- Added support of native ERC20 token;
+- There is some weirdness when NEP21 is sent back as ERC20 it is not getting unwrapped as ERC20;
+  - AI: Alex Kouprin and Chad Ostrowski to investigate. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
+- After Chad is done adding support of token transfer in 4 directions, will make a library out it.
 
 ## 15.10.2020
 
