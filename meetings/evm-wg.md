@@ -10,13 +10,38 @@ Current eng team:
 * Evgeny Kapun -- security-related reviews.
 
 ## Action point long list
-- [ ] 16 Oct, Alex: to share the roadmap and collect the feedback internally
+- [ ] 23 Oct, Eugene: Show during the next meeting the future upgradability approach
+- [ ] 23 Oct, Alex: to have a call with Eugene on the scope for the Phase 2
+- [ ] 23 Oct, Mike: to report on the `ECRECOVER` issue on Tuesday, 27th October
+- [X] 16 Oct, Alex: to share the roadmap and collect the feedback internally
 - [X] 16 Oct, Alex: to sync with Bowen on the importance of the feature flags epic on the protocol level
   - Mainnet guild is fully aware of the blocker and Bowen already created a PR: https://github.com/near/nearcore/pull/3503
 - [X] 16 Oct, Alex: to share the RLP encoding findings with bridge team (`EthereumJS` is an appropriate lib to do it, others may do it wrong)
   - Done, detailed internal conversation between EVM & Bridge team started 
 - [X] 16 Oct, Max: to sync with Peter with regard to tutorial video from Austin
   - Everybody synced, the video will be produced once the EVM deployed at Crashnet or any other network. As an additional AP: to prepare a set of issues for the community (bounties).
+
+## 23.10.2020
+**Mike Purvis**
+- Relayer has a PR with the meta-txs support
+- Rust needs to recover the address of the account, still not working. The test for the `ECRECOVER` is not working.
+  - Max: `ECRECOVER` wants to have specific formatting. Mike: This might conflict with `ERC-712`; this is not a problem at this moment.
+- Relayer is not charging users until we move from the Betanet
+- Petshop example need to have an option for the login (and store the info in the local storage in browser). Need to update the README.
+
+**Eugene Kuzuakov**
+- Figuring out what features to ship within Phase 2
+
+**Bo Yao**
+- Finalised PR on deducting cost from EVM transactions
+- Corrected a couple of scenarios for fees calculation
+- Achieved <10% volatility on the gas costs
+- Working on the Balancer contract Truffle tests. Multiple issues occured: address unknown for the contract (when using Truffle migrate).
+
+**Arto**
+- Should Arto take a look at Gas estimations within updating the EVM code?
+  - We just use Parity calculation, so it is assumed that EVM Gas costs are accurate. So the updates should be done.
+- Working on the setting up and bringing himself up-to-date
 
 
 ## 16.10.2020
