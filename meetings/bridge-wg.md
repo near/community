@@ -11,7 +11,7 @@ We pursue safety and usability at the same time.
 * Usability. We work on documentation and examples.
 
 ## Action point long list
-- [ ] ???
+- [ ] 22 Oct, Alex Kouprin and Chad Ostrowski: To investigate NEP21 being sent back as ERC20 without unwrapping. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
 
 ## 22.10.2020
 
@@ -20,12 +20,12 @@ We pursue safety and usability at the same time.
 
 **Vlad Frolov**
 - Working on redesign & naming (together with Alex Kouprin)
-- Current focus is the near/rainbow-bridge#344 approx. 20%
+- Current focus is the https://github.com/near/rainbow-bridge#344 approx. 20% done
 
 **Evgeny Kapun**
-- Proposal of architecture change (transmission of the events): *link*
+- Proposal of architecture change (transmission of the events): https://docs.google.com/document/d/1KGg4JWYxUim_pVd-vHCkD7DMLCIbmtSCKFcB1lEqMKQ/edit?usp=sharing (limited access for near.org)
 - Security issue found for token connector, though it's the issue of the events transmission
-- Architecture change can lead to significant reduction of the Ethereum side gas costs for client;
+- Architecture change can lead to significant reduction of the Ethereum side gas costs for light client contracts;
 
 **Marcelo Fornet**
 - Found an issue with generalized token connector that can be exploited where a malicious actor can submit an incorrect proof. Currently fixing it;
@@ -36,7 +36,6 @@ We pursue safety and usability at the same time.
 - Will work on support generic token connector on the front-end app. 
 - Added support of native ERC20 token;
 - There is some weirdness when NEP21 is sent back as ERC20 it is not getting unwrapped as ERC20;
-  - AI: Alex Kouprin and Chad Ostrowski to investigate. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
 - After Chad is done adding support of token transfer in 4 directions, will make a library out it.
 
 **Alex Shevchenko**
