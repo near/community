@@ -6,6 +6,85 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Oct 26, 2020
+
+### Chain (Bowen)
+
+Michael is working on merging optimistic forwarging of chunk parts (it's an old PR that didn't make the cut for phase I)  
+Then looks at bottlenecks for chunk distribution.
+
+Memory leak investigations: we understand many memory leaks, and the general direction of how to fix them. Almost exclusively from external dependencies. Next step is to figure out how to address them.
+
+Mikhail works on combining state parts. Now do it in memory, when the state is large it will OOM (not a concern short term).
+
+Alex S rewrites syncing code: adds light client sync, GC headers.
+
+Bowen works on the new upgrade process, with feature flags, and nightly builds.
+
+### Tx Runtime (Eugene)
+
+Still working on upgrading the fees. Nightly builds (discussed by Bowen above) will help testing it on release.
+
+Compilation on deploy: first will build caching on function call, then caching on deploy. Will charge on deploy.  
+Not a protocol change, thus fees are more important.
+
+### Contract Runtime (Max)
+
+Nikolay managed to almost complete compilation on deploy, and is disabling WASM cache (not only caching WASM bytes).
+
+Were able to fork some of our dependencies, and now we compile nearcore with stable Rust.
+
+Progress on cross-contract testing, in the loop with Mike, Chad, collecting feedback.  
+When we compile contract, we should be able to remove debug info or exclude test logic.  
+E.g. today near-sdk-rs depends on some primitives from nearcore, which on itself has many dependencies. For testing should compile with all dependencies, on deploy should only use the needed, which brings the compilation time down.
+
+### Node interfaces (Frol)
+### Explorer (Frol)
+
+Bridging together nearcore indexer, and what explorer needs. Last stages before it's produciton ready. It is deployed on testnet, had some issues with migration.
+
+Will have a better backend for the explorer. Current one misses execution outcomes, so lots of info for cross-contract calls is missing. E.g. staking, delegations, lockups all involve cross-contract calls.  
+Initiative to fix it is Bohdan's.
+
+Rosetta RPC still has some issues with the genesis block. We try to expose it as having 200K transactions, but Rosetta can't handle it. Looking for solutions.
+
+JsonRPC is getting more update on the structured errors side. Trying to ship in two phases, backwards compatible. The string errors will remain, extended with the structured error.
+
+Discussion with Matt re: our China deployment, there are issues with reaching our services from China, there's no latest update presently, need to work closely with Bo and Amos.
+
+### Wallet (Kendall)
+
+A release today: staking with unlocked near, partial unstaking, and new account creation flow that enables anyone to create new accounts.
+
+After this release we will take couple cycles to fix issues, have end2end tests, work on stability for the next couple weeks.
+
+Question from Eugene: can one create an implicit account with Ledger? Kendall's response: you'd need to have two steps.
+
+### Infra (Sandi)
+
+Max helped to create a new on-call schedule. For people involved: please update your calendars.
+
+Nick is working on rolling out terraform on betanet. Then will be rolled out on testnet, then mainnet.
+
+### Bridge (Alex Sh)
+
+Lots of work on the architecture changes. Repos are being restructured. Some CI tests are broken because of that.
+
+Preparing for the townhall with the roadmap:  
+The first step: Deploy the bridge in the confined environment, only for the approved accounts. Will be the same as the one we used for the hackathon, but with a differnet structure, and several bugs fixed. One was a critical bug found by Marcelo. Peter brought one more person from the community who will be helping with the connector for native currencies.
+
+### EVM (Eugene)
+
+Mike continues working on metatx and ecrecover support. There's a version that is mostly working.
+
+Eugene: Figuring out the initial scope.
+
+Bo: estimating EVM tx cost, mapping between ETH gas and our gas, and how the tx size influences our gas. Making good progress, achieved less than 10% volatility in gas cost. Also wokring on tests for balancer.
+
+Arto joined the team, experienced with EVM, will be helping with updating our EVM to latest, and help with details on EVM.
+
+Plan to release on betanet behind the feature flag. Potentially might be forked several times, not caring about the upgradability short term.
+
 ## Notes -- Monday Oct 19, 2020
 
 ### Chain (Bowen)
