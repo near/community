@@ -8,6 +8,17 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+
+## 10.27.2020
+
+Michael: figuring out bottlenecks around sharding. Time from sending parts to parts get validated suddenly spiked at 20 shards. Data received by nodes piked at around 15-16 shards. Look at 8 shard tps.
+
+Piotr: optimize tools to make sure node can sync with the debugging tools running. Half of the memory leak comes from rocksdb. Wasmer also constantly leaks memory. Trying to repro the wasmer memory leak. Changing `max_open_files` in rocksdb only makes it worse.
+
+Alex: light speed sync & garbage collecting headers
+
+Bowen: Test nightly protocol. Fix order of execution outcomes.
+
 ## 10.20.2020
 
 Michael: merged version shard chunk header. Working on post phase 1 branch. Fixing some pytests
