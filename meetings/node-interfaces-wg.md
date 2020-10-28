@@ -1,7 +1,16 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
-# 22.10.2020
+# 28.10.2020 (Explorer)
+
+## Discussions
+
+* Indexer for Explorer: The migration is ongoing (deployed on GCP). Bohdan K: ETA is end of this week to be feature-complete. testnet and mainnet were successfully started to sync from genesis (syncing quite rapidly).
+* Balances on Explorer: The balances are confusing to users, so Vlad F is considering to replace those with a link to Wallet Profile, and focus on improving that page on the Wallet side collecting all the possible sources of tokens (staked, delegated, locked, NFT, etc). Corwin: It is important to understand how people are using Explorer. Vlad F: Do we want to hide the balances on Explorer? Kendell: We still should have the native NEAR balances for the low-level view. Corwin: How about displaying "Total Balance"? Kendell: In Wallet "Total Balance" means all the assets the user controls (including delegated, etc). Vlad F: It is hard to pull all the possible balances from all the contracts holding tokens for the users. -- **Decision made**: roll back to native balances (brainstorm the name) and point users to the Wallet Profile.
+* Redesign of the Dashboard: Vlad F: Let's revisit the design. /cc Yifang
+* Redesign of the Validators Dashboard: Corwin: ETA end of this week.
+
+# 22.10.2020 (nearcore)
 
 ## Current focus
 
