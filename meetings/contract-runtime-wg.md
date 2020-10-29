@@ -20,6 +20,20 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 29.10.2020
+
+### Status
+
+* Contract caching needs final approval from Evgeny
+* Willem working on compiling Wasmer (and nearcore) with stable Rust: dynasm dependency of Wasmer need to be promoted, 
+ lightbeam in Wasmtime seems to require nightly
+* Nikolay performed first cost coefficient computations in https://github.com/near/nearcore/pull/3483, further
+* Bo estimated EVM costs on multiple machines: results are stable
+* Bo fixed EasyRecover for EVM bridge
+* Bo helping to look at Wasmer memory leak at https://github.com/near/nearcore/issues/3402
+* Wasmtime depends on Lightbeam, which depends on static_vec, which doesn't work in Stable; To check if could use other backend, or could 
+  use regular vec, and use own fork on Wasmtime.
+
 ## 22.10.2020
 
 ### Status
