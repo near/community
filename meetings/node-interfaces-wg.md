@@ -1,6 +1,15 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 29.10.2020 (nearcore)
+
+## Current focus
+
+* Indexer for Explorer: Bohdan K: Indexer for Explorer is running from genesis for testnet and mainnet (the testnet indexer all the blocks to the tip). We are addressing minor issues with the idempontancy on the accounts indexing and other tables. There is a new issue needs investigation fetching the parent transaction to properly store some of the receipts. Vlad F: There are basically two issues: memory leaks (allegendly it is the nearcore itself) and the reconciliation of the receipts (attachment to transactions).
+* Rosetta RPC: Vlad F: haven't had any progress there. (1) high memory usage and non-responsive RPC on testnet (allegedly after querying the genesis block); (2) incorrect balances reconciliation on mainnet.
+* JSON RPC: Structured errors: we need to rebase the structured errors implementation for view-client -> structured errors on the RPC side.
+* JSON RPC: Structured errors: https://github.com/near/nearcore/issues/2976 discuss the structured RPC error design.
+
 # 28.10.2020 (Explorer)
 
 ## Discussions
