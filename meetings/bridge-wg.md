@@ -10,7 +10,7 @@ We pursue safety and usability at the same time.
   * Safety. We address the remaining issues in the `Fully Tested Bridge` release in order of their priorities, see https://app.zenhub.com/workspaces/chainmiddleware-5cea2bcf78297c385cf0ec81/reports/release?release=5ed9658f026fd74dde14faec
 * Usability. We work on documentation and examples.
 
-## Action point long list
+## Action item long list
 - [ ] 22 Oct, Alex Kouprin and Chad Ostrowski: To investigate NEP21 being sent back as ERC20 without unwrapping. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
   - Not yet come with the final solution. Alex Kouprin to look into the issue. Maybe we need to put everyhtibg into an issue in the bridge repos
 - [ ] 29 Oct, Chad Ostrowski, Alex Kouprin to assemble the knowledge on fixing the bridge
