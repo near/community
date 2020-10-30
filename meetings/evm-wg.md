@@ -10,9 +10,11 @@ Current eng team:
 * Evgeny Kapun -- security-related reviews.
 
 ## Action point long list
-- [ ] 23 Oct, Eugene: Show during the next meeting the future upgradability approach
-- [ ] 23 Oct, Alex: to have a call with Eugene on the scope for the Phase 2
-- [ ] 23 Oct, Mike: to report on the `ECRECOVER` issue on Tuesday, 27th October
+- [ ] 30 Oct, Alex: Loop in Sandi for Betanet setup & deployment of EVM there
+- [X] 23 Oct, Eugene: Show during the next meeting the future upgradability approach
+  - See here: https://github.com/near/nearcore/issues/3544
+- [X] 23 Oct, Alex: to have a call with Eugene on the scope for the Phase 2
+- [X] 23 Oct, Mike: to report on the `ECRECOVER` issue on Tuesday, 27th October
 - [X] 16 Oct, Alex: to share the roadmap and collect the feedback internally
 - [X] 16 Oct, Alex: to sync with Bowen on the importance of the feature flags epic on the protocol level
   - Mainnet guild is fully aware of the blocker and Bowen already created a PR: https://github.com/near/nearcore/pull/3503
@@ -20,6 +22,36 @@ Current eng team:
   - Done, detailed internal conversation between EVM & Bridge team started 
 - [X] 16 Oct, Max: to sync with Peter with regard to tutorial video from Austin
   - Everybody synced, the video will be produced once the EVM deployed at Crashnet or any other network. As an additional AP: to prepare a set of issues for the community (bounties).
+
+## 30.10.2020
+**Mike Purvis**
+- Worked on `ECRECOVER` tasks. The decision was to push this to the moment when we want to implement meta-tx. Bo is going to take over this issue.
+- Working on the Petshop example
+- Working on all additional tooling (`near-api-js`, `near-web3-provider`, `near-cli` - 2 new calls, etc.)
+  - `near-cli` PR ready to merge
+  - `near-api-js` PR ready to merge
+
+**Eugene Kuzuakov**
+- Mostly on vacation
+- Need to wrap inner structures in EVM: Precompile `meta-call-args` need to wrap into `enums` with versions (see the upgradability action item from lst weeks' call)
+
+**Bo Yao**
+- `ECRECOVER` is correct now
+- Issue found: `prepare_meta_call_args` give different msg than `eth-sig-util`'s `TypedDataUtils.encodeData`
+  - Fixed `near_erc721_domain` to encode same as `TypedDataUtils`, should be similar to fix entire prepare_meta_call_args
+- The plan is to merge [gas PR](https://github.com/near/nearcore/pull/3299) today (after doing "do not change genesis" and "resolve conflict")
+
+**Arto**
+- Working on the EVM upgrade taks. Submitted first [PR for the update of the EVM to 2.6.2](https://github.com/near/nearcore/pull/3542)
+- Update to a 2.6.8 would be prepared as a next step
+- Ethereum 3.0.1 is set as a target for the update. 
+
+**Questions**
+- Illia to Evgeny: do we need to make an enum wrapping or not? This will change the logic in many tools.
+  - Evgeny: No major problems should occur. See the discussion [here](https://github.com/near/nearcore/issues/3544)
+- Alex: does everybody OK with merging Gas PR?
+  - No major problems should appear, except to perhaps genesis config or some other side-effects. Data and configs need to be guarded by the feature flags.
+
 
 ## 23.10.2020
 **Mike Purvis**
