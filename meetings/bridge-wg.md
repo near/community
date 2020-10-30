@@ -12,6 +12,44 @@ We pursue safety and usability at the same time.
 
 ## Action point long list
 - [ ] 22 Oct, Alex Kouprin and Chad Ostrowski: To investigate NEP21 being sent back as ERC20 without unwrapping. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
+  - Not yet come with the final solution. Alex Kouprin to look into the issue. Maybe we need to put everyhtibg into an issue in the bridge repos
+- [ ] 29 Oct, Chad Ostrowski, Alex Kouprin to assemble the knowledge on fixing the bridge
+- [ ] 29 Oct, Alex Shevchenko, to work on the monitoring with Sandi
+- [ ] 29 Oct, Max Zavershynkyi, to create a doc \'What can go wrong with the bridge\'. This doc can be used for creation of the playbook for monitoring.
+- [ ] 29 Oct, Alex Kouprin, to review [NEP](https://github.com/nearprotocol/NEPs/pull/123) on smart contract upgradability
+
+
+## 29.10.2020
+**Alex Kouprin**
+- Coordinating [repos major update](https://github.com/near/rainbow-bridge/issues/372), all the major things except config restructuring and CI are completed
+- Repos were splitted in accordance with the new architecture
+- Experimenting with nearcore `pytest` to have an ability to test the bridge under different circumstances
+
+**Vlad Frolov**
+- Working on config, 50% done
+
+**Evgeny Kapun**
+- Working on the architecture on the proofs
+- Investigation of the development frameworks for Ethereum contracts -> Truffle is not OK; [Embark](https://framework.embarklabs.io/) and Hardhead (?) frameworks
+
+**Marcelo Fornet**
+- Working on the token factory issue, resolved it
+- Focusing on the CI at the moment
+
+**Chad Ostrowski**
+- FE supports generic token connector, still hardcoded to send a single ERC20 token
+- There's a PR for multiple ERC20 tokens
+- Held a meeting with Corwin Harrell on UI for the bridge FE
+- Got the credentials for the testnet bridge, though there're some issues with fixing the bridge
+
+**Alex Shevchenko**
+- Composing the hackathon projects' feedabck
+- Preparing for the Community Toownhall
+
+**Questions**
+- Illia: upgradability, what's the status?
+  - We need to update the communication protocol. Even if we make the Ethereum contracts upgradable there would be changes in future due to built in libraries, that might concern changes in the interface. Rust side would be probably easier.
+- Illia: there's an NEP for the Rust side upgradability <- need to review it.
 
 ## 22.10.2020
 
