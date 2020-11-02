@@ -29,7 +29,7 @@ Long-term goal: Near-independent and non-specific to Near contract execution run
  lightbeam in Wasmtime seems to require nightly
 * Nikolay performed first cost coefficient computations in https://github.com/near/nearcore/pull/3483, further
 * Bo estimated EVM costs on multiple machines: results are stable
-* Bo fixed EasyRecover for EVM bridge
+* Bo fixed EcRecover for EVM bridge
 * Bo helping to look at Wasmer memory leak at https://github.com/near/nearcore/issues/3402
 * Wasmtime depends on Lightbeam, which depends on static_vec, which doesn't work in Stable; To check if could use other backend, or could 
   use regular vec, and use own fork on Wasmtime.
