@@ -6,6 +6,79 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Nov 2, 2020
+
+### Chain (Bowen)
+
+Michael was measuring TPS with sharding, with 50 validators the TPS scales almost linearly with the number of shards. At 8 shards we achieve around 5000 TPS.
+With 100 block producers there are still unknown bottlenecks.
+
+Still investigating memory leaks from Wasmer, and from RocksDB. For the former Piotr tries to reproduce locally, and to submit to Wasmer.  
+On the RocksDB side needs more investigation how some caches are used to understand why it is leaking.
+
+Alex is still working on the change to enable garbage collecting headers and light speed sync.
+
+Bowen works with others on new upgradability technique that enables different sets of features enabled on different networks.
+
+### Tx Runtime (Eugene)
+
+PR is mostly done to upgrade the fees.
+Waiting for final asjustments re: IO costs. Will run an estimator, and adjust the fees to account for IO.
+
+### Contract Runtime (Nikolay)
+
+Merged contract caching. Not fully done. As mentioned above, will need to update costs, to account for the new model of contract deployment, in which we never recompile contracts.  
+Nikolay is inclined to start with separating, and first upgrading the costs to account for the new deployment model, and then separately to account for IO.  
+Managed to remove the requirement to use nightly Rust. Only Wasmer required it, and it appeared that the dependency in Wasmer was small, and we just removed it.
+
+### Node interfaces (Frol)
+
+Lots of focus on Indexes, work by Frol, Bohdan and Yifang
+
+### Explorer (Frol)
+
+https://github.com/near/near-explorer/discussions/463
+
+### Wallet (Kendall)
+
+Last week released on Tuesday three major features:
+
+- Staking UI for non-lockup tokens;
+- New account creation UI with implicit account intermediate step;
+
+For the next couple releases will be concentrated on some UI bug fixes.
+Post bugs here:
+https://github.com/near/near-wallet/projects/5
+
+Adding an ability to disable 2FA (which will also release 35NEAR that are held on the account to pay for 2FA storage).
+
+### Infra (Sandi, Bowen)
+
+At this stage defining milestones.
+
+Mario will be working on investigating RPC perf.
+
+Nick is working on Terraform config for RPC nodes, and figuring out a better way to manage our nodes, especially for migrations (speaking of Testnet, not Mainnet).
+
+Sandi and Bowen will be driving the transition for nearcore to switch to using feature flags for Betanet, will require a hard fork of Betanet.
+
+Finalized oncall schedules, realized we need a better handbook.
+
+### Bridge (Alex Sh)
+
+The bridge team was focused on refactoring repos, most of the work besides CI is completed.  
+Props to Marcelo for finding a critical issue in the token factory, and fixing it.  
+Props to Chad for the work on the UI.
+
+Current focus: releasing the beta on the mainnet.  
+And upgradability for smart contracts.
+
+### EVM (Eugene)
+
+Making good progress. Mike finishes examples, and updates tools (near-cli, near-api). Want to introduce upgradability before we merge those changes.
+
+Plan to push to master next week behind the nightly compile-time flag.
+
 ## Notes -- Monday Oct 26, 2020
 
 ### Chain (Bowen)
