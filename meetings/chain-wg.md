@@ -8,6 +8,13 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 11.03.2020
+
+Michael: sending 50k tps to a network of 100 validators and 8 shards and it is able to maintain 5k tps. For 5k input tps, added chunks counting and it is always 8. For validators getting kicked out under no load, adding more logging to figure out what happened.
+
+Piotr: Trying to reproduce memory leak with wasmer. Starting with wasmer example and compile it in a loop but didn't find any memory leaks. Currently trying with one of the contracts we use to see if it can help reproduce the issue.
+
+Bowen: Finishing introducing nightly protocol features and transition the upgrade processs to use nightly protocol features
 
 ## 10.27.2020
 
