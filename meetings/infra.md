@@ -114,6 +114,7 @@ Sandi:
 - most likely help debug current RPC issues: backup issue, connection termination issue, migration issue, ...
 - figure out if the migrating commit path is executed.
 
+
 ### Discussion notes:
 Terraform migration for betanet. Just make sure to have a seperate GLB and rediredirect the DNS, figure out if we can reuse the certifactes (99percent it does).
 
@@ -125,3 +126,24 @@ Any RPC related questions we haven't covered before tomorrows RPC meeting?
 - Discuss archival vs non-archival nodes discussion for tomorrow. 
 - Archival nodes are running a hotfix and we have to figure out a way to upgrade that. The new release should fix this across the network.
 
+
+## Nov 5th 2020
+### Weekly team updates:
+Nick:
+- Terraform setup & test on crashnet. Initialize new nodes that are spawned. Use packer image to start the nodes. Created an epic for the work on rpc nodes infra
+
+Sandi:
+- Split nightly and stable releases. Nightly takes master and builds with nightly features enabled. CI for both with nightly features and without feature flags. Fix certificate on nearprotocol.com.
+- Testnet release
+- change to deploy scripts. Change from pulling from release page to pulling from master
+- CI pipeline for nearup for mainnet: update S3 files
+- betanet hardfork: 1) prepare the announcement 2) generate new genesis 3) shutdown current nodes 4) Distribute tokens and let new validators join
+
+Mario:
+- Publicly available archival node backups
+- coredumps
+- rpc benchmark investigation. Used gas_price for benchmark and rpc nodes work fine up to tens of thousands of rps.
+
+### Discussion
+
+We hardcode bootnodes into config.json. We don't know ip addresses of nodes before they are provisioned --> addressed by using static ip addresses
