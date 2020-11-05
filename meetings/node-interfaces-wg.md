@@ -1,6 +1,21 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+# 05.11.2020 (nearcore)
+
+## Current focus
+
+* Indexer: Bohdan K: continuing stabilizing the indexer for Explorer -- fixed the bug handling data receipts (finding the parent transaction hash from the indexer database). Indexer for Explorer is running without issues now (yay!). Indexer for Explorer is almost feature-complete (access keys sync from genesis remains to be pulled into the index).
+* Nightly support in nearcore: is done
+* TODO:
+  * Rosetta RPC: fix bugs, implement the view-calls as of the latest Rosetta spec, contruction API inlcuded in the rosetta.cfg
+  * JSON RPC: Structured errors
+
+## Discussions
+
+* Eugene K: Events support in Indexer. Vlad F: we can build a separate Indexer based on the [NEAR Indexer Framework](https://github.com/near/nearcore/tree/master/chain/indexer) (see [example](https://github.com/near/nearcore/tree/master/tools/indexer/example)) to handle the emmited events (through execution outcome logs)
+* Vlad F: [NEAR Indexer for Explorer v0.2](https://github.com/near/near-indexer-for-explorer/tree/0.2.x) can be easily run by anyone since it only requires PostgreSQL database and the server running the Indexer in archival mode, and it will dump all the hisotorical data into PostgreSQL database, and after that you are free to use SQL to query the data.
+
 # 29.10.2020 (nearcore)
 
 ## Current focus
@@ -11,6 +26,8 @@ This thread contains agenda and/or summary of the regular RPC sync meeting. Plea
 * JSON RPC: Structured errors: https://github.com/near/nearcore/issues/2976 discuss the structured RPC error design.
 
 # 28.10.2020 (Explorer)
+
+Sync is moved to https://github.com/near/near-explorer/discussions/463
 
 ## Discussions
 
