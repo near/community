@@ -20,6 +20,22 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 05.11.2020
+
+### Status
+
+  * Finally got contract caching merged, few follow ups from Eugene and Bowen; Bowen resolved issue with migration
+  * Contract caching PR also disable single-threaded mode of RocksDB, as non-functional
+  * Bo will take a look on estimator run hang (with Eugene)
+  * Willem's effort of compiling with stable Rust: dynasm and one inline asm in our Rust code: replaced inline asm with Rust operation
+  * Willem: simulation testing wrapped up
+  * Working on Contract Runtime WG OKRs: 80% done
+  * Not much changed in memory growth cost
+  * Wasmer memory leak wasn't reproducible, Piotr created an issue amnd let's see if could reproduce it
+  * Wasmer planning no more 0.x releases, but could accept our patches to those branches
+  * Eugene: we have P0 issue with RPC view calls not able to mutate compiled contracts cache: we could either mutate cache in 
+    view calls or force precompilation on deployment across nodes (discuss with @frol or Misha)
+
 ## 29.10.2020
 
 ### Status
@@ -33,6 +49,7 @@ Long-term goal: Near-independent and non-specific to Near contract execution run
 * Bo helping to look at Wasmer memory leak at https://github.com/near/nearcore/issues/3402
 * Wasmtime depends on Lightbeam, which depends on static_vec, which doesn't work in Stable; To check if could use other backend, or could 
   use regular vec, and use own fork on Wasmtime.
+
 
 ## 22.10.2020
 
