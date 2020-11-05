@@ -7,6 +7,11 @@ The scope of the transaction runtime is the following:
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
 
+## 05.11.2020
+
+- Fee update PR. Blocked on generating the new config with param estimator.
+- Support for Events: https://github.com/nearprotocol/NEPs/issues/130#issuecomment-722516715
+
 ## 22.10.2020
 
 - Fee changes -- Eugene Kuzyakov is still working on it; In progress, depends on `nightly_protocol` feature.
