@@ -11,12 +11,43 @@ We pursue safety and usability at the same time.
 * Usability. We work on documentation and examples.
 
 ## Action item long list
-- [ ] 22 Oct, Alex Kouprin and Chad Ostrowski: To investigate NEP21 being sent back as ERC20 without unwrapping. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
-  - Not yet come with the final solution. Alex Kouprin to look into the issue. Maybe we need to put everyhtibg into an issue in the bridge repos
 - [ ] 29 Oct, Chad Ostrowski, Alex Kouprin to assemble the knowledge on fixing the bridge
 - [ ] 29 Oct, Alex Shevchenko, to work on the monitoring with Sandi
-- [ ] 29 Oct, Max Zavershynkyi, to create a doc \'What can go wrong with the bridge\'. This doc can be used for creation of the playbook for monitoring.
 - [ ] 29 Oct, Alex Kouprin, to review [NEP](https://github.com/nearprotocol/NEPs/pull/123) on smart contract upgradability
+- [X] 29 Oct, Max Zavershynkyi, to create a doc \'What can go wrong with the bridge\'. This doc can be used for creation of the handbook for monitoring.
+  - Built in the huge document in the issue in github: https://github.com/near/rainbow-bridge/issues/411
+- [X] 22 Oct, Alex Kouprin and Chad Ostrowski: To investigate NEP21 being sent back as ERC20 without unwrapping. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
+  - Not yet come with the final solution. Alex Kouprin to look into the issue. Maybe we need to put everyhting into an issue in the bridge repos.
+
+## 05.11.2020
+
+**Alex Kouprin**
+- NayDuck basic integration (with Marcelo). Stuck into not passing the txs. Perhaps config issues.
+
+**Vlad Frolov**
+- [Draft PR](https://github.com/near/rainbow-bridge/pull/412) for the config changes is created . Multiple things need to be fixed. 
+
+**Evgeny Kapun**
+- Discussing with Alex Kouprin slight changes of the assembly of the proofs + changes in the NEAR light client on Ethereum
+
+**Marcelo Fornet**
+- Working on testing
+
+**Chad Ostrowski**
+- Some work on the FE of the bridge: https://near.github.io/rainbow-bridge-frontend/ <-- test tokens for demos.
+- Multiple tokens can be sent over the bridge in the same time
+- PR for sending tokens back from NEAR to Ethereum
+
+**Alex Shevchenko**
+- Tags for the BD
+- NwtN community call
+
+**Questions**
+- What is blocking us?
+  - The setup issue that Alex and Marcelo working on right now + Vlads' config PR.
+- Upgradability?
+  - No progress
+
 
 
 ## 29.10.2020
