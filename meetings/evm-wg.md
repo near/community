@@ -10,7 +10,7 @@ Current eng team:
 * Evgeny Kapun -- security-related reviews.
 
 ## Action point long list
-- [ ] 30 Oct, Alex: Loop in Sandi for Betanet setup & deployment of EVM there
+- [X] 30 Oct, Alex: Loop in Sandi for Betanet setup & deployment of EVM there
 - [X] 23 Oct, Eugene: Show during the next meeting the future upgradability approach
   - See here: https://github.com/near/nearcore/issues/3544
 - [X] 23 Oct, Alex: to have a call with Eugene on the scope for the Phase 2
@@ -22,6 +22,37 @@ Current eng team:
   - Done, detailed internal conversation between EVM & Bridge team started 
 - [X] 16 Oct, Max: to sync with Peter with regard to tutorial video from Austin
   - Everybody synced, the video will be produced once the EVM deployed at Crashnet or any other network. As an additional AP: to prepare a set of issues for the community (bounties).
+
+## 06.11.2020
+**Mike Purvis**
+- Health work on PRs (marking `Draft`, etc.)
+- Oracle system of Chainlink price feeds inside the EVM
+
+**Bo Yao**
+- Working on multiple PRs: ([1](https://github.com/near/nearcore/pull/3571), [2]( https://github.com/near/nearcore/pull/3564), [3](https://github.com/near/nearcore/pull/3534))
+
+**Arto**
+- Upgraded the EVM to 2.6.8
+- Reading the codebase
+- Starting the next week available full time
+- Next step is 2.7.*
+
+**Eugene**
+- Rebased the branch to current master
+- Waiting for fix from Bowen on the `nighly features`
+- CryptoZombies has one failing test(view call), rests of the tests are passing. No understanding why is it failing (wrong ABI?)
+- No work on upgradability <- should be done before the release
+- Finalised OKRs on the call extension https://near.ai/evm-okrs
+  
+**Questions**
+Betanet release requirements:
+- Merge the EVM branch to master:
+  - Make sure that we're introducing EVM behind a `nightly feature` Bowen: No problem expected. Just guard all the EVM code by `feature` flag
+  - (Internal) upgradability needs to be done
+  - Passing CI, not affecting the master
+- Mike: Do we need a separate shard for EVM?
+  - No need to do it right now, let's think of this closer to the `Testnet` release 
+
 
 ## 30.10.2020
 **Mike Purvis**
