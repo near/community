@@ -6,6 +6,74 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Nov 9, 2020
+
+### Chain (Bowen)
+
+Investingating perf bottleneck for sharding.  
+There was a bug in the benchmark. Currently with 100 validators they get kicked out, likely due to epoch length too short.
+
+Memory investigation: found two places in WASMER where it is leaking memory.
+One related to a cache we are using, which is already removed in master.
+
+Misha is looking into failures of stress.py in nightly.
+
+Preparing to run betanet with nightly features feature.
+
+### Tx Runtime (Eugene)
+
+Still working on the fees. Blocked on param estimator. It started failing for an unknown (yet) reason, Bo will look into it.
+
+### Contract Runtime (Nikolay)
+
+Investigating the memory leak. As Bowen said above, likely one memory leak is removed as we disabled the cache.  
+The other one is being investigated.
+
+Another unresolved issue is view-only contracts. For them the execution is way more expensive if the cache doesn't have the contract for some reason.  
+To solve it we need to allow them write access to the cache.
+
+### Node interfaces (Frol)
+### Explorer (Frol)
+
+The progress last week mostly on the indexer side. Ran explorer indexer without any issues syncing from both testnet and mainnet and populating the postgres. Need some column naming, more indexes.
+
+No progress on Rosetta last week, wants to spend more time in the coming week.
+
+Discussion on Explorer with the community: https://github.com/near/near-explorer/discussions/467
+
+### Wallet (Kendall)
+
+https://github.com/near/near-wallet/pull/1133
+
+Fixing several bugs.
+
+Pushed three features into this release to allow for the testing: disabling 2FA, available balance update, adding / removing ledger if Ledger is the only recovery option.
+
+### Infra / SRE (Sandi, Bowen)
+
+Testing the terraform config. Need it for RPC nodes.  
+On the release side preparing the change for the betanet release: both the new genesis, and the changes in the pipeline.  
+Mario is investigating some issues with RPC nodes. Brief benchmark doesn't show any obvious problems.  
+Setting up canaries for testnet and mainnet.
+
+### Bridge (Alex Sh)
+
+Working towards private beta release. After the major refactoring that we discussed last week, the bridge is restored to the normal conditions. It is now is compiling again. There are some tests that are still not passing.
+
+Working with Nayduck integration. The major issue before the beta release is some work on the config, that Frol is working on it.
+
+Next call topics: upgradability, and some security considerations.
+
+Chad is working on the frontend. Will be published for public around December. Also props to Corwin for help with the interface.
+
+Private betanet applications start this week.
+
+### EVM (Eugene)
+
+Evgeny needs to do an internal upgradability. Preparing to merge the EVM PR into master, need to fix some test failures and hide it behind the nightly flag, and that the merge doesn't pollute any part of the protocol when the nigtly feature is off.
+
+Good progress on the rest of the features, metatransactions work now. Merged in the changes from OpenEthereum, checking if it's compatible with what we have been using.
+
 ## Notes -- Monday Nov 2, 2020
 
 ### Chain (Bowen)
