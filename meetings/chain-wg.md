@@ -8,6 +8,18 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 11.10.2020
+
+Michael: unexpected node behavior in 100 node, 8 shards network. One node behaves abnormally (takes a long time to receive blocks at some point). Need more debugging info to figure out what happened.
+
+Piotr: Try to reproduce wasmer memory leak by running example contract in a loop but this fails to reproduce the issue. Pinned down the exact data structure in
+wasmer that leaks memory. 20% of the leaks have been fixed by the disk cache change. The remaining leak is related to mmap used by wasmer. Easy to reproduce if run a node.
+
+Misha: Investigating is_height_processed usage. Working on orphan attack fix.
+
+Alex: 1) change the interface for fetching light client blocks while maintaining backward compatibility. Working on database migration for the change 2) garbage collection of headers & light client headers. Garbage collection of headers is done and light client sync is in progress.
+
+
 ## 11.03.2020
 
 Michael: sending 50k tps to a network of 100 validators and 8 shards and it is able to maintain 5k tps. For 5k input tps, added chunks counting and it is always 8. For validators getting kicked out under no load, adding more logging to figure out what happened.
