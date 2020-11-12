@@ -20,6 +20,21 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 12.11.2020
+
+### Status
+  
+  * Memory leak seems to be resolved, thanks Piotr and Bo
+  * Willem added docs to testing infra
+  * Willem computed memory growth cost estimation
+  * Willem took a look on using coverage in testing, evaluated DWARF support
+  * Nikolay finished Contract WG OKRs and put those to the Airtable
+  * Bo and Eugene is looking on estimator panic/hang
+  * Bo debugging contract execution crash/misbehavior
+  * Nikolay to look on issue from Eugene: we have P0 issue with RPC view calls not able to mutate compiled contracts cache: we could either mutate cache in 
+    view calls or force precompilation on deployment across nodes (discuss with @frol or Misha)
+  * Willem switched Rust/QEMU interface from inline asm to read syscall (3533)
+
 ## 05.11.2020
 
 ### Status
