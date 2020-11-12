@@ -1,7 +1,7 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
-All the further updates will get posted on the [nearcore Discussions board](https://github.com/near/nearcore/discussions?discussions_q=category%3A%22Public+Interfaces%22)
+All the further updates will get posted on the [nearcore Discussions board](https://github.com/near/nearcore/discussions?discussions_q=category%3A%22Node+Public+Interfaces%22)
 
 # 12.11.2020
 
