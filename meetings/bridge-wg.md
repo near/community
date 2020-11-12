@@ -2,7 +2,13 @@
 This thread contains agenda and/or summary of the regular Bridge sync meeting. Please propose agenda items through the PRs and Issues.
 
 ## High-level Goals
+Short term
+* `Private Beta` Release on Mainnet
+
+Mid term
+
 We pursue safety and usability at the same time.
+
 * Current focus:
   * Safety. We close all findings related to the audit, see: `2020-07 audit` label: https://github.com/near/rainbow-bridge/issues?q=is%3Aopen+is%3Aissue+label%3A%222020-07+audit%22
   * Usability. [We have already split the repo](https://github.com/near/rainbow-bridge/pull/319). [Now we extract RainbowLib](https://github.com/near/rainbow-bridge/issues/297) Alex K discuss RaibowLib usages with Illia and Chad;
@@ -13,11 +19,40 @@ We pursue safety and usability at the same time.
 ## Action item long list
 - [ ] 29 Oct, Chad Ostrowski, Alex Kouprin to assemble the knowledge on fixing the bridge
 - [ ] 29 Oct, Alex Shevchenko, to work on the monitoring with Sandi
-- [ ] 29 Oct, Alex Kouprin, to review [NEP](https://github.com/nearprotocol/NEPs/pull/123) on smart contract upgradability
+- [X] 29 Oct, Alex Kouprin, to review [NEP](https://github.com/nearprotocol/NEPs/pull/123) on smart contract upgradability
 - [X] 29 Oct, Max Zavershynkyi, to create a doc \'What can go wrong with the bridge\'. This doc can be used for creation of the handbook for monitoring.
   - Built in the huge document in the issue in github: https://github.com/near/rainbow-bridge/issues/411
 - [X] 22 Oct, Alex Kouprin and Chad Ostrowski: To investigate NEP21 being sent back as ERC20 without unwrapping. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
   - Not yet come with the final solution. Alex Kouprin to look into the issue. Maybe we need to put everyhting into an issue in the bridge repos.
+
+## 05.11.2020
+**Vlad Frolov**
+- Almost finished [Config PR](https://github.com/near/rainbow-bridge/pull/412). Anticipated that this would be ready for review today.
+- Big thanks to Marcelo and Alex Kouprin for fixing CI.
+- Config is blocking testing, which is blocking the release.
+
+**Marcelo**
+- CI & testing lots of updated tests & missing tests
+  - Old stuff from mintablefungible token, for example
+- Review of Vlad's PR
+- Working on deployment
+
+**Chad**
+- Created PR for sending back NEP-21 to ERC-20, still draft.
+
+**Alex**
+- Finished document with tags for BD -> this is to be fed into the form for collecting requirements and wishes from our partners
+- Worked on communication of `Private Beta` -- the decision is to make it completely private. Sasha Hudzilin will come up with a set of partners with which we're going to test the bridge
+- Scheduled a Security and Upgradability call tomorrow
+
+Questions:
+- Max: can we do a roadmap?
+  - Alex: roadmap highly depends on the decisions from the Security and Upgradability call, this is a step into it
+- Alex: Proposal to move to discussions.
+  - No immediate objections
+- Sandi: Bridge needs to be monitored. How we can understand what to monitor?
+  - Alex: I can be a contact person. A joint decision to put this into rainbow-bridge repo under SRE tag.
+  - Max: let's agree on this with Alex Skidanov
 
 ## 05.11.2020
 
