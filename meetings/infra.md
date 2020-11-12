@@ -147,3 +147,32 @@ Mario:
 ### Discussion
 
 We hardcode bootnodes into config.json. We don't know ip addresses of nodes before they are provisioned --> addressed by using static ip addresses
+
+
+## Nov 12th 2020
+### Weekly team updates:
+
+Sandi:
+- Betanet hardfork. Created a separate network with four validators and change the deployment pipeline
+- no color log flag for neard
+- debugging CI issue: some tests pass on CI but fail locally. `--no-cache` if turned on, then the test passes.
+
+Mario:
+- public backups for both testnet and mainnet
+- bridge tests & linter
+- testnet rpc issues: sometimes it gets timeout
+- coredumps
+
+### Discussion
+Want to do a hard fork on betanet whenever `PROTOCOL_VERSION` behind the nightly protocol feature flag is increased. Dump state and restart the network. Check if the variable has changed in the new commit.
+
+Rpc health check:
+1) switch load balancer health check to use /health endpoint
+2) release the PR that would mark nodes that are syncing to be not healthy
+
+Cherry-pick commits into the next release:
+1) no-color-log flag
+2) improved healthe check
+3) monitoring improvements
+
+One validator brought up an idea w.r.t centralized log collection service. We can use graylog for this.
