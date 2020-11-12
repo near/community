@@ -25,7 +25,7 @@ We pursue safety and usability at the same time.
 - [X] 22 Oct, Alex Kouprin and Chad Ostrowski: To investigate NEP21 being sent back as ERC20 without unwrapping. Eugene Kapun thinks it is not a design flaw, we should solve it on the front-end side to check if NEP21 is already matched to ERC20 then we don't need to wrap it additionally.
   - Not yet come with the final solution. Alex Kouprin to look into the issue. Maybe we need to put everyhting into an issue in the bridge repos.
 
-## 05.11.2020
+## 12.11.2020
 **Vlad Frolov**
 - Almost finished [Config PR](https://github.com/near/rainbow-bridge/pull/412). Anticipated that this would be ready for review today.
 - Big thanks to Marcelo and Alex Kouprin for fixing CI.
