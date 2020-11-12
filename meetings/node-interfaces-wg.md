@@ -1,6 +1,25 @@
 # Node Interfaces Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular RPC sync meeting. Please propose agenda items through the PRs and Issues.
 
+All the further updates will get posted on the [nearcore Discussions board](https://github.com/near/nearcore/discussions?discussions_q=category%3A%22Public+Interfaces%22)
+
+# 12.11.2020
+
+Moved to https://github.com/near/nearcore/discussions/3597
+
+## Current focus
+
+* Indexer: Bohdan K: Refactored the Indexer for Explorer DB schema to be easier to navigate through. Indexers for Explorer for testnet and mainnet are redeployed. TODO: Idempotency of accounts and access keys storage needs to be addressed to enable high-availability setup (running multiple nodes at once).
+
+## Plans
+
+* Rosetta RPC: fix bugs, implement the view-calls as of the latest Rosetta spec, contruction API inlcuded in the rosetta.cfg
+
+## Discussions
+
+* Sandi F: IO is too high when the node is under high load of RPC calls (Mario has added a detailed logging per method name, so we are about to learn about the specifics) -- needs further investigation (/cc Bowen)
+
+
 # 05.11.2020 (nearcore)
 
 ## Current focus
