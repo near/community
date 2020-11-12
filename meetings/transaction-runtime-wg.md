@@ -1,4 +1,4 @@
-# Transaction Runtime Work Group Agenda and Notes
+# Runtime and Friends Work Group Agenda and Notes
 This thread contains agenda and/or summary of the regular Transaction Runtime sync meeting. Please propose agenda items through the PRs and Issues.
 
 The scope of the transaction runtime is the following:
@@ -6,6 +6,38 @@ The scope of the transaction runtime is the following:
 * State;
 * Standalone execution;
 * Fees, refunds, gas price and conversion of tokens to gas, economics
+
+Applications:
+* use-cases from partners
+* needs from application developers
+* potential improvements for tools
+* educational content
+
+Contracts:
+* SDK
+* JS SDK
+* New Contracts
+* Standards
+
+## 12.11.2020 
+
+- Runtime:
+    - Fees update still blocked on new params estimation due to some panic during the estimation.
+    - Request: implement `DeleteState` action.
+    - Discussion about host method to do `trie_iterator` which we commented on to explain the reason why it was removed.
+- Applications:
+    - Testnet devX/UX is different from Mainnet. Free tokens, lower security for wallets. Needs testnet faucet.
+- Contracts: 
+    - Staking pools can't be deleted, because they are locked contracts without keys. This is to avoid breaking some guarantees for lockup contracts.
+    - Simulation Testing PR is ready for review and blocked on reviews
+    - 2FA issues with near-api-js were fixed.
+    - 0.25 allowance encourages you to not attach 300Tgas
+- Standards:
+    - Review of Fungible token standard. Rename safes to vaults (NEP 122).
+    - Add view methods to the NEP 122 standard.
+    - Add a diagram to NEP 122 to explain transfer flow.
+    - Need to explain account registration standard.
+    - Discussion/Question: make `transfer` and `transfer_with` payable and require 1 yoctoNEAR for security perspective.
 
 ## 05.11.2020
 
