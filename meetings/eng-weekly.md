@@ -6,6 +6,94 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Nov 16, 2020
+
+### Chain (Bowen)
+
+Debugged the problem with validators being kicked out in a 8-shard system even without load. Turned out was a configuration issue.  
+With a moderate load (50tps per shard) the same problem emerged, due to not enough chunks.
+
+Memory leak -- great progress. The Wasmer memory leak is fixed. Some leaks in the cache are gone due to getting rid of the cache.  
+Some memory leaks were misreporting due to not handling `munmap` properly in the memory leak detector.  
+The issue on RocksDB is also figured out -- we were allocaging 8.5GB cache. Reduced to 2GB cache.
+
+Misha continues investigating the issue with `is_height_processed`. Have a repro of certain attacks, fixing it.
+
+Alex keeps working on building light speed sync / GCing of headers.
+
+### Infra / SRE (Sandi, Bowen)
+
+Focus on Betanet hardfork. Transition from the stakewars network (discontinued) to a new network for nightly releases. Will redeploy every 24 hours.
+
+Investingating issues with RPC timeouts. Added more metrics to collect more data.
+
+### Contract Runtime (Nikolay)
+
+PR reviews that adds cache to the view-only contracts.
+
+Memory growth cost: William was investigating a possibility of applying cost per additional allocated page. Initially used the same approach as param estimator, which was not appropriate due to mostly-kernel nature of pages allocations.
+
+More work on documentation.
+
+### Tx Runtime (Eugene) -> Runtime and Friends
+
+Blocked on param estimator, found a bug in param estimator which was incorrectly estimating the cost of storage. There's a PR to fix it.
+
+New request: DELETE STATE, that deletes the entire state of a contract.
+
+New request: add trie iterator. Will not implement it. People should use `TreeMap` for iterable sorted collections.
+
+People get surprised when move from Testnet to Mainnet that accounts cannot be just created. Potentially need to make testnet match mainnet behavior.
+
+A new video that covers fungible token standard.
+
+### EVM (Eugene)
+
+Upgraded EVM to the 2.7.2. Making sure the existing tools still work and pass tests.
+
+Almost ready to merge EVM into master under a nightly feature flag.
+
+More tests + work on metatransactions.
+
+### Bridge (Alex Sh)
+
+Private beta runs on mainnet.
+
+Open for partners, assembling the set of developers who will be testing the bridge.
+
+Ran test transactions between the two mainnets, successfully.
+
+A major discussion on upgradability of the bridge.
+
+Next: private beta, further work on upgradability.
+
+### Node interfaces (Frol)
+
+https://github.com/near/nearcore/discussions/3597
+
+The state of indexer grows very fast, need to be aware of that.
+
+Considering using OpenRPC spec in Q1 2021. Might also choose plain HTTP API instead of JsonRPC. The two (plain HTML and OpenRPC) are in conflict, still figuring out.
+
+We might want to downgrade our RPC nodes to make our resources consumption reasonable.
+
+### Explorer (Frol)
+
+https://github.com/near/near-explorer/discussions/470
+
+### Wallet (Kendall)
+
+Last week pushed UI changes to staking, to make it more clear when you have a lockup.
+
+More recovery methods when your primary recovery is ledger.
+
+### Further discussion
+
+Max encourages people to remember that the work of all teams must connect to the teams OKRs.
+
+Stephano re-emphasizes that the betanet was reset. Now people who wish to test running a node should either join the testnet or open shard alliance.  
+Frol is asking if the new betanet is from scratch, or is a continuation of the old one. It's a brand new network.
+
 ## Notes -- Monday Nov 9, 2020
 
 ### Chain (Bowen)
