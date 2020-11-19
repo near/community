@@ -8,6 +8,18 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 11.17.2020
+
+Michael: still investigating the 100 nodes, 8 shards network: sometimes it takes a lokng time between receiving a block and producing the next chunk.
+
+Piotr: No memory leak for wasmer and rocksdb. Reduced rocksdb cache size to 2GB. Still investigating whether there is memory leak in rust code.
+
+Misha: pushed partial fix for orphan attack and submitted a PR for chunk mask. Continue working on fixing orphan attack. Investigating is_height_processed issue.
+
+Alex: still working on syncing
+
+Bowen: investigated some performance issue network; recalibrating inflation
+
 ## 11.10.2020
 
 Michael: unexpected node behavior in 100 node, 8 shards network. One node behaves abnormally (takes a long time to receive blocks at some point). Need more debugging info to figure out what happened.
