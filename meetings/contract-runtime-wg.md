@@ -20,6 +20,20 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 19.11.2020
+
+### Status
+  * P0 performance problem with view contracts was resolved: PR merged
+  * Need to have "interface types" published in some crate to avoid "primitives obsession"
+  * OKRs got synchronized with actual activities
+  * Willem to take a step to get rid of inline asm in our codebase
+  * Bo debugged estimator issue (see issue 3601), related to measuring of already deleted keys
+  * After fix estimator runs too long, need to optimize run time (mostly related to number of accounts)
+  * Bo will take a look on above optiomization
+  * Willem finishing up simulation PR: addressing comments
+  * Nikolay -> Willem as Rust SDK reviewer
+  * Willem fixing deny.toml issues to simplify switch to stable Rust
+
 ## 12.11.2020
 
 ### Status
