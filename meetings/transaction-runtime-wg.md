@@ -19,6 +19,21 @@ Contracts:
 * New Contracts
 * Standards
 
+## 19.11.2020
+
+- Runtime:
+    - A PR to fix param estimator with preparing storage keys before deletion and removing randomness from deployed contracts to be consitent.
+    - Events - we can start implementing `logs_base64` on RPC endpoint.
+- Applications:
+    - Implemented NEP122 for Berryclub. Maybe switch Payload to JSON string from binary Borsh for human-checking
+- Contracts:
+    - Simulation testing PR is reviewed and looks good.
+    - New Promise methods for passing nonces to keys.
+    - We'll need to publish a new `near-sdk-rs` version with a few fixes.  
+- Standards:
+    - NEP122 has to move to vaults and add a Trait for methods. Add payable requirements.
+
+
 ## 12.11.2020 
 
 - Runtime:
