@@ -176,3 +176,23 @@ Cherry-pick commits into the next release:
 3) monitoring improvements
 
 One validator brought up an idea w.r.t centralized log collection service. We can use graylog for this.
+
+## Nov 19th 2020
+
+Sandi:
+- oncall
+- disable color in logs
+- set up profiler machines on testnet and mainnet. Setting up automation to collect flamegraph and call graph daily
+- cron job for betanet nightly release
+- pipeline for mainnet binary and metadata so that we nearup can work well on mainnet
+
+Mario:
+- Mainnet updates. Update archival nodes
+- Terraform for rpc. Problem with fast scaling
+- Bridge monitoring
+- debugging public backups
+
+### Discussion
+
+hardfork pipeline for betanet when there is a protocol change.
+Bridge monitoring: prometheus poc
