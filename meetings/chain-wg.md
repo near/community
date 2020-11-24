@@ -8,6 +8,16 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 11.24.2020
+
+Michael: sharded network investigation w/ transaction loaded. Latency seems be in the distribution of chunk parts. Chunk part forwarding does not help enough. Bottleneck is mostly in getting chunk parts.
+
+Piotr: Fixing the security issue by limiting the number of total connections (including pending ones). Modifying meory leak detection. Hopefully will get more data by the end of this week. Document how to improve rust compilation speed without changing Cargo.toml.
+
+Misha: Investigating potential deadlock. Didn't find any potential deadlock in our code. Keep working on fix for orphan pool.
+
+Bowen: dealing with critical issues on mainnet. 
+
 ## 11.17.2020
 
 Michael: still investigating the 100 nodes, 8 shards network: sometimes it takes a lokng time between receiving a block and producing the next chunk.
