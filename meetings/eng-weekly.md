@@ -6,6 +6,78 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Nov 30, 2020
+
+### Chain (Bowen)
+
+Continuing the same work:
+
+* Investigating slowness in sharded network. So far narrowed down to collecting chunk parts.
+  * Sometimes requests keep on being sent after the chunk is reconstructed
+  * Marcelo confirmed that in the experiments there's no long routes, so the slowness can't be attributed to that
+* Memory leak: adding more debug info. Mostly fixed in dependencies, now looking for issues on our end. Today leakng 6MB / day.
+* Mikhail investigates why nodes ocasionally get stuck. Suspected deadlock initially, and concluded that our code is unlikely to have a deadlock, given we barely use any locks, and the ones we use can be analyzed.
+* Mikhail also keeps on working on the full fix for the orphan pool issues.
+
+Alex is asking if 6MB / day is worth fixing. We should not use more than 6GB today. Might not be worth fixing it.
+
+### Infra / SRE (Sandi, Bowen)
+
+Mario is still working on the terraform config for RPC nodes, as well as backups.  
+Sandi is working on hardforks on betanet.
+
+### Contract Runtime (Nikolay)
+
+Discovered some nasty issue with contract caching, due to misinterpreting deserialization errors. Fix is available, needs some testing.  
+Bo implemented a mechanism for continuous monitoring for non-compalible contracts. There could be multiple reasons why they do not compile: the obvious one is random junk instead of WASM, but also possible that something very close to correct WASM, and either intentionally or unintentionally breaking the ahead of time compilation mechanism.
+
+Helping with memory leaks investigations.
+
+Bowen points out that there's no currently reported memory leaks in WASM.
+
+### Tx Runtime (Eugene) -> Runtime and Friends
+
+A bug in param estimator that was not correcly estimating evictions.
+
+All meetings were skipped last week (due to Thanksgiving?).
+
+More educational videos.
+
+### EVM (Eugene)
+
+EVM branch was in review last week. Some minor things that need to be addressed and upgraded to master.
+
+Adding features to actually use EVM, new test to cover precompiles in EVM.
+
+### Bridge (Alex Sh)
+
+Issue with the beta bridge: at some point default was changed from payable to non-payable, and the contract on the betanet was not able to receive tokens. Flux hit the issue. With the issue fixed, Flux is live on mainnet. (Max points out that was an SDK change, not protocol change).
+
+Wrapper NEAR contract is on PR. Now work on NFT connector.
+
+Work on Front End.
+
+### Node interfaces (Frol)
+
+Received a PR for borsh that adds no-std support.
+
+Another PR for adding a time-machine (a bounty).
+
+### Explorer (Frol)
+
+Close to migrating to the indexer infra. The backend is close to supporting both backends at the same time.
+
+### Wallet (Patrick)
+
+Released lots of bug fixes and refactoring, especially around enabling and reconnecting ledger.
+
+Fixed issues with staking, where the delegator was inactive or kicked out, it was not shown in the list.
+
+There's an issue with displaying staking rewards if there's a 2FA on a non-lockup account.
+
+Ability to skip 2FA on account creating; Reducing an amount needed to require 2FA to Ⓝ200.
+
+
 ## Notes -- Monday Nov 16, 2020
 
 ### Chain (Bowen)
