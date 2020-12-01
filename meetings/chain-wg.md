@@ -8,6 +8,16 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 12.01.2020
+
+Michael: Didn't find anything wrong with routed messages. Sometimes response is dropped. PR for re-enabling seals
+
+Piotr: adding performance metrics to actix actors. Only 6MB/day memory leak: in spawned futures & actix. Wrote documentation on improving compilation time
+
+Misha: Finish the orphan fix: more invasive than expected. Will help unblock addressing `is_height_processed` issue. Also investigate the issue with node hanging.
+
+Alex: no update on syncing. It is however a nonprotocol change.
+
 ## 11.24.2020
 
 Michael: sharded network investigation w/ transaction loaded. Latency seems be in the distribution of chunk parts. Chunk part forwarding does not help enough. Bottleneck is mostly in getting chunk parts.
