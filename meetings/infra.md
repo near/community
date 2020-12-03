@@ -179,6 +179,7 @@ One validator brought up an idea w.r.t centralized log collection service. We ca
 
 ## Nov 19th 2020
 
+### Weekly update
 Sandi:
 - oncall
 - disable color in logs
@@ -196,3 +197,25 @@ Mario:
 
 hardfork pipeline for betanet when there is a protocol change.
 Bridge monitoring: prometheus poc
+
+## Dec 3rd 2020
+
+### Weekly update
+
+Sandi:
+- Finish betanet pipeline hardfork pipeline. Need to be able to trigger awx from buildkite for the hard fork.
+- Fixed betanet ci pipeline for applayer: it didn't use nightly before & some bug in docker image. Need to deprecate docker and refactor the pipeline
+- Fix mac builds for nearcore CI. The github action failed because it wasn't maintained anymore. Found some other action and used it instead.
+- Work on oncall handbook
+TODO: profiler automation. Need to figure out why some symbols were unknown. Rpc timeout investigation
+
+Mario:
+- oncall duties
+- Some rpc node gets stuck (not getting new blocks) on mainnet
+- Managed to make public backups.
+- Improve systemd to restart nodes, memory & cpu utilization control. Adding coredumps. We can make packer json file public.
+TODO: Ethereum full node & bridge monitoring
+
+### Discussion
+
+Bowen discussed with frol on the rpc timeout issue. Frol encountered the timeout while he is working on RosettaRPC. Have some hypothesis but need to verify it. Need to follow up on the exact strategy on how to test it.
