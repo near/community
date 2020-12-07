@@ -6,6 +6,89 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Dec 7, 2020
+
+### Chain (Bowen)
+
+Further working on the perf of sharded network. Fixing some suboptimalities found.  
+Piotr investigates a new memory leak. The leak itself is not bad, but the behavior looks weird enough to spend time investigating.
+
+Mikhail keeps on working on the orphans fix, which ended up to be more invasive than expected. This will unblock another investigation with `is_height_processed`. Mihkail also looks into why nodes ocasionally hang.
+
+### Infra / SRE (Sandi, Bowen)
+
+Betanet hardfork pipeline is finished. Did a test, works fine.
+
+Next time we do a protocol change on nightly, it will automatically trigger the upgrade.
+
+Fixed CI pipeline on betanet, which was broken due to some issue with Docker. We are deprecating docker in favor of using the binary directly.
+
+More work on on-call handbook.
+
+Mario finished the work on public backups. There were some issues due to the size of the data.
+
+### Contract Runtime (Nikolay)
+
+Fixed the problem with caching of saved serialization state (error state).
+
+A PR is out that makes cost computation to take into account IO.
+
+Bo has collected all the failed compilation results. It was mostly due to contract non-existing (e.g. deleted), but in certain cases we failed to deserialize the cached contract. Need to investigate.
+
+William and Sherif discussed extending our testing infra to external people through DevX team.
+
+### Tx Runtime (Eugene) -> Runtime and Friends
+
+Discussed partial vs full state deletion for a contract. Partial requires iterators, that we don't want to support. Full deletion makes sense.
+
+Recorded more educational videos.
+
+More work on SDK.
+
+### EVM (Eugene)
+
+Merged EVM into master! 100+ commits. All behind the nightly feature, released to Betanet.
+
+More tests for different scenarios, and fixing a bunch of things around the tests (including the web3js provider).
+
+New team member: Frank, helps Arto with tests.
+
+New EVM channel in discord, the best place to discuss EVM!
+
+### Bridge (Alex Sh)
+
+Still waiting for testing of the upgradable bridge.
+
+Wrapped NEAR is in progress.
+
+Keep on focusing on the ability to restart the transfer process.
+
+Over the weekend we ran out of funds, and the bridge has stopped. Re-funded. Need monitoring infra.  
+Alex Sh points that Mario has already started working on the bridge.
+
+### Node interfaces (Frol)
+### Explorer (Frol)
+
+Indexer for explorer has been running for a week, keeping the network synced into a postgres database. Props to Bohdan!
+
+Explorer is now moving to this new indexer database.
+
+### Wallet (Kendall)
+
+New release process: Every Monday ship to prod last week release, and roll out a new release, giving us one full week of testing.
+
+This week production is mostly bug fixes.
+
+Next week production: adding function call arguments to tx signing change. Most user encounter them via 2FA or Ledger, for others make it more obvious; 
+
+Disabling 2FA is basically done, testing.
+
+Coming soon: reworking account creation flow. People get confused with the implicit account, making it more intuitive.
+
+Priorities: https://github.com/near/near-wallet/projects/6
+
+Discussed adding account created in CLI into wallet. The way to do it now is by adding a seed phrase via CLI and importing it from the wallet.
+
 ## Notes -- Monday Nov 30, 2020
 
 ### Chain (Bowen)
