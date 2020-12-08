@@ -8,6 +8,14 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 12.08.2020
+
+Michael: fix performance issues when found during sharded network investigation. Check header signature only once; only apply blocks when it has all chunks
+
+Piotr: Adding performance metrics: see how much resource each actor uses by adding wrappers on top of actor. Currently measure only cpu usage. Going to print from one thread vs. every thread. Working on improving memory investigation tools. Going to investigate why we have more futures every day. Change info logging to print number of blocks that need to be downloaded.
+
+Misha: Opened PR for approvals change; found weird bug in header sync/state sync; investigate node hanging. Looking into lock contention on view cache in trie. Seems like we can fix the lock issue by ignoring invalidated view cache since view client can fail safely.
+
 ## 12.01.2020
 
 Michael: Didn't find anything wrong with routed messages. Sometimes response is dropped. PR for re-enabling seals
