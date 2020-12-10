@@ -207,6 +207,7 @@ Sandi:
 - Fixed betanet ci pipeline for applayer: it didn't use nightly before & some bug in docker image. Need to deprecate docker and refactor the pipeline
 - Fix mac builds for nearcore CI. The github action failed because it wasn't maintained anymore. Found some other action and used it instead.
 - Work on oncall handbook
+
 TODO: profiler automation. Need to figure out why some symbols were unknown. Rpc timeout investigation
 
 Mario:
@@ -214,8 +215,28 @@ Mario:
 - Some rpc node gets stuck (not getting new blocks) on mainnet
 - Managed to make public backups.
 - Improve systemd to restart nodes, memory & cpu utilization control. Adding coredumps. We can make packer json file public.
+
 TODO: Ethereum full node & bridge monitoring
 
 ### Discussion
 
 Bowen discussed with frol on the rpc timeout issue. Frol encountered the timeout while he is working on RosettaRPC. Have some hypothesis but need to verify it. Need to follow up on the exact strategy on how to test it.
+
+## Dec 10th 2020
+
+### Weekly update
+
+Sandi:
+- Finalize the profiler setup. Generate both call graphs and flamegraphs and upload them to gcloud storage. Will create a pipeline that does this every 4 hours.
+- Start writing oncall handbooks. Added some instructions for betanet, testnet & mainnet
+
+TODO: Setup some nodes to direct some traffic to test a modified version of neard on the issue of rpc timeout
+
+Mario:
+- Started 10 backups on testnet. Observed timeout for rpc nodes. Timeouts disappear when the backup nodes finished syncing
+- Templated dashboard for grafana. Important for alerts. Graph must have a 1:1 correspondence to alerts
+- Started an ethereum node. Done through terraform and packer. Working on monitoring of the node. Figured out types of eth nodes
+- terraform for rpc nodes. Testnet doesn't have the same neard as mainnet. Switch from using names to labels
+
+TODO: dashboard for ethereum nodes. Monitoring and alerts for bridge relayers
+
