@@ -6,6 +6,68 @@ If you have a proposal for a topic - send a PR to add it to agenda (and your ema
 The live stream each Monday 4pm GMT (9am PST) can be found: https://youtu.be/nJQnSjsRAD4. 
 Past meetings have their own links.
 
+## Notes -- Monday Dec 14, 2020
+
+### Chain (Bowen)
+
+Michael addressed a multitude of perf issues.  
+Piotr adds perf metrcis to the actors to get a more detailed view of how the load is distributed accross different actors. Mostly done, PR ois out.  
+Misha continues working on fixing some issues with the Orphan pool.
+
+### Infra / SRE (Sandi, Bowen)
+
+Sandi works on automation to dump call graphs and flame graphs from gperf every six hours;  
+Sandi also works on on-call handbook improvements;
+
+Mario mostly works on finishing up the terraform for RPC nodes, and early work on the SRE work required for bridge, including syncing a full Ethereum node, and the corresponding alerting;
+
+### Contract Runtime (Nikolay)
+
+Wasmer is close to releasing 1.0, we won't switch right away, will evaluate the perf first;  
+A comprehensive look into properly taking IO costs into account when evaluating gas costs do not show much discrepancy with the current gas costs;  
+Augment testing infra with the mechanism to support gas consumption profile (ability to see where most of the gas is spent).
+
+Frol is asking if 1.0 Wasmer will make nearcore compilable with stable rust.
+Nikolay: actally even Wasmer 0.71 can be made compilable with the stable rust. 1.0 is also stable rust.
+
+### Tx Runtime (Eugene) -> Runtime and Friends
+
+Work on the new gas config;  
+Need to rethink the inflation with the new costs, since a tx can now have 300 receipts, not 64.
+
+Live contract review of berry farm, which uses NEP122.
+
+Pending publishing a new NEAR SDK.
+
+### EVM (Alex Sh)
+
+Assembled all the features related to Phase II, that encompases all the features we want to have when we ship EVM to mainnet. Mostly around testing and benching of the EVM, as well as meta transactions (currently meta txs are not implemented).
+
+Initiating the conversation between the bridge and EVM how to bridge into the EVM vault;
+
+### Bridge (Alex Sh)
+
+Upgradable version of the bridge was tested and deployed to the mainnets.
+
+### Node interfaces (Frol)
+### Explorer (Frol)
+
+no-std support for Borsh from the community;  
+Released the new version of explorer that uses the indexer; Have more accurate statistics such as number of accounts and such, that before were a bit off;  
+Yet to be deployed to the default domain.
+
+Bohdan is working on the accrate estimation of the circulating supply.
+
+Effort on JsonRPC structured errors;
+
+Restructuring Borsh repo to be just an umbrella project, with dedicated repos for various implementations.
+
+### Wallet (Kendall)
+
+This week release: improved staking UI, balance calculation improvements; Showing function call arguments on the screen;
+
+Next week release: Ability to disable 2FA; Updated account creating flow, especially around the funding.
+
 ## Notes -- Monday Dec 7, 2020
 
 ### Chain (Bowen)
