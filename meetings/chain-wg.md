@@ -8,6 +8,14 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## 12.15.2020
+
+Michael: rerun the experiment for sharded network after fixes. Network can sustain up to 1000tps, but 2000 tps still does not work (some nodes get kicked out)
+
+Piotr: finish adding performance metrics (PR submitted); improved stats by adding number of blocks that need to be synced; finish adding metrics for memory behind a feature flag; figured out issue with intellj
+
+Misha: fix the cache contention on trie view cache; found the issue that we don't check version of header and block; state part request is slow (traverses the trie in order) and may not benefit from caches. Plan to disable cache for that. Also looked into lock-free lru cache, but didn't find anything in rust
+
 ## 12.08.2020
 
 Michael: fix performance issues when found during sharded network investigation. Check header signature only once; only apply blocks when it has all chunks
