@@ -240,3 +240,24 @@ Mario:
 
 TODO: dashboard for ethereum nodes. Monitoring and alerts for bridge relayers
 
+## Dec 17th 2020
+
+### Weekly update
+
+Sandi:
+- oncall work; improve oncall handbook
+- figure out issues with profiler automation
+- set up rpc node for investigating rpc timeout
+
+TODO: further improvements on oncall handbook; rpc timeout investigation
+
+Mario:
+- finish setting up ethereum node (ropsten and rinkeby) for bridge
+- PR to add basic monitoring for the relayers; bridge team will add more metrics
+- help Sandi with profiler setup
+- fix issue with monitoring and graylog setup on mainnet
+- oncall handbooks for backups
+
+### Discussion
+
+There is some issue on testnet with rpc. If the requests are submitted to a separate node not under load balancer, it works. However, it doesn't work if the requests are submitted to the loadbalancer. Frol tried to submit requests to the nodes behind load balancer directly but still experiences "Transaction Expired" errors. Some stats on the timeouts per method could be helpful
