@@ -261,3 +261,24 @@ Mario:
 ### Discussion
 
 There is some issue on testnet with rpc. If the requests are submitted to a separate node not under load balancer, it works. However, it doesn't work if the requests are submitted to the loadbalancer. Frol tried to submit requests to the nodes behind load balancer directly but still experiences "Transaction Expired" errors. Some stats on the timeouts per method could be helpful
+
+
+## Jan 7th, 2021
+
+### Weekly update
+
+Sandi:
+- add documentation on how to run archival nodes
+- backups
+- investigate why nearcore CI fails with too many files opened
+
+TODO: keep investigating the CI failure; investigate neard version and tag mismatch; license compliance work; looking into adding coredumps
+
+Mario:
+- migrate testnet nodes to use systemd from nearup. New labels for alerting (differentiate validator nodes from rpc nodes)
+- change playbooks for backups w/ systemd change
+- Explorer indexer monitoring
+
+TODO: deploy new testnet rpc nodes and reroute traffic to them
+
+
