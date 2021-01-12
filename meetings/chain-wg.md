@@ -8,7 +8,19 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
-## 12.15.2020
+## Jan 12, 2021
+
+Michael: working on slow chunk distribution in sharded network. Looking into whether something is slow on the receiving side. 2k tps works fine with 8 shards. Also working on seals.
+
+Piotr: cleaning up memory investigation code and move some code to a different repositories. Will start working on network stats (size of buffers on both sending and receiving end)
+
+Misha: Finishing spec for epoch manager. Will work on combining state parts without using cache.
+
+kpr: working on epoch sync. Will add block ordinal to `BlockHeaderInnerRest`, which is needed to check block merkle proofs.
+
+Discussion: Adding secp key for validators and add bridge specific secp signatures to blocks. Bowen and Alex will write up a document detailing the changes necessary to share it with everyone on the team as well as the community.
+
+## Dec 15, 2020
 
 Michael: rerun the experiment for sharded network after fixes. Network can sustain up to 1000tps, but 2000 tps still does not work (some nodes get kicked out)
 
@@ -16,7 +28,7 @@ Piotr: finish adding performance metrics (PR submitted); improved stats by addin
 
 Misha: fix the cache contention on trie view cache; found the issue that we don't check version of header and block; state part request is slow (traverses the trie in order) and may not benefit from caches. Plan to disable cache for that. Also looked into lock-free lru cache, but didn't find anything in rust
 
-## 12.08.2020
+## Dec 08, 2020
 
 Michael: fix performance issues when found during sharded network investigation. Check header signature only once; only apply blocks when it has all chunks
 
@@ -24,7 +36,7 @@ Piotr: Adding performance metrics: see how much resource each actor uses by addi
 
 Misha: Opened PR for approvals change; found weird bug in header sync/state sync; investigate node hanging. Looking into lock contention on view cache in trie. Seems like we can fix the lock issue by ignoring invalidated view cache since view client can fail safely.
 
-## 12.01.2020
+## Dec 01, 2020
 
 Michael: Didn't find anything wrong with routed messages. Sometimes response is dropped. PR for re-enabling seals
 
@@ -34,7 +46,7 @@ Misha: Finish the orphan fix: more invasive than expected. Will help unblock add
 
 Alex: no update on syncing. It is however a nonprotocol change.
 
-## 11.24.2020
+## Nov 24, 2020
 
 Michael: sharded network investigation w/ transaction loaded. Latency seems be in the distribution of chunk parts. Chunk part forwarding does not help enough. Bottleneck is mostly in getting chunk parts.
 
@@ -44,7 +56,7 @@ Misha: Investigating potential deadlock. Didn't find any potential deadlock in o
 
 Bowen: dealing with critical issues on mainnet. 
 
-## 11.17.2020
+## Nov 17, 2020
 
 Michael: still investigating the 100 nodes, 8 shards network: sometimes it takes a lokng time between receiving a block and producing the next chunk.
 
@@ -56,7 +68,7 @@ Alex: still working on syncing
 
 Bowen: investigated some performance issue network; recalibrating inflation
 
-## 11.10.2020
+## Nov 10, 2020
 
 Michael: unexpected node behavior in 100 node, 8 shards network. One node behaves abnormally (takes a long time to receive blocks at some point). Need more debugging info to figure out what happened.
 
@@ -68,7 +80,7 @@ Misha: Investigating is_height_processed usage. Working on orphan attack fix.
 Alex: 1) change the interface for fetching light client blocks while maintaining backward compatibility. Working on database migration for the change 2) garbage collection of headers & light client headers. Garbage collection of headers is done and light client sync is in progress.
 
 
-## 11.03.2020
+## Nov 03, 2020
 
 Michael: sending 50k tps to a network of 100 validators and 8 shards and it is able to maintain 5k tps. For 5k input tps, added chunks counting and it is always 8. For validators getting kicked out under no load, adding more logging to figure out what happened.
 
@@ -76,7 +88,7 @@ Piotr: Trying to reproduce memory leak with wasmer. Starting with wasmer example
 
 Bowen: Finishing introducing nightly protocol features and transition the upgrade processs to use nightly protocol features
 
-## 10.27.2020
+## Oct 27, 2020
 
 Michael: figuring out bottlenecks around sharding. Time from sending parts to parts get validated suddenly spiked at 20 shards. Data received by nodes piked at around 15-16 shards. Look at 8 shard tps.
 
@@ -86,7 +98,7 @@ Alex: light speed sync & garbage collecting headers
 
 Bowen: Test nightly protocol. Fix order of execution outcomes.
 
-## 10.20.2020
+## Oct 20, 2020
 
 Michael: merged version shard chunk header. Working on post phase 1 branch. Fixing some pytests
 
@@ -96,7 +108,7 @@ Misha: working on state sync. Making sure we can combine state parts when they a
 
 Alex: rewriting sync code: light client sync and garbage collecting headers
 
-## 10.13.2020
+## Oct 13, 2020
 
 Michael: version shard chunk header. fixing test
 
@@ -106,7 +118,7 @@ Misha: fixed applying genesis state on node restart
 
 Bowen: Investigated and fixed lock contention on trie cache; fixed the issue with execution outcome on forks so that the execution outcomes on canonical chain cannot be overwritten.
 
-## 10.06.2020
+## Oct 06, 2020
 
 Michael: version shard chunk header. Almost done
 
@@ -119,7 +131,7 @@ Alex: fix stress.py. In doing so also address the issue of requesting chunk part
 Bowen: Return receipts from transaction status query rpc.
 
 
-## 09.29.2020
+## Sep 29, 2020
 
 Marcelo: Fix several issues with network. Fix massive state sync test. Implement achival peer anchoring
 
@@ -127,7 +139,7 @@ Piotr: Debug memory leaks. Add jemalloc stats. Counting memory allocated per thr
 
 Michael: working on merging post-phase-1 branch. Need to figure out how to add protocol version to ShardChunkHeader.
 
-## 09.22.2020
+## Sep 22, 2020
 
 Marcelo: working on fixing massive state sync test.
 
@@ -138,9 +150,7 @@ Alex: Syncing from archival nodes. MOONGLOW
 Bowen: Testing syncing from archival on mainnet. Fixed several issues with block sync and partial chunks in storage. Fix an inconsistentcy with final state.
 
 
-
-
-## 09.15.2020
+## Sep 15, 2020
 Michael: fix issue with slowdown when there are many (10k) transactions submitted to the node
 
 Marcelo: network upgrades, state sync tests, spec for new sync. Investigate memory spike during state sync
@@ -154,7 +164,7 @@ Alex: Syncing for archival nodes
 Bowen: remove holding genesis records in memory, get execution outcomes for chunks in view client
 
 
-## 09.08.2020
+## Sep 08, 2020
 
 Marcelo: Network protocol upgrades regarding the change of handshake format. Fixing state sync test
 
