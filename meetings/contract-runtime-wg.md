@@ -20,6 +20,31 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+
+## 14.01.2021
+
+### Status
+
+ Done:
+   * Tried to compile nearcore on Apple Silicon hardware: fails so far (and no, Docker is not available)
+   * Keeping profile data in ApplyState is merged: https://github.com/near/nearcore/pull/3730
+   
+ In progress: 
+   * Adding Wasmer 1.0 support is WIP: https://github.com/near/nearcore/pull/3799, certain roadblocks:
+      * Error info fields is non-public
+      * Infinite loops not properly discovered by Wasmer compiler
+   * Applying IO to costs is WIP: https://github.com/near/nearcore/pull/3730
+   * Discussions with static analysis company (https://arxiv.org/pdf/1908.11227.pdf)
+   * Discussions about AS and other non-Rust languages for contracts: https://gov.near.org/t/planning-for-assemblyscript-support-and-integration-for-the-next-6-months-starting-jan21/345
+   * Simulation testing improvements per feedback from Mintbase
+   
+ Planned:
+   * Large crates refactoring, to allow crates publishing
+   * Simulation correctness improvements
+   * Try nearcore build on Linux ARM machines
+ 
+### Meeting notes
+
 ## 19.11.2020
 
 ### Status
