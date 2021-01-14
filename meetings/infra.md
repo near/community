@@ -281,4 +281,27 @@ Mario:
 
 TODO: deploy new testnet rpc nodes and reroute traffic to them
 
+## January 14th 2021
+### Weekly team updates:
+Sandi:
+- fixing the CI failure caused by file descriptor limit on buildkite
+- fixed the Ethereum chain id issue which was not supported for betanet
+- added support for coredumps and added ansible automation, currently only rolled out on betanet. coredumps can be found in /var/crash.
+- fixed a small bug in the hardfork betanet script
+
+Mario:
+- landing new RPC infra managed by terraform only for public rpc endpoint, still has to migrate the internal
+- adjusted the prometheus config to fix service discovery to pick up missing nodes
+- mainnet is now migrated to systemd
+
+### Priorities for the next week:
+Sandi:
+- talk to Max about compliance (licencing) across all the NEAR repos
+- automated uploads and cleanups of the coredumps on the machines becuase they are quite big.
+- oncall
+
+Mario:
+- increase the cadence of the snapshots
+- rainbow bridge: sync up with the bridge team for end2end testing and frontend monitoring (Alex S.)
+- look into possible backup node issues on mainnet only
 
