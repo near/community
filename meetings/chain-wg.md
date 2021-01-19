@@ -8,6 +8,29 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+
+## Jan 19, 2021
+
+Michael:
+- Done: seals PR almost finished; Some issue with the actix buffer on the receiving end of the network. Speed of reading from this buffer is at most 2kb/s.
+- Todo: investigate this slowness in reading from buffer
+
+Piotr:
+- Done: finish moving memory tracker to separate repo. Reading actix code to understand it better.
+- Todo: finish stats on upload/download size from network
+
+Misha:
+- Done: working on epoch manager spec
+- Todo: finish epoch manager spec
+
+Kpr:
+- Done: block ordinal PR merged; finish epoch sync implementation
+- Todo: testing epoch sync. Figure out how epoch sync to header sync transition works. Separate epoch sync and header gc.
+
+Egor:
+- Done: submit PR for receipt id fix
+- Todo: finish onboarding
+
 ## Jan 12, 2021
 
 Michael: working on slow chunk distribution in sharded network. Looking into whether something is slow on the receiving side. 2k tps works fine with 8 shards. Also working on seals.
