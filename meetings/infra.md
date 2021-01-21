@@ -305,3 +305,40 @@ Mario:
 - rainbow bridge: sync up with the bridge team for end2end testing and frontend monitoring (Alex S.)
 - look into possible backup node issues on mainnet only
 
+### January 21st 2021:
+
+### Weekly team updates:
+
+Sandi:
+- New release of nearup 0.8.1 fixing several issues:
+  - added automatic restarts on genesis change
+  - fixed the issue where the config.json is not updated on restart
+  - enabled verbose logging for betanet validators by default for better debugging
+  - added native mac support which was deleted due mac support release issues
+  - fixed test issues and updated the documentation
+  - working on disabling coloring for nearup by default
+
+- Added coredumps to the packer images for RPC
+- Added nightly macosx release pipeline to the Nearcore CI
+
+Mario:
+- Migrate mainnet rpc to new node setup managed fully by terraform
+- Implemented faster backups, enabled the also for rpc backups
+- Added tags for running AWX on grafana
+- Resized AWX with bigger disk and more cpu
+- Resized indexer instance 4 vCPU => 8 vCPU
+- Added promethus configuration for bridge instances
+
+### Priorities for the next week:
+
+Sandi:
+- Write an automation script for initializing all the repos with the fossa initialization config and start landing PRs for all the repos
+- Setup a coordination spreadsheet for all the teams involved in the fossa integration
+
+Mario:
+- Debug running terraform on AWX
+- Bridge dashboards and alerts, help out marcelo if needed
+- Revision of alerts for mainnet and testnet to sync/verify new setup
+
+### Discussion
+- alerting for wallet and explorer, explorer currently uses statuspal which doesn't support pagerduty integration (https://github.com/near/near-ops/issues/352, https://github.com/near/near-ops/issues/351) cc: @stefano about the walllet.
