@@ -21,6 +21,22 @@ Short- and medium-term goal: Safe and highly performant contract execution runti
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
 
+## 21.01.2021
+
+### Status
+
+Done:
+  * IO costs logic https://github.com/near/nearcore/pull/3730 is merged
+  * Wasmer 1.0 support mostly there: https://github.com/near/nearcore/pull/3799 (just to be merged)
+  
+In progress:
+  * Prototype of syscall interface: https://github.com/near/nearcore/pull/3820 and https://github.com/near/near-sdk-rs/pull/272
+  * Update of costs (with IO costs, better contract compilation cost): https://github.com/near/nearcore/pull/3818
+
+Discussions:
+  * Fix `syn` dependency issue in Borsch
+  * Evaluate new costs for fixing https://github.com/near/nearcore/security/advisories/GHSA-q39c-4p3r-qpv3
+
 ## 14.01.2021
 
 ### Status
