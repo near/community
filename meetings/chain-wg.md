@@ -8,6 +8,31 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## Jan 26th, 2021
+
+Michael:
+- Done: working on sharded network performance. Investigate various bottlenecks. Tried ignoring signatures and avoiding duplicate messages; they help somewhat but still do not make the test with 4k tps work.
+- Todo: continue investigating the sharded network performance
+
+Piotr:
+- Done: add new repository (near-memory-tracker) to near. Tools to understand how much time we spend inside actix. Come up with an algorithm to exchange routing table information much more efficiently. There is a tradeoff between number of roundtrips and the amount of data required to be exchanged
+- Todo: investigate how to measure the time spent inside `poll`; investigate more into cpu usage of a node (might be some issue with actix); write down a more detailed version of the algorithm to exchange routing table information
+
+Misha:
+- Done: finished spec for epoch manager, PR submitted
+- Todo: finish PR with orphans; work on fix trie cache bottleneck
+
+kpr:
+- Done: change the design of epoch sync slightly to reuse existing code. Investigate transition from epoch sync to header sync
+- Todo: figure out which solutions to go with for epoch sync to header sync
+
+Egor:
+- Done: working on PR with receipt ids. Need to write an additional test to verify receipt ids work with forks
+- Todo: understand better the protocol to write the test
+
+Discussion:
+- Add secp key change: do the upgrade of `Stake` action and contracts from runtime directly without adding new actions
+- Piotr presented briefly the new algorithm for exchanging routing tables.
 
 ## Jan 19, 2021
 
