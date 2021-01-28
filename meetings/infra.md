@@ -27,6 +27,39 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+### January 28st 2021:
+
+### Weekly team updates:
+Sandi:
+- created a organizational spreadsheet for tracking the fossa integration and working on collecting all the owners and data
+- generated reports for 80% of the repositories, some of the didn't work, after looking seems like all the python ones and some rust failed, but will investigate more
+- started sending first issues on github for resolving the repositories with concerns on Fossa
+- fully integrated several repos with fossa including: near/borsh-js, near/near-ledger-js, near/near-api-js, near/docs.
+- gave a presentation about NEAR for Croatian Blockchain Association
+
+Mario:
+- Mainnet release (rpc and archive nodes)
+- Fixed running terraform on AWX
+- Public backups are running again for testnet/mainnet rpc and archive
+- Update all alerts to be in sync with new infrastructure
+- Auto restart neard node via systemd on testnet and mainnet
+- New alerts for GCP loadbalancer latency
+
+
+### Priorities for the next week:
+Sandi:
+- continue with the fossa integration
+- milestone planning
+- oncall activities
+
+Mario:
+- New sharded/cluster graylog centralized logging setup
+- Bridge if it comes up, bridge itself is still being stabilized
+- Milestone planning...
+
+
+### Discussion
+- monitoring for wallet and web services in general (privacy in mind, maybe e2e testing) raise this issue in gov.near.org
 
 ### January 21st 2021:
 
