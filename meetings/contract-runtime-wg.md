@@ -21,6 +21,24 @@ Short- and medium-term goal: Safe and highly performant contract execution runti
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
 
+## 28.01.2021
+
+### Status
+
+Done:
+   * PR for switching Wasmer to Borsch serialization
+   * Borsch support for usize
+
+In progress:
+   * Compile contract on deployment: https://github.com/near/nearcore/pull/3859
+   * Compiled contract compression: got merged and reverted 
+   * Major crates refactoring: almost there
+   * Improvements of deserialization speed: maps and trees blocks
+
+Discussion:
+   * Diamond-shaped dependency graphs with different features cannot be solved by cargo
+   * Both our target VMS have built-in gas counters (need to be consistent between VMs and current gas counters)
+
 ## 21.01.2021
 
 ### Status
