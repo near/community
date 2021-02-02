@@ -8,6 +8,28 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## Feb 2nd, 2021
+
+Michael
+- Done: upgrading actix and tokio to the latest version; Stop validation rotation in the test to make sure that they only track one shard at any given moment; 8 shard network can now sustain 4k tps. 
+- Todo: measure 1 shard tps again to see how well we scale now
+
+Piotr:
+- Done: adding more stats to measure performance and found that there was a bug in tokio 0.2, which is used by actix 0.9. Now the performance stats match the actual cpu usage accurately. Merged memory stats to master, which prints memory usage of every thread every minute.
+- Todo: Working on the new algorithm for exchanging routing table information; looking into routing table calculation and optimizing it
+
+Misha
+- Done: merged epoch manager spec; merged orphan verification PR; reduced contetion on trie cache lock by bypassing the cache when doing state parts calculation
+- Todo: combine state parts without using too much memory (write intermediate results into database); verify orphans once
+
+Egor
+- Done: PR to fix receipt ids
+- Todo: calculation of storage (due to a previous bug we had)
+
+kpr:
+- Done: PR that updates block header with epoch info hashes
+- Todo: keep working on epoch sync
+
 ## Jan 26th, 2021
 
 Michael:
