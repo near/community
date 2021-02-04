@@ -30,6 +30,10 @@ kpr:
 - Done: PR that updates block header with epoch info hashes
 - Todo: keep working on epoch sync
 
+Bowen:
+- Done: help Michael investigate the bottleneck with 8-shard network; help frol upgrade dependencies to the latest version to address the high cpu usage; prepare and organize a meeting to discuss secp key change with validators
+- Todo: land the change that lowers storage cost by 10x and cut the new release for testnet to make sure that partners have what they need for EthDenver.
+
 ## Jan 26th, 2021
 
 Michael:
