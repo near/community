@@ -20,6 +20,27 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 04.02.2021
+
+### Status
+
+Done:
+   * Major crates refactoring
+   * Fixed `cargo test` run in nearcore
+   * Reintroduced memory cache for contracts
+
+In progress:
+
+   * Compile contract on deployment: https://github.com/near/nearcore/pull/3859
+   * Wasmer 1.0 support merge is planned
+   * Need to rework features related to cost counting
+   * Reproducible environment for running perf critical contracts such as Eth bridge
+   * Consider implementing WASM-level profiler
+   * Wasmer 1.0 has dramatic deserialization performance improvements, even with bincode (15 -> 4 msecs), borsch can make it even better
+   
+ TODO:
+    * Nikolay to take a look why we need BTreeMap in Wasmer and if we could reuse running VM
+    * Bo to provide a profile of running contract to see the breakdown between parts (to reuse some profiling code from Analyzer)
 
 ## 28.01.2021
 
