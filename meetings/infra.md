@@ -27,6 +27,41 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+
+
+### February 5th 2021:
+
+### Weekly team updates:
+Mario: 
+- Graylog with sharded ElasticSearch cluster PoC AWS. 
+- Sorting out how to monitor bridge frontend, created a post on the gov.near.org forum
+- Archival nodes for The Graph integration. 
+- Archival nodes for testnet indexer refactor. 
+
+Sandi:
+- several SEVs happening on testnet where block production either goes to zero or CPU load is high, but not due to RPC (frol verified)
+- fixed CORS SEV with Mario
+- covered 42 fossa repos, 9 integrated with fossa, sentout 18 issues to owners to fix their repositories
+- migrated nearcore build, test, release and canary scripts from buildkite to the repos
+- fixing the canary nodes going down
+- help Dani setup grants DNS settings
+- oncall and incident rewamp 
+
+
+### Priorities for the next week:
+
+Mario: 
+- Finalize frontend monitoring after gathering inputs. 
+- Graylog adding loadbalancer for higher throughput 
+and polishing the whole setup.
+
+Sandi:
+- talk to every service owner and make sure the compliance issues get resolved
+- discuss oncall, incident reviews and ownership and create a proposal doc
+- continue with the fossa integrations and buildkite migrations
+- next week incident review
+
+
 ### January 28st 2021:
 
 ### Weekly team updates:
