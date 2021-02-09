@@ -8,6 +8,36 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## Feb 9th, 2021
+
+Michael
+- Done: benchmark for single shard tps, found that the single shard test fails after a long time under 800tps. `apply_transactions` takes longer over time.
+- Todo: Figure out why `apply_transactions` takes longer over time.
+
+Piotr:
+- Done: Optimize routing table computation by 200x (using hashmap was slow because of hash computation). Update statisticis printed per thread to include message type. Update near-memory-tracker to be able to publish to crates.io. Research routing information exchange algorithms
+- Todo: Prototype the algorithm for routing table exchange
+
+Misha:
+- Done: combining state parts on disk; fix the flakiness in a test
+- Todo: keep working on combining state parts on disk (will take another week)
+
+Egor:
+- Done: fix storage usage
+- Todo: finish fixing storage usage and look into parallel runtime
+
+kpr:
+- Done: epoch sync now passes sanity tests (gc_after_sync.py)
+- Todo: fix tests due to the introduction of epoch sync (tests related to storage validator all fail now).
+
+Bowen:
+- Done: helped with change to reduce storage cost by 10x; fixed a bug we introduced when fixing the receipts id; released a version for testnet
+- Todo: finish up the change to rpc to add protocol config; help with investigation of sharded network test failure
+
+Alex:
+- Done: change state sync timeout to be configurable and fixed some nightly tests; investigate stress.py failure
+- Todo: investigate stress.py wipe data failure (a node cannot sync); nayduck distributed test
+
 ## Feb 2nd, 2021
 
 Michael
