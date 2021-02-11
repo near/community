@@ -27,6 +27,31 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+### February 11th 2021:
+
+### Weekly team updates:
+
+Mario: 
+- Fully setup graylog and elastic search operational now with all the DEBUG logs enabled on all the networks (with SSL)
+- Solved the coloring issue for logging on the machines
+
+Sandi:
+- Fossa integration all repos investigated and issues sent out, fossa integration hopefully by end of February.
+- SLOs planning with team leaders
+- Oncall and incident review
+- Cost Optimization review
+
+### Priorities for the next week:
+
+Mario: 
+- Rainbow Bridge frontend monitoringsynced with Vlad Grichina to setup sentry for the frontend
+- Rainbow Bridge E2E tests
+
+Sandi:
+- Send out PRs for reamaining fossa CI integrations
+- Sync with Peter and Ash on the SLOs review, maybe write a forum update on SLOs
+- Figure out a plan to reduce costs on GCP
+- Improve nearcore CI based on matklads proposals
 
 
 ### February 5th 2021:
