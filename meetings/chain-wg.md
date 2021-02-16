@@ -8,6 +8,40 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## Feb 16th, 2021
+
+Michael:
+- Done: profile time spent per transaction/receipt for single shard network and found that it takes longer to execute over time. Could be related to database performance; start looking into validator selection algorithm
+- Todo: Keep working on validator selection algorithm
+
+Piotr:
+- Done: reading research paper on how to efficiently exchange routing table information; start writing a document on the new approach
+- Todo: Start thinking about potentially replacing actix; finish the document on the new approach on exchanging routing table exchange
+
+Misha:
+- Done: fixed a bug in trie iterator (not a protocol change)
+- Todo: working on combining state parts on disk (almost done)
+
+Egor:
+- Done: Working on fix for correct storage usage and adding versioned account
+- Todo: start working on parallelizing runtimes
+
+kpr: 
+- Done: Epoch sync passes CI test. Working on nightly tests; thinking about passive header gc (garbage collect headers during epoch sync only when a node starts)
+- Todo: check Bowen's suggestion on avoiding sending block infos during epoch sync, which will eliminate the need to migrate block infos in database; fix nightly tests and add additional python tests for epoch sync
+
+Lg:
+- Done: started onboarding; learning rust
+- Todo: read nightshade and possibly doomslug paper
+
+Bowen:
+- Done: finish up the PR to save transaction hashes in state; looked into RPC timeout issues and submit a PR to fix the validator rpc endpoint; merged the PR to provide a new endpoint to query protocol config
+- Todo: finish the PR for validator rpc endpoint and look more into rpc issues
+
+Alex:
+- Done: working on stress.py
+- Todo: looking into cross_shard_tx failures
+
 ## Feb 9th, 2021
 
 Michael
