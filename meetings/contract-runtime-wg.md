@@ -20,6 +20,29 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 18.02.2021
+
+### Status
+
+  Done:
+    * Formed wishlist of features for Wasmer
+    * Also created list of potential optimizations in our stack: https://docs.google.com/document/d/1PD9yRCs9PKkPLF-4jKLmAxbOKTH9xCEi7rd5o3RxUmM/edit
+    * Added tracing support to runtime
+    * Created unit test to reproduce EVM bridge perf issue
+    * Discovered perf issue in simulator: was because of missing contract cache
+  
+  In progress:
+    * Performance effort
+    * Alex is working on testbed capable to reproduce complex runtime behavior situations
+    * Investigated replacement of bincode with borsch, only 10% improvement, not go this way
+    * Keep deserialized contracts in memory for now
+    * Feature refactoring to simplify compilation in various configs and crates deps
+    
+ Planned:
+    * Pipeline approach to execution: know all contracts in the block, preload all of them and prepare VMs 
+    to run concurrently
+    * Consider having more persistent contract cache for simulation testing, i.e. using RocksDB as BE
+   
 ## 04.02.2021
 
 ### Status
@@ -28,7 +51,6 @@ Done:
    * Major crates refactoring
    * Fixed `cargo test` run in nearcore
    * Reintroduced memory cache for contracts
-
 In progress:
 
    * Compile contract on deployment: https://github.com/near/nearcore/pull/3859
