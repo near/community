@@ -27,6 +27,41 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+### February 19th 2021:
+
+### Weekly team updates:
+Mario:
+- Graylog debugging new setup issues, loadbalancer send all logs to single instance.
+- Nginx collect all requests and repsonses for timeout investigation.
+- Modify loadbalancer to reduce timeouts, reduced the utilization target from 80% to 70%.
+- Sentry bridge error monitoring frontend.
+- Repair auto restart for testnet and mainnet.
+- oncall: improving the causes of alerts, 50% reduction. CPU alerts for archival nodes reach high utilization without traffic.
+
+Sandi:
+- added support for the perf release pipeline running on betanet and testnet
+- canary and betanet broken due to https://github.com/near/nearcore/pull/3964
+- mainnet nodes timeouts due to `broadcast_tx_commit` timeouts
+- betanet broken due to a bug in the new perf release pipeline
+- integrated several more repos for EVM team, synced with other teams which are working on this.
+- mainnet high CPU usage profiler debug with Frol
+- added non-buffered systemd log striping
+
+### Priorities for the next week:
+Mario:
+- Sentry bridge monitoring latency.
+- Graylog repairs/debugging.
+
+Sandi:
+- finalize fossa intergrations
+- nearcore build improvements: https://github.com/near/near-ops/issues/400, https://github.com/near/near-ops/issues/401
+- start working on cost optimisation in March
+- send-out incident reviews
+
+Notes:
+- Q2 project seperation for different projects.
+- check if the policies are correct, split between Apache and GPL.
+
 ### February 11th 2021:
 
 ### Weekly team updates:
