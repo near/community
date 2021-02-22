@@ -8,6 +8,52 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## Feb 22th, 2021
+
+### Transaction runtime
+
+Egor: 
+- Done: PR reviews & reading
+- Todo: version account change
+
+Alex Logunov:
+- Done: Read first half of the nightshade paper
+- Todo: look into code related to transaction handling and dig deeper into the codebase
+
+Bowen:
+- Done: Submitted the NEP PR to add secp validator key
+- Todo: finish up the PR and address review comments
+
+Discussion:
+- We should potentially expose prev_block_height, block_hash, and storage usage to contracts.
+
+### Chain
+
+Michael:
+- Done: investigate proposed block and chunk producer algorithm
+- Todo: do some simulation to understand better the ratio of stake between block and chunk producer
+
+Misha:
+- Done: PR to fix combining state parts; fix memory usage in state sync
+- Todo: speed up trie iterator and do some benchmarks
+
+Alex:
+- Done: debugging cross_shard_tx tests failure. It doesn't appear to be caused by tx_validity_period
+- Todo: keep debugging this test
+
+Bowen:
+- Done: finish up the PR on addressing validator rpc slowness
+- Todo: address some PR review comments
+
+Discussion:
+- block and chunk producer selection algorithm https://gov.near.org/t/block-and-chunk-producer-selection-algorithm-in-simple-nightshade/66
+
+### Network
+
+Piotr:
+- Done: add filtering by thread id to the memory debugging tool; benchmark for memory_stats and it can be improved; prototype for the algorithm to exchange routing table exchange; update the document on the algorithm; thinking about potentially replacing actix
+- Todo: read code & choose the right algorithm to implement for routing table exchange; post ideas regarding actix
+
 ## Feb 16th, 2021
 
 Michael:
@@ -30,7 +76,7 @@ kpr:
 - Done: Epoch sync passes CI test. Working on nightly tests; thinking about passive header gc (garbage collect headers during epoch sync only when a node starts)
 - Todo: check Bowen's suggestion on avoiding sending block infos during epoch sync, which will eliminate the need to migrate block infos in database; fix nightly tests and add additional python tests for epoch sync
 
-Lg:
+Alex Logunov:
 - Done: started onboarding; learning rust
 - Todo: read nightshade and possibly doomslug paper
 
