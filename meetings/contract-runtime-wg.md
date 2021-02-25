@@ -20,6 +20,27 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 25.02.2021
+
+### Status
+
+Done:
+  * Wasmer 1.0 support is finally merged
+  * Willem's refactoring of crates is over and merged, working on publishing
+  * Decided to avoid using Borsch in Wasmer by default
+  * Added in-memory testing to simulation testing
+  * Alex's tracing framework used in simulator
+ 
+In progress:
+   * First prototype of testbed capable to reproduce complex runtime behavior situations is ready (no chaching support so far)
+   * VM preparation pipeline, API is ready, implementation in progress: https://github.com/near/nearcore/pull/3985
+   * Max suggests to remove in-memory cache for compiled contracts: to do after VM preparation pipeline
+   * Got first feedback on wishlist by Wasmer team, mostly clarifications
+   * Implemented initial prototype of VM in-memory whitelist: considering to move to "VM config contract" instead
+   
+Planned:
+   * Optimyze.cloud offered their distributed profiling solution: decided we'll consider integrating their solution
+
 ## 18.02.2021
 
 ### Status
