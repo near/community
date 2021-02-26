@@ -27,6 +27,32 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+
+### February 26th 2021:
+
+### Weekly team updates:
+Sandi:
+- fossa integration ~10 repos left, biggest issue still nearcore and transitive dependencies on nearcore 
+- improved CI for indexers (linters, testing, style, fossa) and nearcore (debug symbols on betanet and testnet enabled, disabled landing with warnings, fixed broken mac osx and refactor)
+
+Mario:
+- Increase log storage on machine.
+- Adjust loadbalancer configuration new version (switched to RPS based balacing instead of CPU, data looks good so far, still need more signal)
+- Down-scalled over-provisioned regions.
+- Running bridge-frontend locally for testing.
+
+### Priorities for the next week:
+Sandi:
+- still finalizing fossa integration
+- milestone planning and cost reduction 
+
+Mario:
+- Bridge
+- Milestone planning
+
+### Notes
+- backups nodes snapshots are used on RPC infra, so the RPC disks have to be `>= than the backup disks` to rescaled the RPCs.
+
 ### February 19th 2021:
 
 ### Weekly team updates:
