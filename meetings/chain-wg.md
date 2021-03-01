@@ -8,6 +8,58 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## March 1st, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: Account versioning and encounter some issue with serialization since we need to deserialize it differently
+- Todo: Finish account versioning change and then start looking into parallel runtimes
+
+Alex Logunov:
+- Done: finish reading nightshade paper & watch youtube walkthrough videos; tried to send some transactions on testnet & mainnet
+- Todo: try to understand transaction lifetime by reading code; deploy contracts and send transactions; look into transaction size limits
+
+Bowen:
+- Done: organize meeting to discuss issue with access key nonces and posted a [thread](https://gov.near.org/t/issue-with-access-key-nonce/749) on gov.near.org
+- Todo: Finish this discussion and move forward with implementation
+
+Eugene:
+- Done: [PR to add a new host function](https://github.com/near/nearcore/pull/3971). Adds `alt_bn128_g1_multiexp` and `alt_bn128_pairing_check` to the set of host functions.
+- Todo: bundle the new cost configs
+
+Discussion:
+- Account versioning upgrade: check the size of account since it is currently static
+- Rethink nightly features and how they are used
+
+### Chain
+
+Michael:
+- Done: update model for the validator selection algorithm to include delegation. Write a simulation for the algorithm
+- Todo: add more parameters to the simulation and post results
+
+Misha:
+- Done: pushed the PR to combine state parts on disk & reset_data_pre_state_sync improvements
+- Todo: prototype trie iterator speed up: batch rocksdb requests
+
+KPR:
+- Done: finalized decision on how to introduce epoch sync (doing header gc).
+- Todo: Submit PR on skeleton of epoch sync code to avoid further merge conflicts; open an issue on gc_after_sync.py
+
+Bowen:
+- Done: addressed comments on the PR to fix validator rpc; submit a PR to temporarily address issue with state requests
+- Todo: look into some python test failures
+
+Alex:
+- Done: fix cross_shard_tx tests and found that block sync doesn't work if head is not on canonical chain.
+- Todo: look into remaining stress.py failures
+
+### Network
+
+Piotr:
+- Done: document on routing table exchange (use random value for ibfs for each connection); submit PR to not verify edges twice; changed FramedWriter to drop messages when there are too many messages and can measure the size of the buffer and other stats for debugging; add metrics to prometheus
+- Todo: finish the PR on routing table exchange
+
 ## Feb 22th, 2021
 
 ### Transaction runtime
