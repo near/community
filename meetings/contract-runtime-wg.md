@@ -20,6 +20,26 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 04.03.2021
+
+### Status
+
+Done:
+    * Testbed capable to reproduce complex runtime behavior situations is ready: https://github.com/near/nearcore/pull/3983,
+      scripted via Rust DSL
+    * Clarified Wasmer team questions in wishlist
+    * Similified feature used in few refactoring
+    * Contract caching for simulation tests is done
+    * Docs improvements in simulations tests
+    * Preparing AS SDK prelease
+
+In progress:
+    * Investigating regression https://github.com/near/nearcore/issues/4030 fine tuning perf report infra
+    * VM preparation pipeline, API reworked, some concurrency issues
+    * Updated vmlogic crate to use updated structures, i.e. `ProfileData`
+    * Changing tests from integration test to unit test, so we build fewer artefacts
+    * Experimeted with https://github.com/TimelyDataflow/abomonation serialization mechanism and storing Wasmer symbol table
+
 ## 25.02.2021
 
 ### Status
@@ -32,7 +52,7 @@ Done:
   * Alex's tracing framework used in simulator
  
 In progress:
-   * First prototype of testbed capable to reproduce complex runtime behavior situations is ready (no chaching support so far)
+   * First prototype of testbed capable to reproduce complex runtime behavior situations is ready (no caching support so far)
    * VM preparation pipeline, API is ready, implementation in progress: https://github.com/near/nearcore/pull/3985
    * Max suggests to remove in-memory cache for compiled contracts: to do after VM preparation pipeline
    * Got first feedback on wishlist by Wasmer team, mostly clarifications
