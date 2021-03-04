@@ -25,20 +25,20 @@ Long-term goal: Near-independent and non-specific to Near contract execution run
 ### Status
 
 Done:
-    * Testbed capable to reproduce complex runtime behavior situations is ready: https://github.com/near/nearcore/pull/3983,
+  * Testbed capable to reproduce complex runtime behavior situations is ready: https://github.com/near/nearcore/pull/3983,
       scripted via Rust DSL
-    * Clarified Wasmer team questions in wishlist
-    * Similified feature used in few refactoring
-    * Contract caching for simulation tests is done
-    * Docs improvements in simulations tests
-    * Preparing AS SDK prelease
+  * Clarified Wasmer team questions in wishlist
+  * Similified feature used in few refactoring
+  * Contract caching for simulation tests is done
+  * Docs improvements in simulations tests
+  * Preparing AS SDK prelease
 
 In progress:
-    * Investigating regression https://github.com/near/nearcore/issues/4030 fine tuning perf report infra
-    * VM preparation pipeline, API reworked, some concurrency issues
-    * Updated vmlogic crate to use updated structures, i.e. `ProfileData`
-    * Changing tests from integration test to unit test, so we build fewer artefacts
-    * Experimeted with https://github.com/TimelyDataflow/abomonation serialization mechanism and storing Wasmer symbol table
+  * Investigating regression https://github.com/near/nearcore/issues/4030 fine tuning perf report infra
+  * VM preparation pipeline, API reworked, some concurrency issues
+  * Updated vmlogic crate to use updated structures, i.e. `ProfileData`
+  * Changing tests from integration test to unit test, so we build fewer artefacts
+  * Experimeted with https://github.com/TimelyDataflow/abomonation serialization mechanism and storing Wasmer symbol table
 
 ## 25.02.2021
 
