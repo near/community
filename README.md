@@ -10,7 +10,7 @@ Below, you can find a list of resources to help you get started.
 ### Communication Channels
 
 * [Telegram Announcement Channel](https://t.me/cryptonear)
-* [Discord Community Channel](https://near.dev)
+* [Discord Community Channel](https://near.chat/)
 
 And sign-up to our [newsletter](https://near.org/newsletter/) to receive all updates summarised right to your inbox.
 
@@ -29,14 +29,14 @@ We currently host the following meetings:
 * [NEAR Blog](https://near.org/blog/)
 * [NEAR YouTube Channel](https://www.youtube.com/channel/UCuKdIYVN8iE3fv8alyk1aMw)
 * [NEAR Technical Resources](https://near.org/technology/)
-* [RFP repository](https://github.com/near/rfp) where grant-worthy projects are listed.
+* [Bounties repository (formerly "rfp")](https://github.com/near/bounties) where grant-worthy projects are listed.
 
 ### Developer Resources
 
 If you just starting to learn about NEAR Protocol then please read our [documentation](https://docs.nearprotocol.com/).
 To get inspiration, have a look at our [example projects](http://examples.nearprotocol.com/).
 
-If you have any questions, please head over to our [Discord server](https://discord.gg/t5KGGG) or our [NEAR Slack](https://join.slack.com/t/near-community/shared_invite/zt-dqpw6l4l-gMKRRgBsgf92_UkzmyXGWg).
+If you have any questions, please head over to our [Discord server](https://near.chat/).
 
 ## Join us
 
