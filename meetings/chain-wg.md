@@ -8,6 +8,20 @@ Things that the chain team work on include:
 * Network
 * Cryptographic primitives
 
+## Agenda
+
+### Transaction runtime
+- OKR review
+- Backward compatibility of state record deserialization
+- Receipts congestion when there are many shards
+
+### Chain
+- OKR review
+
+### Network
+- OKR review
+
+
 ## March 1st, 2021
 
 ### Transaction runtime
