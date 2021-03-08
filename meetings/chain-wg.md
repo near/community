@@ -11,15 +11,54 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-- OKR review
-- Backward compatibility of state record deserialization
 - Receipts congestion when there are many shards
 
 ### Chain
-- OKR review
 
 ### Network
-- OKR review
+
+## March 8th, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: Merged versioned account change but then got reverted
+- Todo: Fix versioned account change; introduce account version V2
+
+Alex Logunov:
+- Done: deployed a simple contract & send transactions to call some methods; trying python tests
+- Todo: set transaction size limit
+
+Bowen:
+- Done: made some progress with access key nonce implementation
+- Todo: Finish the access key nonce change this week
+
+Discussion: 
+- Backward compatibility of state record deserialization
+
+### Chain
+
+Michael:
+- Done: finished the modeling on block and chunk producer selection algorithm; submitted PR on the new algorithm to NEP 
+- Todo: look into pytest failure caused by the chunk forwarding feature
+
+Misha:
+- Done: finished prototype for trie iterator using batch read but didn't get much performance gains; fixed some pytest failures
+- Todo: look more into other pytest failures
+
+Bowen:
+- Done: merged the PR that fixes the validator rpc endpoint
+- Todo: look at some test failures/flakiness
+
+KPR:
+- Done: Epoch Sync / GC headers skeleton
+- Todo: Epoch Sync / GC headers enabling and testing
+
+### Network
+
+Piotr:
+- Done: prototype for updating routing table
+- Todo: Submit PR to document the routing table exchange algorithm; investigate potentially slowdown in routing table recomputation
 
 
 ## March 1st, 2021
