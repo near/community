@@ -20,6 +20,27 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 11.03.2021
+
+### Status
+
+In Progress:
+  * Experimetally integrate pipelined execution with runtime (goal: figure out actual speed up to understand 
+    if this is worthwhile to try to lower gas costs this way).
+  * "Intergrated" benchmark for runtime.
+  * Experimeted with flat data serialization mechanism for wasmer.
+  * Testing wasmer 1.0 (https://github.com/near/nearcore/issues/4076).
+  * Sorting out CI problems for std-rs. 
+
+Done:
+  * VM preparation pipeline (3x-4x speed up on a sythetic bench)
+  * Updated vmlogic crate to use updated structures, i.e. `ProfileData`
+  * Changing tests from integration test to unit test, so we build fewer artefacts
+  * Experimeted with https://github.com/TimelyDataflow/abomonation serialization mechanism and storing Wasmer symbol table
+    (some improvent, too unsafe)
+  * Published near-core crates (still pre-release, but works!)
+  * new near-sdk-as release :tada:
+
 ## 04.03.2021
 
 ### Status
