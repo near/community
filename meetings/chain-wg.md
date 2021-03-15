@@ -11,12 +11,53 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-- Receipts congestion when there are many shards
-- Global storage
 
 ### Chain
 
 ### Network
+
+## March 15th, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: reintroduced account versioning PR with migration script and additional tests; work towards second account version
+- Todo: Finish the change to account version v2
+
+Alex:
+- Done: submitted PR for transaction size limit
+- Todo: start looking at reusable contracts
+
+Bowen:
+- Done: Finished access key nonce change
+
+Discussion: shard receipts congestion & global key-value storage
+
+### Chain
+
+Michael:
+- Done: Implementation for block and chunk validator selection: Add versioning to `ValidatorStake`
+- Todo: Continue working on the implementation for the new validator selection algorithm
+
+Misha:
+- Done: fixed a number of python test failures (jsonrpc change broke a number of tests)
+- Todo: Look at more test failures & running clusters with nayduck
+
+KRP:
+- Done: New python tests for epoch sync and they do not work on top of current master; most of epoch sync is implemented
+- Todo: work on fixing the python tests.
+
+Bowen:
+- Done: Made a patch release for testnet to fix some performance issues and rpc issues.
+- Todo: Stabilize some nightly features for the next major release
+
+Discussion: cross_shard_tx test failure due to lack of forkfulness
+
+### Network
+
+Piotr:
+- Done: prototype for routing table exchange; PR to verify each edge only once (reduce time spent on edge verification by 10x); cleanup to update routing table at most once a second
+- Todo: test the routing table exchange prototype
 
 ## March 8th, 2021
 
