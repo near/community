@@ -12,6 +12,7 @@ Things that the chain team work on include:
 
 ### Transaction runtime
 - Receipts congestion when there are many shards
+- Global storage
 
 ### Chain
 
