@@ -27,6 +27,37 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+### March 18th 2021:
+
+### Weekly team updates:
+Sandi: 
+- migrated all the CI scripts from nearcore to near-ops with some fixes and improvements
+- incident on betanet due to account v1 change (hardfork and mitigation).
+- fixed deploy-ci-betanet 
+- created a terraform configuration for wasmer1 canary nodes on testnet and mainnet.
+- started rewriting the alerts
+- implemented a smarter artifacts checks for the betanet deploy script
+- created a list of OKRs for Q2
+
+ Mario:
+- fix public backup due to a incosistent terraform state (disk cleanup issue)
+- mainnet and testnet canary with terraform and fresh data with a binary URL, takes less than 30 minutes to spin up new machines with custom binary
+- created a new repo near/local for local setup via docker compose, wrapping up local docker setup, still some polish missing around wallet and bridge frontend
+- bridge DNS setup
+- geth minor flags and enable miner for ropsten
+
+### Priorities for the next week:
+Sandi:
+- Rewrite of the health/status endpoint
+- Finish rewriting the alerts
+- Refactor of the CI deploy scripts
+- OKR planning
+
+Mario:
+- finalize bridge e2e tests
+- Q2 planning
+- Hunting down assistance for bridge wallet debugging, sending funds doesn't work locally
+
 
 ### February 26th 2021:
 
