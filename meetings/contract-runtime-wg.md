@@ -20,6 +20,22 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 18.03.2021
+
+### Status
+
+Done:
+  * Testing wasmer 1.0 (https://github.com/near/nearcore/issues/4076).
+  * Experimeted with flat data serialization mechanism for wasmer: rkyv deserialize or rkyv archive (zero-copy) show good perf improvements.
+  
+In Progress:
+  * Investigate wasmer 1.0 failure on testnet
+  * Experimetally integrate pipelined execution with runtime (goal: figure out actual speed up to understand 
+    if this is worthwhile to try to lower gas costs this way).
+  * Trying to use native compile + single pass with wasmer, needs work on wasmer side.
+  * Memory and store re-use for pipeline execution
+  * Investigate, why wasmer instantiation takes much longer in the cloud.
+
 ## 11.03.2021
 
 ### Status
