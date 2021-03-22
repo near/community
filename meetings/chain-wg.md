@@ -16,6 +16,44 @@ Things that the chain team work on include:
 
 ### Network
 
+## March 22nd, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: fixed python tests due to account version changes
+- Todo: fix some rust expensive tests that fail because of account version change; submit PR to fix storage usage; study how our MPT works
+
+Alex Logunov:
+- Done: PR to set limits on transaction size; read on borsh
+- Todo: finalize the PR on transaction size
+
+Bowen:
+- Done: discussion on async execution as well as storage cost
+
+Discussion:
+* storage cost
+
+### Chain
+
+Michael:
+- Done: PR to add versioning to `ValidatorStake`
+- Todo: work on the new validator selection algorithm
+
+Misha:
+- Done: fixed tests failure. Found crash related to rocksdb (could be refcounted values)
+- Todo: keep investigating rocksdb issue
+
+KPR:
+- Done: work on epoch sync and fixed epoch_sync_and_then_epoch_sync.py
+- Figure out how to clear data properly before epoch sync.
+
+### Network
+
+Piotr:
+- Done: wrote the prototype on routing table exchange and start testing the change; found the cause of occasional slowness of routing table computation (iterate through all edges)
+- Todo: Test more the routing table exchange; Write a NEP on routing table exchange
+
 ## March 15th, 2021
 
 ### Transaction runtime
@@ -43,7 +81,7 @@ Misha:
 - Done: fixed a number of python test failures (jsonrpc change broke a number of tests)
 - Todo: Look at more test failures & running clusters with nayduck
 
-KRP:
+KPR:
 - Done: New python tests for epoch sync and they do not work on top of current master; most of epoch sync is implemented
 - Todo: work on fixing the python tests.
 
