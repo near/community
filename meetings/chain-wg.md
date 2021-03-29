@@ -16,6 +16,20 @@ Things that the chain team work on include:
 
 ### Network
 
+## March 29th, 2021
+
+### Network
+
+Piotr:
+- Done: Testing the new implementation for routing table exchange and implement rpc to control which peers a node connects to; set up terraform config for deployment of nodes for testing purposes; deduplicate edge verification; fix unnecessary memory allocation in routing table update caused by suboptimal implementation of `Hash` for `PeerId`.
+- Todo: NEP for routing table exchange; finish routing table exchange testing
+
+Bowen:
+- Todo: merge the (incomplete) network spec PR
+
+Discussion:
+- idea: building a python client that only knows how to establish connection and do routing table exchange
+
 ## March 22nd, 2021
 
 ### Transaction runtime
