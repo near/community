@@ -18,6 +18,35 @@ Things that the chain team work on include:
 
 ## March 29th, 2021
 
+### Transaction Runtime
+
+Egor:
+- Done: fixed rust expensive tests not running on nayduck with nightly features; PR to recalculate storage usage, but realize that this is too slow to run since it requires iterating over the account state.
+- Todo: Switch to another approach to fixing the storage usage of accounts; look at how state storage is implemented
+
+Alex:
+- Done: merged PR to set transaction size limit; working on implicit account creation through account deletion
+- Todo: finish the work on account deletion
+
+Bowen:
+- Done: Fix rust expensive tests that failed because of the access key nonce range change
+
+Discussion:
+- Account upgradability: store both new state and old state and migrate old state to new state
+
+### Chain
+
+Michael:
+- Done: working on validator selection algorithm
+- Todo: finish validator selection algorithm
+
+KPR:
+- Done: Testing epoch sync and found that some tests pass by mistake
+- Todo: change syncing state machine and `reset_heads_post_state_sync`
+
+Bowen:
+- Done: restrict rpc view state to accounts with small state
+
 ### Network
 
 Piotr:
