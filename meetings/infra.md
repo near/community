@@ -27,6 +27,17 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+### April 1st 2021:
+### Weekly team updates:
+
+Sandi & Mario:
+- Aurora Testnet hard-fork preparations
+- Infra OKRs
+- Team SLOs in progress
+
+### Priorities for the next week:
+- Milestone planning to figure out what is next after milestones are finalized on Tuesday
+
 ### March 18th 2021:
 
 ### Weekly team updates:
