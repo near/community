@@ -20,6 +20,31 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 01.04.2021
+
+Done:
+  * preloading and pipelining are done, but not integrated. 
+  * Wasmer 1.0 failure turner out to be ops related 
+  * native + singlepass benchmarked to be not so much better than JIT 🎉
+  * we have better mental model of performance
+
+In Progress:
+  * Wasmer error reworking (to distinguish between deterministic & non-deterministic errors)
+  * EVM contract benchmark almost done
+  * rkyv supoort in wasmer (need to move to JIT?)
+  * make costs profiling safe to enable by default
+
+Planned:
+  * simple compilation on deployment
+  * reproduce particular contract execution locally from a transaction explorer 
+
+
+### Status
+
+## 25.04.2021
+
+No meeting
+
 ## 18.03.2021
 
 ### Status
