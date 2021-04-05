@@ -16,6 +16,39 @@ Things that the chain team work on include:
 
 ### Network
 
+## April 5th, 2021
+
+### Transaction Runtime
+
+Egor:
+- Done: dump of current state of mainnet and calculated the storage usage difference (~3000 accounts)
+- Todo: fix storage account usage using the dump of state from mainnet
+
+Alex Logunov:
+- Done: implicit account creation on account deletion is mostly done (balance checker issue is resolved)
+- Todo: fix failing tests and add correct fees to VMLogic
+
+Discussions:
+- gas prediction issue: transactions are paid in NEAR and receipts pay for its storage
+
+### Chain
+
+Misha:
+- Todo: try investigating more the rocksdb issue. If still cannot find anything, will move on
+
+Bowen:
+- Done: fixed some python tests
+
+Discussions:
+- possible issue with new validator selection algorithm: may lead to possible attacks
+- ideas: using fixed threshold (or a fraction of total supply)
+
+### Network
+
+Piotr:
+- Done: Finish debugging tools (connect to a node and get data from the node); working on NEP PR
+- Todo: finish NEP PR; testing the prototype of routing table exchange
+
 ## March 29th, 2021
 
 ### Transaction Runtime
