@@ -20,6 +20,19 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 08.04.2021
+
+Done:
+    * EVM contract benchmark
+    * Synced  with node interfaces about reproducible contract executions
+    * CLI for state viwer to dump contract state for reproducing contract execution
+
+In Progress:
+    * Wasmer error reworking
+    * Compilation on deployment
+    * Exposing configuration parameter to enable gas profiling at runtime
+    * Re-run param estimator with wasmer 1.0 to makes sure that it's not worse
+
 ## 01.04.2021
 
 Done:
