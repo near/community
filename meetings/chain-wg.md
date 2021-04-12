@@ -11,13 +11,48 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-- https://github.com/near/NEPs/issues/93
 - https://gov.near.org/t/attaching-near-instead-of-gas-to-transactions/1160
 
 ### Chain
+
+### Network
+
+## April 12th, 2021
+
+### Transaction Runtime
+
+Egor:
+- working on putting calculated storage usage data into the right place
+- parallel chunk execution
+
+Alex:
+- encountered balance check error on delete action cost while changing the refund to transfer and figured out the issue; PR is ready
+- storage for contracts; potentially work on spec for near-vm-logic
+
+Discussion:
+- https://github.com/near/NEPs/issues/93
+
+### Chain
+
+Misha:
+- Done: give up on rocksdb compaction issue. Hypothesis is that it is caused by oom (which triggers some bug in rocksdb). Found a bug in chain related to the first block of the epoch. It may be rejected if the node is temporarily on the wrong fork.
+- Investigate the other possible such bugs caused by `ChainStoreUpdate` caches
+
+Bowen:
+- Done: fix migration of archival nodes for epoch validator information introduced in the fix for validator rpc.
+
+Discussion
 - https://gov.near.org/t/an-overview-of-possible-sharding-roadmaps-with-some-proposals/1115
 
 ### Network
+
+Piotr:
+- Done: working on testing the routing table exchange; currently the test is manual
+- Todo: need to automate the tests; potentially add the ability to print network topology; submit NEPs PR
+
+Discussion:
+- Use of `RwLock` may cause slowdowns
+- needs a good way to measure whether some change regresses the performance of neard
 
 ## April 5th, 2021
 
