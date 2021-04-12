@@ -11,8 +11,10 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
+- https://gov.near.org/t/attaching-near-instead-of-gas-to-transactions/1160
 
 ### Chain
+- https://gov.near.org/t/an-overview-of-possible-sharding-roadmaps-with-some-proposals/1115
 
 ### Network
 
