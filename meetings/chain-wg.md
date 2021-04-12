@@ -11,6 +11,7 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
+- https://github.com/near/NEPs/issues/93
 - https://gov.near.org/t/attaching-near-instead-of-gas-to-transactions/1160
 
 ### Chain
