@@ -20,6 +20,21 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 15.04.2021
+
+Done:
+    * Error handlid rework https://github.com/near/nearcore/pull/4181
+    * Basic example for local contract reproduciton works! https://github.com/ailisp/repro-near-funcall, #4203
+    * Adding state-file option to vm standalone: #4209, we are actually using non-trivial state now!
+
+In Progress: 
+    * Contract precompilation https://github.com/near/nearcore/pull/4205
+    * Expose enough information via rpc for reproduce contract execution: #4192 #4199 #4221 #4222 (work done, waiting for review)
+      created an issue on explorer for public node interface team to expose these endpoints on explorer UI
+    * Contract runtime developer documentation (waiting for review)
+    * Exposing configuration parameter to enable gas profiling at runtime
+    * Unbreaking params estimator
+
 ## 08.04.2021
 
 Done:
