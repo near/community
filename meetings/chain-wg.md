@@ -17,6 +17,33 @@ Things that the chain team work on include:
 
 ### Network
 
+## April 19th, 2021
+
+### Transaction Runtime
+
+Egor:
+- Done: noticed some bug with versioned account due to change in serialization and changed account struct to have an enum as a field; storage usage fix PR is mostly done
+- Todo: finish PR on storage usage fix
+
+Alex Logunov:
+- Done: fix upgradable test on account deletion change PR and found some issues with python https package on different platforms; Investigated global storage https://github.com/near/NEPs/issues/93
+
+### Chain
+
+Misha:
+- Done: small refactor of `ChainStoreUpdate`; opened an issue for a bug for `cross_shard_tx`
+- Todo: look into performance of neard
+
+KPR:
+- Done: updated `send_approval` to not send approvals during epoch sync; `check_send_announce_account` fails; also found that some data are not properly garbage collected
+- investigate more the epoch sync test
+
+### Network
+
+Piotr:
+- Done: testing and fixing issues with the routing table exchange; need to add more tests to cover corner cases
+- Todo: submit NEP PR on routing table exchange
+
 ## April 12th, 2021
 
 ### Transaction Runtime
