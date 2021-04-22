@@ -20,6 +20,22 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 22.04.2021
+
+Done:
+    * precompilation merged (off by default)
+    * done local reproduce any testnet contract call (need explorer team coop to ship)
+    * refreshed developer docs
+    * reviewed architecture of the sdk&simulator, there's a plan on how to make developing them easier
+
+In Progress:
+    * recomputing costs with Wasmer1 and precompilation, while fixing the computation itself
+    * adding contract reproduction features to the simulator
+    * adding rkyv support to wasmer (final rounds of review)
+    * wasm fuzz tests
+    * discussion: should  we profile gas by default?
+
+
 ## 15.04.2021
 
 Done:
