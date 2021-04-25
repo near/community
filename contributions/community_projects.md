@@ -20,7 +20,7 @@ If you would like to contribute long-term to NEAR, we would love to invite you t
 * [The NEAR Guild Program](https://near.org/guilds/)
 * [Contributors](https://near.org/contributor/)
 
-Have a look at the full contribution section in the [docs](https://docs.near.org/docs/contribution/contribution-overview).
+Have a look at the full contribution section in the [docs](https://docs.near.org/docs/community/contribute/contribute-overview).
 
 ## List of projects
 
