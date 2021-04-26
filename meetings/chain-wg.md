@@ -17,6 +17,29 @@ Things that the chain team work on include:
 
 ### Network
 
+## April 26th, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: almost done with storage usage fix PR (only need to add description for the csv file)
+- Todo: parallel runtime
+
+Alex:
+- Done: working on receipts fix to fix transactions that were stuck. Had some trouble using state-viewer due to database version mismatch between master and release branch
+- Todo: Keep working on the receipts fix
+
+### Chain
+
+Bowen:
+- Done: merged the apply chunk fix to master
+
+### Network
+
+Piotr:
+- Done: fix some bugs in the routing table exchange implementation; adding more test cases
+- Todo: submit NEP PR on routing table exchange
+
 ## April 19th, 2021
 
 ### Transaction Runtime
