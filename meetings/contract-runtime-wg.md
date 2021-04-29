@@ -20,6 +20,20 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 29.04.2021
+
+Done:
+  * #4221 expose epoch height via rpc
+  * merged rkyv support in wasmer for native (not for jit, which we actyally use)
+  * add single threaded option to wasmer
+ 
+In Progerss:
+  * state loading for sdk-sim
+  * design for sdk-sim-cli
+  * estimating wasmer1 and precompilation costs (fixed obvious bugs, need cross-validation)
+  * add tracking issue for missing costs, to know where to stop
+
+
 ## 22.04.2021
 
 Done:
