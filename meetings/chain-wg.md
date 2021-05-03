@@ -11,11 +11,33 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-- https://gov.near.org/t/attaching-near-instead-of-gas-to-transactions/1160
 
 ### Chain
 
 ### Network
+
+## May 3rd, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: finish up the storage cost fix. Decide to fix the storage usage of all affected accounts in one block instead of doing the update lazily so that accounts that are not touched for a long time can also have correct storage usage.
+- Todo: finish the change to storage cost fix
+
+Alex Logunov:
+- Done: implemented fix for receipts that got stuck. Working on tests for the fix.
+- Todo: finish the tests for the PR that fix receipts.
+
+### Chain
+
+Bowen:
+- Done: prepared for the new release that stabilizes multiple new protocol features. Also fixed some python tests
+
+### Network
+
+Piotr:
+- Done: working on finishing the NEPs PR on routing table exchange
+- Todo: finish and submit the NEPs PR
 
 ## April 26th, 2021
 
