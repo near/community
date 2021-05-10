@@ -16,6 +16,16 @@ Things that the chain team work on include:
 
 ### Network
 
+## May 10th, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: PR for storage fix is basically done. Need approvals from Frol and Nikolay; thought about parallel runtime
+- Todo: work on parallel runtimes
+
+Discussion: split of transaction and receipt gas limit
+
 ## May 3rd, 2021
 
 ### Transaction runtime
