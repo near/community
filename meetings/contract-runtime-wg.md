@@ -20,6 +20,18 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 06.05.2021
+
+Done:
+  * wasmer team implemented fast rkyv-based serialization for jit https://github.com/wasmerio/wasmer/pull/2250, for 30-40% deserializaion perf improvement. 
+  * design for new ganache-like approach to contract testing
+  * merged configurable staet size limit for trie viewer: https://github.com/near/nearcore/pull/4199
+
+In Progess:
+  * cross-validation for compilation costs estimates
+  * EVM contarct profiling
+
+
 ## 29.04.2021
 
 Done:
