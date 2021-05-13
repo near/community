@@ -20,6 +20,19 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 13.05.2021
+
+Done:
+  * hot-fixed 1.19 to treat FailWithNoError as deterministic
+  * (almost) cost estimation for wasmer1 and precompilation is ready to be merged
+  * Gas profiling/breakdown is enabled by default. 
+
+In Progess:
+  * investigating signal handlig behaviour in wasmer 0.17 and 1.0
+  * design truffle/ganache like approch for contract testing. Desing is finalized, first WIP PR is up #4287.
+  * tool for measuring gas and runtime costs *simultaneously*, to verify our estimations #4295
+  * look into wasmer 0.17 signal handlig code more.
+
 ## 06.05.2021
 
 Done:
