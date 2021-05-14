@@ -30,11 +30,11 @@ Short and medium term goals:
 
 ### May 14th 2021
 ### Weekly team updates:
-- Started rollout of wasmer 1.0 to testnet (ETA 2 weeks for full rollout)
-- Synced with aurora team on infrastructure related questions
-- Created 20 debugs nodes on testnet for chain team
-- Indexer infrastructure fully automated
-- Small bugfixes across the infra
+- Started rollout of wasmer 1.0 to testnet (ETA 2 weeks for full rollout); @chefsale @mhalambek @matklad
+- Synced with aurora team on infrastructure related questions; @chefsale @mhalambek @artob
+- Created 20 debugs nodes on testnet for chain team; @mhalambek @bowenwang
+- Indexer infrastructure fully automated on both testnet and mainnet; @chefsale @frol
+- Small bugfixes across the infra; @mhalambek @chefsale
 
 
 ### April 1st 2021:
