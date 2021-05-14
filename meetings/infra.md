@@ -27,6 +27,16 @@ Short and medium term goals:
 - Provide open-source IaC for the community to use including Terraform configurations, Ansible Playbooks, CI/CD configurations, Kubernetes deployments and similiar
 - Immidiate incident response 24/7
 
+
+### May 14th 2021
+### Weekly team updates:
+- Started rollout of wasmer 1.0 to testnet (ETA 2 weeks for full rollout)
+- Synced with aurora team on infrastructure related questions
+- Created 20 debugs nodes on testnet for chain team
+- Indexer infrastructure fully automated
+- Small bugfixes across the infra
+
+
 ### April 1st 2021:
 ### Weekly team updates:
 
