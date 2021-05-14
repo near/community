@@ -24,7 +24,15 @@ Egor:
 - Done: PR for storage fix is basically done. Need approvals from Frol and Nikolay; thought about parallel runtime
 - Todo: work on parallel runtimes
 
+Alex Logunov:
+- Done: Fixed previous implementation of restoring receipts, solved cases when an epoch starts with empty chunks, implemented tests.
+- Todo: Address comments on the PR and finish it.
+
 Discussion: split of transaction and receipt gas limit
+
+### Chain
+
+Discussion: Use on-disk hashtable based storage instead of rocksdb to achieve better storage read and write performance.
 
 ## May 3rd, 2021
 
