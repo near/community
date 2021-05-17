@@ -11,12 +11,36 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-- https://github.com/near/NEPs/discussions/173
+
 
 ### Chain
 - Resharding the state
 
 ### Network
+
+## May 17th, 2021
+
+### Transaction runtime
+
+Egor: 
+- Done: Merged PR to fix storage usage and find that there is some gas usage inconsistency. Started on some documentation work on the runtime spec
+- Todo: Help contract runtime team to investigate gas usage inconsistencies. Investigate what needs to be done for parallel runtime
+
+Alex:
+- Done: Addressed comments on the PR that fixes the receipts that were stuck. United the approaches to apply "migrations"
+- Todo: fix the tool that dumps receipts that need to be processed.
+
+Discussion
+- the order of local receipts vs. delayed receipts
+- Run wasm in wasm
+
+### Chain
+
+Bowen:
+- Done: new release that stabilizes multiple protocol features.
+
+Discussion:
+- Resharding of the current state: `aurora` will go into its own shard and everything else will go into another shard.
 
 ## May 10th, 2021
 
