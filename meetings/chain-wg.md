@@ -11,8 +11,10 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
+- https://github.com/near/NEPs/discussions/173
 
 ### Chain
+- Resharding the state
 
 ### Network
 
