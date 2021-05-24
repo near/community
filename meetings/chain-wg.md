@@ -18,6 +18,25 @@ Things that the chain team work on include:
 
 ### Network
 
+
+## May 24th, 2021
+
+### Transaction runtime
+
+Alex Logunov:
+- Done: merged PR to fix lost receipts. Submit PR to cap maximum gas price to 10 * minimum gas price. Update PR to document burnt gas vs. used gas
+- Todo: compile contracts after state sync; research the idea of global storage
+
+Discussion
+- Evgeny: we should compile contracts when we update the state (as a function of the state).
+
+### Chain Sync
+
+Discussion
+- Tests fail on the PR that adds time travel to nearcore.
+- Use balanced bst for state.
+- Have nested tree (tree for accounts and inside an account have another tree for its key-value storage)
+
 ## May 17th, 2021
 
 ### Transaction runtime
