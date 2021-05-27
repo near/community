@@ -20,6 +20,25 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 27.05.2021
+
+Done: 
+  * removed ExecutionOutcome from PeerMessage, so that we can change it
+  * sorted out lost debug logs in near-vm-runner
+  * doc the usage of sandbox node with near-api-js for e2e test and usage of patch_state rpc
+  * fix a near-api-js bug during the doc https://github.com/near/near-api-js/pull/603
+  * publish the design doc on gov.near.org: https://gov.near.org/t/design-doc-of-near-sandbox/2264
+  * addressing comments on state patch rpc pr
+  * fixed wrong error handling logic with wasmer 0.17
+
+
+In Progess:
+  * looking into wasmer reliability
+  * more work on gas & time profiling
+
+
+## 20.05.2021
+
 ## 13.05.2021
 
 Done:
