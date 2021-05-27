@@ -11,10 +11,11 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-
+- spec: what is still missing?
+- https://gov.near.org/t/store-protocol-config-in-a-contract/2105/4
 
 ### Chain
-- Resharding the state
+- https://gov.near.org/t/challenges-of-state-challenges/2028
 
 ### Network
 
@@ -26,6 +27,10 @@ Things that the chain team work on include:
 Alex Logunov:
 - Done: merged PR to fix lost receipts. Submit PR to cap maximum gas price to 10 * minimum gas price. Update PR to document burnt gas vs. used gas
 - Todo: compile contracts after state sync; research the idea of global storage
+
+Egor:
+- Done: Working on specs of how apply works, research for best way to parallelizing runtime
+- Todo: Get ready specs PR, continue research into parallelizing
 
 Discussion
 - Evgeny: we should compile contracts when we update the state (as a function of the state).
