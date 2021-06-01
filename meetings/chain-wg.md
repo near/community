@@ -11,14 +11,31 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-- spec: what is still missing?
-- https://gov.near.org/t/store-protocol-config-in-a-contract/2105/4
 
 ### Chain
 - https://gov.near.org/t/challenges-of-state-challenges/2028
 
 ### Network
 
+
+## June 1st, 2021
+
+### Transaction runtime
+
+Egor:
+- Done: investigate how to parallelize runtime. We have most of stuff done already (applying chunks in parallel and then merge the results)
+- Todo: start implementing parallel runtimes; spec for order of triggers when we apply a chunk
+
+Alex Logunov:
+- Done: Merged PR for gas burnt vs. gas used. Fixed a bug related to restoring lost receipts that led to the betanet crash. Continue working on compiling on contracts at deployment; look into the fix needed for indexer for restoring receipts
+- Todo: Check with Alex and Nikolay on the best way to refactor contract compilation in vm runner. Look further into saving lost receipts to the database
+
+Discussion:
+- Evgeny: we may need to recompile all contracts if some config values change.
+
+### Chain
+
+Discussion: https://gov.near.org/t/store-protocol-config-in-a-contract/2105/4
 
 ## May 24th, 2021
 
