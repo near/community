@@ -1,4 +1,4 @@
-# Chain Team Agenda and Notes
+# Protocol Team Agenda and Notes
 
 This thread contains agenda and/or summary of the regular chain sync meeting. Please propose agenda items through the PRs and Issues.
 
@@ -17,6 +17,24 @@ Things that the chain team work on include:
 
 ### Network
 
+## June 7th, 2021
+
+### Chain + Transaction runtime
+
+Egor:
+- Done: understand actix framework (for parallel runtime); help contract runtime team investigate gas cost inconsistencies
+- Todo: documentation on runtime triggers
+
+Alex:
+- Done: implemented compilation of contracts when state changes. Debug tests on state sync that should trigger compilation of contracts. Fix protocol version in the maximum gas price change and found that some tests no longer work after the recent refactoring of nearcore.
+- Todo: fix the test on state sync; add database change needed for indexer to restore lost receipts
+
+Evgeny:
+- Todo: review host function implementations needed for Aurora
+
+Discussion:
+- https://github.com/near/nearcore/security/advisories/GHSA-r3c6-jwgp-p825
+- Disable nayduck tests that constantly fail
 
 ## June 1st, 2021
 
