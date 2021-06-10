@@ -20,6 +20,16 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 10.06.2021
+
+Done:
+  * reproduce macro migration benchmark locally, cross-validated gas costs via perf
+  * lockup contract auditing
+
+In Progerss:
+  * fuzzing infrastructure to exercise host functions
+  * near sandbox API for patch state. 
+
 ## 27.05.2021
 
 Done: 
