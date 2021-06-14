@@ -11,6 +11,8 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
+- https://gov.near.org/t/gas-price-auction/1423/17
+- local receipts
 
 ### Chain
 - https://gov.near.org/t/challenges-of-state-challenges/2028
