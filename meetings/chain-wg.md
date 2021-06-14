@@ -11,13 +11,42 @@ Things that the chain team work on include:
 ## Agenda
 
 ### Transaction runtime
-- https://gov.near.org/t/gas-price-auction/1423/17
-- local receipts
 
 ### Chain
 - https://gov.near.org/t/challenges-of-state-challenges/2028
 
 ### Network
+
+## June 14th, 2021
+
+### Chain + Transaction runtime
+
+Egor:
+- Done: look more into parallel runtimes and need to write more tests, but didn't find anything unexpected so far
+- Todo: PR to add documentation on runtime triggers https://github.com/near/NEPs/issues/191
+
+Evgeny:
+- Done: working on the math API PR for Aurora and found some issues. Major issue: blake2 interface is not correctly implemented
+- Todo: work with Joshua to resolve the implementation issues and add tests
+
+Min:
+- Done: read protocol spec, small onboarding tasks, reading the rust book
+- Todo: finish watching the youtube videos on runtime & chain; looking into the onboarding task (pytest)
+
+Discussion
+- https://gov.near.org/t/gas-price-auction/1423/17: validators do not have a very strong incentive to not include some transaction due to how rewards work
+- local receipts: intrashard receipt executed in the same block
+  * hard to change it back
+  * local receipt is different because an account is always on the same shard as itself
+  * do we do it only once or would we execute all generated receipts in the same way
+  * Evgeny: have support for whether some transaction is included on chain
+- Host errors
+  * When the contract execution fails, there is a large enum of errors. Evgeny: too much complexity
+  * Max: it serves as a way to document the errors because we need to keep track of all of them (deterministic vs. non-deterministic)
+  * Max: the error is returned from a number of places (storage, runtime, vm)
+  * The exact error variant does not affect the protocol, so we are free to change the error variants as we wish.
+
+
 
 ## June 7th, 2021
 
