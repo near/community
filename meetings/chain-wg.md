@@ -33,6 +33,10 @@ Min:
 - Done: read protocol spec, small onboarding tasks, reading the rust book
 - Todo: finish watching the youtube videos on runtime & chain; looking into the onboarding task (pytest)
 
+Alex Logunov:
+- Done: Submitted PR for contracts precompilation, simplify process_blocks tests a bit
+- Todo: address suggestions in PR; find why another PR led to betanet crash; add brief docs about Trie; add database change needed for indexer to restore lost receipts
+
 Discussion
 - https://gov.near.org/t/gas-price-auction/1423/17: validators do not have a very strong incentive to not include some transaction due to how rewards work
 - local receipts: intrashard receipt executed in the same block
