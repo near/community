@@ -20,6 +20,21 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 17.06.2021
+
+Done:
+
+* patch state(sandbox) PR merged, docs updated
+* fixed some bugs in near CLI
+* https://github.com/near/calibrator to estimate preformance of validator node
+* explaind IO benchmark results
+
+In Progerss:
+
+* confirmed gas counting overhead with real-world benchmark (EVM contract)
+* some progress on adding import support wasm-smith
+
+
 ## 10.06.2021
 
 Done:
