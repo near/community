@@ -17,6 +17,35 @@ Things that the chain team work on include:
 
 ### Network
 
+## June 28th, 2021
+
+### Chain + Transaction runtime
+
+Egor:
+- Done: finish PR to document the triggers when a chunk is applied. Look more into how to parallelize runtime
+- Todo: Keep working on parallel runtime
+
+Alex Logunov:
+- Done: finished work on contract compilation after state sync. Reviewed some PRs
+- Todo: migration to restore receipts in the database
+
+Evgeny:
+- Done: working with Joshua on math api pull request
+- Todo: tests on the math api implementation
+
+Min:
+- Done: finished a python test (infinite loop) and fixed the issue with refund
+- Todo: Look into splitting the state into eight
+
+Bowen:
+- Done: changed the constant for maximum gas price
+
+### Network
+
+Piotr:
+- Done: submitted NEP PR for routing table exchange and addressed comments from Bowen and Marcelo
+- Todo: update the pull request for nearcore; add rpc to get network info for testing purposes
+
 ## June 14th, 2021
 
 ### Chain + Transaction runtime
