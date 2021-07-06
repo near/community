@@ -17,6 +17,14 @@ Things that the chain team work on include:
 
 ### Network
 
+## July 6th, 2021
+
+### Network
+
+Piotr:
+- Done: submitted the PR that changes the routing table exchange to nearcore; will continue testing the PR
+- Todo: Merge the NEPs PR; look into python tests for the change; look into spam protection
+
 ## June 28th, 2021
 
 ### Chain + Transaction runtime
