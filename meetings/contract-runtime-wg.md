@@ -20,6 +20,18 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 08.07.2021
+
+Done:
+
+* Measured gas metering overhead for various inds of contrats
+
+In Progerss
+
+* Helping transaction runtime with shipping contract compilation on deployment
+* Fixing storage corruption that prevent the migration that introduce execution outcome metadata (https://github.com/near/nearcore/pull/4466)
+* Revive borsh support for wasmer 0 (https://github.com/near/nearcore/pull/4448)
+
 ## 17.06.2021
 
 Done:
