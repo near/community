@@ -17,6 +17,29 @@ Things that the chain team work on include:
 
 ### Network
 
+## July 12th, 2021
+
+### Chain + Transaction runtime
+
+Egor:
+- Done: runs apply_chunk in one thread per shard
+- Todo: Run a real node with the change to make sure it works well; write multi-shard tests for performance and stability; run nayduck tests to do a sanity check
+
+Alex Logunov:
+- Done: restore receipts in database through a database migration; work with runtime parameter estimator to update gas costs (reduce function call base cost) and observe a lot of discrepancies with the current costs
+- Todo: explain the discrepancies in contract deployment cost and data receipt creation cost (50Tgas)
+
+Min:
+- Done: Writing a proposal to split current state into multiple shards. Two plans: off-chain approach and on-chain approach. Main difference is whether we have new state roots committed in block headers during the epoch before the split is done.
+- Todo: Decide which plan to proceed with; discuss it with the team this Thusday
+
+Evgeny:
+- Done: working on tests for host functions. Will have some tests ready this week
+- Todo: tests for other host functions not yet included
+
+Discussion:
+- Reconsider hardware requirements and maybe use better SSDs and maybe consider separating state storage.
+
 ## July 6th, 2021
 
 ### Network
