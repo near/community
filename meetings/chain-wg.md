@@ -40,6 +40,12 @@ Evgeny:
 Discussion:
 - Reconsider hardware requirements and maybe use better SSDs and maybe consider separating state storage.
 
+### Network
+
+Piotr:
+- Done: continue working on testing the routing table exchange; network 101 presentation
+- Todo: finish example scenarios for network communications
+
 ## July 6th, 2021
 
 ### Network
