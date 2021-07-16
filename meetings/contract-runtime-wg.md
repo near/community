@@ -20,11 +20,24 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 15.07.2021
+
+Done:
+
+* Code cleanups: https://github.com/near/nearcore/pulls/4488, https://github.com/near/nearcore/pulls/4516, https://github.com/near/nearcore/pulls/4481, https://github.com/near/nearcore/pull/4511.
+* Proposal for wasm32 based contract unit tests: https://github.com/near/near-sdk-rs/issues/467
+
+In Progress:
+
+* storing gas profiling metadata in the ExecutionOutcome: https://github.com/near/nearcore/pull/4466
+* wasm-global based gas metering
+* improving wasmer 0 deserialization performance by switching to borsh
+
 ## 08.07.2021
 
 Done:
 
-* Measured gas metering overhead for various inds of contrats
+* Measured gas metering overhead for various kinds of contrats
 
 In Progerss
 
