@@ -17,6 +17,29 @@ Things that the chain team work on include:
 
 ### Network
 
+## July 19th, 2021
+
+### Chain + Transaction runtime
+
+Alex Logunov:
+- Done: found that function call base cost and per byte cost are incorrectly computed; found several issues with the parameter estimator (some costs increase linearly with the number of accounts). Data receipt creation cost is somehow dependent on the number of metrics we measure in parameter estimator. We may have overestimated the function call costs by 40x; decreasing function call cost leads to some test failing which is related to pessimistic gas pricing
+- Todo: investigate the strange behavior in data receipt creation cost; work with contract runtime team to understand the inconsistencies in cost estimation
+
+Min:
+- Done: writing NEP for splitting the state
+- Todo: finish NEP and start the implementation
+
+Evgeny:
+- Done: mostly finished the tests for math API host functions and found a corner case for ecrecover
+- Todo: integrate tests with nearcore
+
+Bowen:
+- Done: debugged testnet crash and fixed the issue
+
+Discussion
+- maximum receipt depth and pessimistic gas pricing
+- potential change to shardId. 
+
 ## July 12th, 2021
 
 ### Chain + Transaction runtime
