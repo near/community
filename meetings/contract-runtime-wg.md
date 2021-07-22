@@ -20,6 +20,18 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 22.07.2021
+
+Done:
+
+* run wasm fuzzing against real host functions, comparing wasmer0 and wasmer2 (https://github.com/matklad/wasm-tools/tree/smith-imports)
+
+In Progress:
+
+* wasm-global based gas metering 
+* improving wasmer 0 deserialization performance by switching to borsh
+* removing old implementation of EVM (https://github.com/near/nearcore/issues/4515)
+
 ## 15.07.2021
 
 Done:
