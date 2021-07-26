@@ -17,6 +17,35 @@ Things that the chain team work on include:
 
 ### Network
 
+## July 26th, 2021
+
+### Chain + Transaction runtime
+
+Alex Logunov:
+- Done: we are changing the definition of function call per byte cost to include contract deserialization and IO cost, which blocks the update of the function call cost. Investigated the strange behavior in data receipt creation cost and it appeared that the issue is related to the size of the state; documentation on `Trie` and how it is used in runtime; 
+- Todo: investigate the effect of size of the state on data receipt creation cost; Start working on https://github.com/near/nearcore/issues/3284
+
+Egor:
+- Done: Making sure that all tests (CI and nayduck) pass
+- Todo: finish the PR on parallelizing the apply chunks (load tests and sanity tests with multiple shards)
+
+Min:
+- Done: finished NEP on how to split the current state into multiple states
+- Todo: started implementation of change to `ShardId`
+
+Evgeny:
+- Done: working on tests for `ecrecover`
+- Todo: finish the tests for `ecrecover` by the end of this week
+
+Bowen:
+- Done: ported a fix for a critical issue in `validator_*` host functions; new release going out on July 26th
+
+Discussion:
+- measuring the cost of loading contract modules
+  * loading the contracts when the chunk is decoded does not fully work because an attacker can submit a chunk full of empty calls to unique contracts and lead to slowdowns
+  * There is a bottleneck in parallelizing the workload (fetching contract modules from disk)
+
+
 ## July 19th, 2021
 
 ### Chain + Transaction runtime
