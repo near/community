@@ -20,6 +20,24 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+## 07.29.2021
+
+We now have async status updates publicly on Zulip: https://near.zulipchat.com/#narrow/stream/295306-dev-contract-runtime/topic/weekly-sync
+Feel free to join!
+
+Done: 
+
+* improved contract deserialization performance, by switching to borsh
+* cleanup: remove obsolete evm implementation from nearcore: https://github.com/near/nearcore/pull/4557
+* explain ecrecover feee inconsistency: https://github.com/near/nearcore/issues/4548#issuecomment-888323690
+* vairous code cleanups https://github.com/near/nearcore/pull/4549, https://github.com/near/nearcore/pull/4545, https://github.com/near/nearcore/pull/4563, https://github.com/near/nearcore/pull/4571
+* fix a blocker for transitioning to wasmer2: https://github.com/wasmerio/wasmer/issues/2329
+
+In Progress:
+
+* compute gas profile per receipt, rather than per block
+* wasm-global based gas metering 
+
 ## 22.07.2021
 
 Done:
