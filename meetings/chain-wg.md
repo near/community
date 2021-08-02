@@ -13,9 +13,26 @@ Things that the chain team work on include:
 ### Transaction runtime
 
 ### Chain
-- https://gov.near.org/t/challenges-of-state-challenges/2028
 
 ### Network
+
+## August 2nd, 2021
+
+### Chain + Transaction runtime
+
+Alex Logunov:
+- Done: Launched estimator with the new function call fee and found that the cost increased dramatically; we may need to change how the estimation model works (least square method) to get a more precise estimation; investigating the reason why data receipt creation cost is not accurate but reproduced the issue with both icount and time metrics
+- Todo: investigate what the best way is to estimate the function call fee; investigate the data receipt creation cost more
+
+Min:
+- Done: implementing NEP on splitting the state; change shard layout to be dynamic (have a different number of shards across epochs); change `ShardId` to differentiate `ShardId` and internal ids for states; realized that we need to put catchup into a separate thread
+- Todo: finish the two PRs mentioned above
+
+### Network
+
+Piotr:
+- Done: investigated Kademlia, its implementation, and potential security concerns
+- Todo: finish the tests for routing table exchange (currently missing some corner cases and test case for bigger routing table exchanges); update the NEP PR for routing table exchange
 
 ## July 26th, 2021
 
