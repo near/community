@@ -16,6 +16,28 @@ Things that the chain team work on include:
 
 ### Network
 
+## August 9th, 2021
+
+### Chain + Transaction runtime
+
+Alex Logunov:
+- Done: data_receipt_creation_cost was not estimated accurately because testbed is reused incorrectly in the parameter estimator; discussed possible ways to address the high function call fee after including the cost of loading and deserializing the contract module; observed some discrepancy in storage_read estimation
+- Todo: submit PRs to fix the parameter estimator and fix the data_receipt_creation_cost (https://github.com/near/nearcore/issues/4649); work on improving the accuracy of the estimation for function call fee
+
+Egor:
+- Done: test apply_chunk in parallel on two shards and investigated the speed of applying chunks in parallel and found the cause
+- Todo: submit the PR for parallelizing apply chunks and (separately) PR for putting catch up into a separate thread
+
+Min:
+- Done: implementing `ShardId` change and found a few issues while doing that: state sync assumes that the number of shards remains the same before epochs; temporary solution for the upcoming split: disable state syncing for the epoch for which the number of shards changes. Some issues with `ShardTracker` (assumes that the number of shards does not change)
+- Todo: get the `ShardId` change done and work on actually splitting the state into multiple shards
+
+### Network
+
+Piotr:
+- Done: fixed some tests after rebasing master; found some inefficiencies in borsh serialization but realized that some of that is not avoidable; work on documentating some examples of how the protocol works (e.g, handshake between nodes on the network)
+- Todo: fix the tests that still fail (e.g. block_production.py); hope to get it done by the end of the week
+
 ## August 2nd, 2021
 
 ### Chain + Transaction runtime
