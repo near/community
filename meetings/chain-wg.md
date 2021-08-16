@@ -16,6 +16,37 @@ Things that the chain team work on include:
 
 ### Network
 
+## August 16th, 2021
+
+### Core
+
+Alex Logunov:
+- Done: Submitted documentation on how trie works in nearcore; started working on the proper way to update runtime config; found the cause for some weird behavior in parameter estimator (related to cargo profile and lto) and @matklad fixed it
+- Todo: keep working on runtime config and update function call fees
+
+Egor:
+- Done: merged the PR on parallelizing apply_chunks; look into making catchup run in parallel
+- Todo: figure out how to make catchup run in a separate thread; it might involve some large refactoring of `ClientActor`
+
+Min:
+- Done: merged the PR that changes shard layout; Implemented `ShardUId` which uniquely identifies shards across epochs
+- Todo: change `account_id_to_shard_id` to take into account epoch info; start working on splitting states
+
+Evgeny:
+- Done: back from vacation
+- Todo: finish PR on ecrecover testing and review the PR on state splitting
+
+Bowen:
+- Done: Merged master into the chunk-only producer PR (https://github.com/near/nearcore/pull/4193) and fixed some tests there
+
+### Network
+
+Piotr:
+- Done: add python code to communicate with rpc server for network testing; mostly done with testing
+- Todo: need to switch json rpc server to make the API consistent with the existing one;
+
+dev-network stream is created on zulip!
+
 ## August 9th, 2021
 
 ### Chain + Transaction runtime
