@@ -20,6 +20,52 @@ The scope of the contract runtime is the following:
 Short- and medium-term goal: Safe and highly performant contract execution runtime for Near;
 Long-term goal: Near-independent and non-specific to Near contract execution runtime for general blockchains.
 
+
+## 08.19.2021
+
+Done:
+
+* merged first non-trivial param estimator refactoring: https://github.com/near/nearcore/pull/4636 
+
+In Progress:
+
+* allowing to compute a subset of costs in the estimator https://github.com/near/nearcore/pull/4640
+* testing signal-less version of wasmer
+* better serde and borsh serialization format for metadata in execution outcome
+* a lot progress in global based gas counter:
+  * made a draft pr, that now works for wasmer 0: https://github.com/near/nearcore/pull/4688
+  * change wasm-utils to use i64 from i32 to count remain gas
+  * figure out and confirm with Max that we should pass used gas into wasm counter instead of burn_gas_limit
+  * handle burn gas limit exceed on run_vm return
+  * handle gas counted differently in error cases
+  * break down wasmer init instance to two step to access gas when start func errors. Made a PR in near-wasmer to support this.
+  * debug stack over flow test now only use 1/3 gas in th
+
+## 08.12.2021
+
+Done:
+
+* upgraded wasmer0 to include Nikolay's fix for the setjump miscompilation on a particular nightly
+* investigate failures when using wasmer2 and `cargo tset --test-threads 1`
+* refactored gas profile in nearccore to not use interior mutability
+* correct a outcome storage corruption in testnet archive node
+
+In Progress:
+
+* param estimator refactoring
+* wasm-global based gas metering 
+
+## 08.05.2021
+
+Done:
+
+* investigated wasmer miscompilation around setjump/longjump
+
+In Progress:
+
+* started refactoring parameter estimator!
+
+
 ## 07.29.2021
 
 We now have async status updates publicly on Zulip: https://near.zulipchat.com/#narrow/stream/295306-dev-contract-runtime/topic/weekly-sync
