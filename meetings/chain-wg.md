@@ -16,6 +16,33 @@ Things that the chain team work on include:
 
 ### Network
 
+
+## August 23rd, 2021
+
+### Core
+
+Alex Logunov:
+- Done : Worked with Alex Kladov on usability of parameter estimator (docker image for example); getting rid of separate calls to genesis populate; working on updating runtime config and merged one PR to get rid of `max_gas_burnt_view`; Verified that restoring receipts works with current mainnet state
+- Todo: figure out how to update runtime config and potentially update data_receipt_creation_cost
+
+Min:
+- Done : finishied implementing account_id_to_shard_id to take `EpochId` into consideration; fixed minor bugs in `backward_compatible.py`; finished implementing `ShardUId`; led the discussion on team purpose
+- Todo: Finish implementing splitting state
+
+Evgeny:
+- Done: worked on PR to test evm-precompile host functions; blocked on CI
+- Todo: figure out why exactly CI on the PR fails
+
+Bowen:
+- Done: finished testnet release for 1.21.0-rc.1
+
+### Network
+
+Piotr:
+- Done: finished rewriting the change to network rpc endpoints using the jsonrpc API
+- Todo: merge the PR on routing table exchange; prepare for a discussion on possible improvements on network
+
+
 ## August 16th, 2021
 
 ### Core
